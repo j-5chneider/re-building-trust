@@ -1,0 +1,620 @@
+---
+title: "Reproducible Documentation of Analyses"
+output: 
+  html_document: 
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+    theme: flatly
+editor_options: 
+  chunk_output_type: console
+---
+
+
+# ReadMe
+This is a documentation of the analyses for the manuscript *"(Re-)Building Trust? Investigating the effects of open science badges on perceived trustworthiness of journal articles."* **for internal purposes**. A final and polished version of this documentation will be submitted along the manuscript as supplemental material. 
+
+# Study design [text c+p from preregistration]
+The design will include three conditions: visible Open Science Practices (visOSP), Practices not visible (nonvis) and visible non-Open Science Practices (nonOSP). Two of the (three) conditions are randomly chosen and randomized in their order within person. Realizing all three conditions within person would highlight the variation between conditions as too obvious and thus undermine blinding of subjects.  
+visOSP condition: Subjects receive a title page of an empirical study (Title, Abstract, Keywords, Introduction, ...) together with three Open Science badges. The badges are explained using hints in style of speech bubbles and indicate that the authors engaged in the OSP open data, open analysis script and open materials.  
+nonvis condition: Subjects receive a title page of an empirical study (Title, Abstract, Keywords, Introduction, ...) with no further information on Open Science, reflecting a "standard" journal article.
+nonOSP condition: Subjects receive a title page of an empirical study (Title, Abstract, Keywords, Introduction, ...) together with three Open Science badges. The badges are explained using hints in style of speech bubbles and indicate that the authors did not engage in the OSP open data, open analysis script and open materials.  
+
+As participants are exposed to more than one condition, we create all three conditions for three different empirical studies (topics). In doing so, we avoid participants to see one study topic twice under different conditions, which would undermine the blinding.
+
+# Materials
+see https://osf.io/vgbrs/files $\rightarrow$ badges
+
+## Hypotheses
+We preregistered (https://osf.io/uzbef) two confirmatory and two exploratory hypotheses:
+
+1. Confirmatory, Hyp 1: Visible OSP (vs. not visible vs. visibly non-OSP) influence the perceived trustworthiness (subscale integrity). Our assumption: The more openness, the more trustworthy with small to moderate effects. [...]
+2. Confirmatory, Hyp 2: The higher the topic specific multiplism, the lower the perceived trustworthiness (subscale integrity). Negative correlation.
+3. Exploratory, Hyp 3: Topic specific multiplism moderates the effect of OSP on perceived trustworthiness (subscale integrity). 
+4. Exploratory, Hyp 4: Visible OSP (vs. not visible vs. visibly non-OSP) have a negative effect on topic specific multiplism.
+
+# Data import
+```{r setup, include=FALSE}
+library(tidyverse)
+library(hrbrthemes)
+library(lavaan)
+library(hrbrthemes)
+library(bain)
+library(skimr)
+library(psych) 
+library(mice) 
+library(ggbeeswarm)
+library(osfr)
+
+# fetch the data from the osf
+# osf_download(osf_retrieve_file("XXXXX"))) # anonymized for peer-review
+
+# load data object `x` which contains the data
+load("rbt.RData") 
+# convert to tibble
+data_longest <- x%>%
+  as_tibble()%>%
+  mutate(session = as_factor(session))
+```
+
+# Datawrangling
+First we had to reshape `data_longest` and filter the METI/TSM-items. Then we had to recode the METI items and omit the empty cases.
+
+```{r wrangling_psychprop_meti_tsm, warning=FALSE}
+# A function to inverse the METI items
+inv7fct <- function(x) (8-as.numeric(x))
+
+data_psych_prop_METI <- 
+data_longest%>%
+  filter(substr(variable, 1, 3) == "tru")%>% # see codebook
+  mutate(item = substr(variable, 5, 9))%>%
+  select(session, item, treat, value)%>%
+  pivot_wider(names_from = item,
+              values_from = value)%>%
+  group_by(session)%>%
+  mutate(meas_rep = 1:n(),
+         treat = as.factor(treat))%>%
+  ungroup()%>%
+  mutate_at(vars(exp_1:ben_4),
+            list(~inv7fct(.))) # recoding 1-->5, 2-->4, ...))
+
+data_psych_prop_tsm <- 
+data_longest%>%
+  filter(substr(variable, 1, 3) == "tsm")%>% # see codebook
+  mutate(item = substr(variable, 1, 5))%>%
+  select(session, item, treat, value)%>%
+  pivot_wider(names_from = item,
+              values_from = value)%>%
+  group_by(session)%>%
+  mutate(meas_rep = 1:n(),
+         treat = as.factor(treat))%>%
+  ungroup()%>%
+  mutate_at(vars(starts_with("tsm")),
+            list(~as.numeric(as.factor(.))))
+  
+# Join the data frames
+data_psych_prop_joined <- full_join(data_psych_prop_METI, data_psych_prop_tsm)%>%
+  mutate(treat = as_factor(treat))
+
+# create a list of questionnaire session which are empty
+PID_list <- data_psych_prop_joined%>%
+  mutate(count_NAs = rowMeans(is.na(.)))%>%
+  filter(count_NAs < .8)%>%
+  pull(session)%>%
+  unique()
+
+# data frame with valid cases (not complete NA)
+data_psych_prop <- data_psych_prop_joined%>%
+  filter(session %in% PID_list)
+
+# data frames with sum scales
+data_scales <- data_psych_prop%>%
+  mutate(Treatment = factor(treat, levels = c("nonosp", "nonvis", "visosp")),
+         Experitse = rowMeans(data.frame(exp_1, exp_2, exp_3, 
+                                   exp_4, exp_5, exp_6), na.rm = T),
+         Integrity = rowMeans(data.frame(int_1, int_2, int_3, int_4), na.rm = T),
+         Benevolence = rowMeans(data.frame(ben_1, ben_2, ben_3, ben_4), na.rm = T),
+         TSM = rowMeans(data.frame(tsm_1, tsm_2, tsm_3, tsm_4), na.rm = T))
+
+data_scales_lables <- data_psych_prop%>%
+  mutate(Treatment = factor(treat, levels = c("nonosp", "nonvis", "visosp")),
+         Treatment = fct_recode(Treatment,
+                                `Visible OSP (badges)` = "visosp",
+                                `No Information about OSP` = "nonvis",
+                                `Visible rejection of OSP\n(greyed out badges)` = "nonosp"),
+         Experitse = rowMeans(data.frame(exp_1, exp_2, exp_3, 
+                                   exp_4, exp_5, exp_6), na.rm = T),
+         Integrity = rowMeans(data.frame(int_1, int_2, int_3, int_4), na.rm = T),
+         Benevolence = rowMeans(data.frame(ben_1, ben_2, ben_3, ben_4), na.rm = T),
+        `Topic specific multiplism` = rowMeans(data.frame(tsm_1, tsm_2, tsm_3, tsm_4), 
+                                               na.rm = T))
+
+data_scales_wide <- data_scales%>%
+  select(Experitse, Integrity, Benevolence,
+         TSM, Treatment, session)%>%
+  gather(Variable, Value, -session, -Treatment)%>%
+  mutate(Variable2 = paste(Variable, Treatment, sep = "_"))%>%
+  select(-Variable, -Treatment)%>%
+  spread(Variable2, Value)
+
+data_scales_lables_wide <- data_scales_lables%>%
+  select(Experitse, Integrity, Benevolence,
+         `Topic specific multiplism`, Treatment, session)%>%
+  gather(Variable, Value, -session, -Treatment)%>%
+  mutate(Variable2 = paste(Variable, Treatment, sep = "_"))%>%
+  select(-Variable, -Treatment)%>%
+  spread(Variable2, Value)
+
+# Data of treatment check
+data_tch <- data_longest%>%
+  filter(variable %in% c("tch_1", "tch_2", "tch_3", "tch_4"))%>%
+  # recoding "weiß nicht[don't know]" as lowest specification of ordinal variable
+  mutate(value = as.ordered(value))%>%
+  spread(variable, value)%>%
+  # remove complete empty cases
+  filter(is.na(tch_1) == F & is.na(tch_2) == F &
+           is.na(tch_3) == F & is.na(tch_4) == F)%>%
+  group_by(session)%>%
+  mutate(meas_rep = 1:n())%>%
+  ungroup()
+
+data_tch_n <- data_longest%>%
+  filter(variable %in% c("tch_1", "tch_2", "tch_3", "tch_4"))%>%
+  # recoding "weiß nicht[don't know]" as missing
+  mutate(value = as.numeric(ifelse(value == "-999", NA, value)))%>%
+  spread(variable, value)%>%
+  # remove complete empty cases
+  filter(is.na(tch_1) == F & is.na(tch_2) == F &
+           is.na(tch_3) == F & is.na(tch_4) == F)%>%
+  group_by(session)%>%
+  mutate(meas_rep = 1:n())%>%
+  ungroup()
+```
+
+# Sample
+## Sample size
+```{r}
+length(PID_list)
+```
+
+## Demographics
+```{r}
+
+data_longest%>%
+  filter(variable %in% c("age", "sex", "semester"))%>%
+  spread(variable, value)%>%
+  select(-treat)%>%
+  mutate(age = as.numeric(age),
+         semester = as.numeric(semester),
+         sex = as.numeric(sex))%>%
+  skim(.)
+```
+
+
+
+# Psychometric properties of the measurements
+## Descriptive overview
+```{r}
+skewn <- function(x) DescTools::Skew(x, na.rm = T)
+kurto <- function(x) DescTools::Kurt(x, na.rm = T)
+maxabszvalue <- function(x) max(abs(scale(na.omit(x))))
+
+my_skim <- skim_with(numeric = sfl(skewn, kurto, maxabszvalue))
+
+data_scales%>%
+  my_skim(.)
+```
+
+
+## METI
+### Dimensionality (CFA)
+First we specified two consecutive threedimensional CFA models
+```{r cfa_meti}
+cfa_meti_model <- "exp =~ exp_1 + exp_2 + exp_3 + exp_4 + exp_5 + exp_6
+                   int =~ int_1 + int_2 + int_3 + int_4 
+                   ben =~ ben_1 + ben_2 + ben_3 + ben_4"
+
+cfa_meti_1 <- cfa(cfa_meti_model, data = data_psych_prop%>%filter(meas_rep == 1))
+fitmeasures(cfa_meti_1)[c("cfi", "tli", "rmsea", "srmr")]
+
+cfa_meti_2 <- cfa(cfa_meti_model, data = data_psych_prop%>%filter(meas_rep == 2))
+fitmeasures(cfa_meti_2)[c("cfi", "tli", "rmsea", "srmr")]
+```
+
+In an next step we ran a two-level CFA ...
+```{r mcfa_meti, warning=FALSE}
+mcfa_meti_model <- "level: 1
+                    exp_w =~ exp_1 + exp_2 + exp_3 + exp_4 + exp_5 + exp_6
+                    int_w =~ int_1 + int_2 + int_3 + int_4 
+                    ben_w =~ ben_1 + ben_2 + ben_3 + ben_4
+                 
+                    
+                    level: 2
+                    exp_b =~ exp_1 + exp_2 + exp_3 + exp_4 + exp_5 + exp_6
+                    int_b =~ int_1 + int_2 + int_3 + int_4 
+                    ben_b =~ ben_1 + ben_2 + ben_3 + ben_4
+                    
+                    int_3~~0*int_3
+                    int_4~~0*int_4
+                    ben_1~~0*ben_1"
+
+mcfa_meti <- cfa(mcfa_meti_model, data = data_psych_prop, cluster = "session")
+fitmeasures(mcfa_meti)[c("cfi", "tli", "rmsea", "srmr_between", "srmr_within")]
+
+```
+
+
+
+### Reliability (McDonalds $\omega$)
+```{r rel_METI}
+# First Measurement
+semTools::reliability(cfa_meti_1)["omega",]
+# Second Measurement
+semTools::reliability(cfa_meti_2)["omega",]
+```
+
+
+## Topic specific multiplism
+### Dimensionality (CFA)
+First we specified two consecutive onedimensional CFA models
+```{r cfa_tsm}
+cfa_tsm_model <- "tsm =~ a*tsm_1 + a*tsm_2 + a*tsm_3 + a*tsm_4
+                  tsm_2 ~~ tsm_4"
+
+cfa_tsm_1 <- cfa(cfa_tsm_model, data = data_psych_prop%>%filter(meas_rep == 1))
+fitmeasures(cfa_tsm_1)[c("cfi", "tli", "rmsea", "srmr")]
+
+cfa_tsm_2 <- cfa(cfa_tsm_model, data = data_psych_prop%>%filter(meas_rep == 2))
+fitmeasures(cfa_tsm_2)[c("cfi", "tli", "rmsea", "srmr")]
+
+```
+
+In an next step we ran a two-level CFA ...
+```{r mcfa_tsm, warning= F}
+mcfa_tsm_model <- "level: 1
+                    tsm_w =~ tsm_1 + tsm_2 + tsm_3 + tsm_4
+                    
+
+                    level: 2
+                    tsm_b =~ tsm_1 + tsm_2 + tsm_3 + tsm_4
+                    tsm_2 ~~ tsm_4"
+
+mcfa_tsm <- cfa(mcfa_tsm_model, data = data_psych_prop, cluster = "session")
+fitmeasures(mcfa_tsm)[c("cfi", "tli", "rmsea", "srmr_within", "srmr_between")]
+```
+
+
+### Reliability (McDonalds $\omega$)
+```{r rel_tsm}
+# First Measurement
+semTools::reliability(cfa_tsm_1)["omega",]
+# Second Measurement
+semTools::reliability(cfa_tsm_2)["omega",]
+```
+
+
+
+
+## Treatment check
+### Dimensionality (CFA)
+We specified two consecutive onedimensional CFA models
+```{r cfa_tch}
+cfa_tch_model <- "tch =~ a*tch_1 + a*tch_2 + a*tch_3 + a*tch_4
+tch_2  ~~ tch_3"
+
+cfa_tch_1 <- cfa(cfa_tch_model, data = data_tch_n%>%
+                   filter(meas_rep == 1))
+fitmeasures(cfa_tch_1)[c("cfi", "tli", "rmsea", "srmr")]
+
+cfa_tch_2 <- cfa(cfa_tch_model, data = data_tch_n%>%filter(meas_rep == 2))
+fitmeasures(cfa_tch_2)[c("cfi", "tli", "rmsea", "srmr")]
+modificationindices(cfa_tch_1)
+```
+
+
+### Reliability (Ordinal McDonalds $\omega$)
+```{r rel_tch, warning = F}
+# First Measurement
+semTools::reliability(cfa_tch_1)["alpha",]
+# Second Measurement
+semTools::reliability(cfa_tch_2)["alpha",]
+```
+
+
+
+# Results of the treatmentcheck
+```{r, fig.width = 12, fig.height = 6}
+data_tch%>%
+  gather(variable, value, starts_with("tch_"))%>%
+  group_by(treat, variable, value)%>%
+  summarize(freq = n())%>%
+  ggplot(aes(variable, value)) + 
+  geom_point(aes(size = freq, color = freq), shape = 15) +
+  scale_size_continuous(range = c(3,15)) + 
+  scale_color_gradient(low = "grey95", high = "grey65") +
+  guides(color=guide_legend(), size = guide_legend()) +
+  facet_wrap(~treat) + 
+  theme_ipsum_ps() + 
+  ggtitle("Results of the treatment check", "Frequency per item and experimental condition")
+```
+
+
+# Graphical exploration
+## Hyp 1
+```{r hyp1_graph, fig.width=12, fig.height=6}
+data_scales_lables%>%
+  gather(Variable, Value, Experitse, Integrity, Benevolence)%>%
+  ggplot(., aes(x = Treatment, y = Value)) + 
+  geom_violin(adjust = 1.5) +
+  stat_summary(fun.data = "mean_sdl", fun.args = list(mult = 1)) +
+  coord_flip() +
+  facet_wrap(~ Variable, nrow = 1) + 
+  labs(title = "Graphical overview (Hyp 1)",
+       subtitle = "Violinplots and means ± 1*SD",
+       caption = "") +
+  ylim(1,7) +
+  hrbrthemes::theme_ipsum_ps()
+```
+
+
+
+## Hyp 2/3
+```{r hyp2_hyp3_graph, fig.width=12, fig.height=6}
+plot_hyp2_1 <- ggplot(data_scales_lables, 
+                      aes(x=`Topic specific multiplism`, y = Integrity)) + 
+  geom_jitter() +
+  facet_wrap(~ Treatment, nrow = 1) + 
+  labs(title = "Graphical overview (Hyp 2/3)",
+       subtitle = "Jitter plot per tretament") +
+  hrbrthemes::theme_ipsum_ps()
+
+
+plot_hyp2_1 + stat_smooth()
+plot_hyp2_1 + stat_smooth(method = "lm")
+
+```
+
+## Hyp 4
+```{r hyp4_graph, fig.width=8, fig.height=6, out.width="70%"}
+data_scales_lables%>%
+  ggplot(., aes(x = Treatment, y = `Topic specific multiplism`)) + 
+  geom_violin(adjust = 1.5) +
+  stat_summary(fun.data = "mean_sdl", fun.args = list(mult = 1)) +
+  coord_flip() +
+  labs(title = "Graphical overview (Hyp 4)",
+       subtitle = "Violinplots and means ± 1*SD",
+       caption = "") +
+  ylim(1,4) +
+  hrbrthemes::theme_ipsum_ps()
+```
+
+
+# Inference statistics (Hyp 1)
+## Description of the variables
+All of the following analyses are based on the data frame object `data_scales_wide` which is why we describe it here somewhat more detailed.  
+All analyses are based on measured variables *Integrity* (`Integrity`, is information source sincere, honest, just, unselfish and fair?) and *Topic Specific Multiplism* (`TSM`, is knowledge and knowing about a topic arbitrary?). As this data set is in wide format, the experimental conditions are encoded wtihin the variable names:  
+
+* `nonosp` means, that the participants of the study could learn from the grey out badges (ans corresponding explanations) within the abstract, that the authors of the study denied to use Open Practices
+* `nonvis` means, that the participants of the study could not learn if or if not the authors of the study used Open Practices
+* `visosp`means,  that the participants of the study could learn from the colored badges (ans corresponding explanations) within the abstract, that the authors of the study used Open Practices
+
+Finally, the variable `session` identified the study participants.
+
+If we look descriptively at these variables:
+```{r}
+data_scales_wide%>%
+  my_skim(.)
+```
+
+## Imputation plus parameter and BF estimation  
+
+@Herbert: This is the code you already reviewed once ...
+```{r hyp1_imp_and_bain, cache = T}
+M <- 1000
+out <- mice(data = data_scales_wide%>%select(-session),
+            m = M,
+            meth=c("norm","norm","norm",
+                   "norm","norm","norm",
+                   "norm","norm","norm",
+                   "norm","norm","norm"), 
+            diagnostics = FALSE,
+            printFlag = F)
+
+# Set up the matrices for the estimates ##############
+# setup of matrices to store multiple estimates
+mulest_hyp1 <- matrix(0,nrow=M,ncol=3) 
+# and covariance matrices
+covwithin_hyp1 <- matrix(0,nrow=3,ncol=3) 
+
+
+# Estimate the coefficients for each data frame ######
+for(i in 1:M) {
+ within_hyp1 <- lm(cbind(Integrity_nonosp,Integrity_nonvis,Integrity_visosp)~1, 
+                   data=mice::complete(out,i)) # estimate the means of the three variables
+ mulest_hyp1[i,]<-coef(within_hyp1)[1:3] # store these means in the matrix `mulres`
+ covwithin_hyp1<-covwithin_hyp1 + 1/M * vcov(within_hyp1)[1:3,1:3] # compute the averages 
+}
+
+
+# Compute the average of the estimates ###############
+estimates_hyp1 <- colMeans(mulest_hyp1)
+names(estimates_hyp1) <- c("Integrity_nonosp","Integrity_nonvis","Integrity_visosp")
+covbetween_hyp1 <- cov(mulest_hyp1) # between covariance matrix
+covariance_hyp1 <- covwithin_hyp1 + (1+1/M)*covbetween_hyp1 # total variance
+
+
+# Determine the effective and real sample sizes ######
+samp_hyp1 <- nrow(data_scales_wide) # real sample size
+nucom_hyp1<-samp_hyp1-length(estimates_hyp1)
+
+# corresponds to Equation (X) in Hoijtink, Gu, Mulder, & Rosseel (2019) ...
+lam_hyp1 <- (1+1/M)*(1/length(estimates_hyp1))* 
+  sum(diag(covbetween_hyp1 %*% 
+             MASS::ginv(covariance_hyp1))) # ... (43)
+nuold_hyp1<-(M-1)/(lam_hyp1^2) # ... (44)
+nuobs_hyp1<-(nucom_hyp1+1)/(nucom_hyp1+3)*nucom_hyp1*(1-lam_hyp1) # ... (46)
+nu_hyp1<- nuold_hyp1*nuobs_hyp1/(nuold_hyp1+nuobs_hyp1) # ... (47)
+fracmis_hyp1 <- (nu_hyp1+1)/(nu_hyp1+3)*lam_hyp1 + 2/(nu_hyp1+3) # ... (48)
+neff_hyp1<-samp_hyp1-samp_hyp1*fracmis_hyp1 # = 172 approx. 2/3* 270
+
+# coerce `covariance` to a list
+covariance_hyp1<-list(covariance_hyp1)
+
+
+# Test the hypotheses with bain ######################
+results_hyp1 <- bain(estimates_hyp1,
+               "Integrity_nonosp=Integrity_nonvis=Integrity_visosp;
+                Integrity_nonosp<Integrity_nonvis<Integrity_visosp;
+                Integrity_nonosp<Integrity_nonvis=Integrity_visosp",
+                n = neff_hyp1, Sigma=covariance_hyp1,    
+                group_parameters=3, joint_parameters = 0)
+
+print(results_hyp1)
+results_hyp1$BFmatrix
+```
+
+
+# Inference statistics (Hyp 2)
+@Herbert: This is new code. Hence it would be great if you can review it.  
+
+## Parameter estimation
+```{r hyp2_3_estimation, cache = T}
+path_mod <- "Integrity_nonosp ~ TSM_nonosp
+             Integrity_nonvis ~ TSM_nonvis             
+             Integrity_visosp ~ TSM_visosp"
+
+# Set up the matrices for the estimates ##############
+best_hyp2 <- matrix(0,nrow=M,ncol=3) # setup of matrices to store multiple estimates
+covwithin_hyp2 <- matrix(0,nrow=3,ncol=3) # and covariance matrices
+
+
+# Estimate the coefficients for each data frame ######
+for(i in 1:M) {
+ path_fit <- sem(path_mod, 
+                 data = mice::complete(out, i), 
+                 std.lv = T) # estimate the path coefficients 
+ best_hyp2[i,] <- parameterestimates(path_fit, standardized = T)%>% # store path coefficients
+                     filter(op == "~")%>%
+                     pull(std.all) 
+ covwithin_hyp2 <- covwithin_hyp2 + # compute the average of the covariance matrices
+                  1/M * lavInspect(path_fit, 
+                                   "vcov.std.all")[c("Integrity_nonosp~TSM_nonosp", 
+                                                     "Integrity_nonvis~TSM_nonvis", 
+                                                     "Integrity_visosp~TSM_visosp"),
+                                                   c("Integrity_nonosp~TSM_nonosp", 
+                                                     "Integrity_nonvis~TSM_nonvis", 
+                                                     "Integrity_visosp~TSM_visosp")]
+}
+
+# Compute the average of the estimates ###############
+estimates_hyp2 <- colMeans(best_hyp2)
+names(estimates_hyp2) <- c("Int_on_TSM_nonosp", "Int_on_TSM_nonvis", "Int_on_TSM_visosp")
+covbetween_hyp2 <- cov(best_hyp2) # between covariance matrix
+covariance_hyp2 <- covwithin_hyp2 + (1+1/M)*covbetween_hyp2 # total variance
+
+# Determine the effective and real sample sizes ######
+samp_hyp2 <- nrow(data_scales_wide) # real sample size
+nucom_hyp2 <- samp_hyp2-length(estimates_hyp2)
+
+# corresponds to Equation (X) in Hoijtink, Gu, Mulder, & Rosseel (2019) ...
+lam_hyp2 <- (1+1/M)*(1/length(estimates_hyp2))* 
+  sum(diag(covbetween_hyp2 %*% 
+             MASS::ginv(covariance_hyp2))) # ... (43)
+nuold_hyp2 <- (M-1)/(lam_hyp2^2) # ... (44)
+nuobs_hyp2 <- (nucom_hyp2+1)/(nucom_hyp2+3)*nucom_hyp2*(1-lam_hyp2) # ... (46)
+nu_hyp2 <- nuold_hyp2*nuobs_hyp2/(nuold_hyp2+nuobs_hyp2) # ... (47)
+fracmis_hyp2 <- (nu_hyp2+1)/(nu_hyp2+3)*lam_hyp2 + 2/(nu_hyp2+3) # ... (48)
+neff_hyp2 <- samp_hyp2-samp_hyp2*fracmis_hyp2 # = 114 approx. 2/3* 270
+
+# coerce `covariance` to a list
+covariance_hyp2 <- list(covariance_hyp2)
+```
+
+## Bayes Factor estimation (Hyp 2)
+```{r hyp2_BF}
+results_hyp2 <- bain(estimates_hyp2, 
+                     "Int_on_TSM_nonosp < 0 & Int_on_TSM_nonvis < 0 & Int_on_TSM_visosp < 0;
+                     Int_on_TSM_nonosp = 0 & Int_on_TSM_nonvis = 0 & Int_on_TSM_visosp = 0",
+                    Sigma = covariance_hyp2,
+                    n = neff_hyp2,
+                    group_parameters = 3,
+                    joint_parameters = 0,
+                    standardize = F)
+print(results_hyp2)
+results_hyp2$BFmatrix
+```
+
+
+# Inference statistics (Hyp 3)
+@Herbert: Again new code. 
+```{r hyp3_BF}
+results_hyp3 <- bain(estimates_hyp2, 
+                    "Int_on_TSM_nonosp < Int_on_TSM_nonvis < Int_on_TSM_visosp;
+                     (Int_on_TSM_nonosp, Int_on_TSM_nonvis) < Int_on_TSM_visosp;
+                     Int_on_TSM_nonosp = Int_on_TSM_nonvis = Int_on_TSM_visosp",
+                    Sigma = covariance_hyp2,
+                    n = neff_hyp2,
+                    group_parameters = 3,
+                    joint_parameters = 0,
+                    standardize = T)
+
+print(results_hyp3)
+results_hyp3$BFmatrix
+```
+
+
+# Inference statistics (Hyp 4)
+```{r hyp4_estimation_BF}
+# Set up the matrices for the estimates ##############
+mulest_hyp4 <- matrix(0,nrow=M,ncol=3) # setup of matrices to store multiple estimates
+covwithin_hyp4 <- matrix(0,nrow=3,ncol=3) # and covariance matrices
+
+
+# Estimate the coefficients for each data frame ######
+for(i in 1:M) {
+ within_hyp4 <- lm(cbind( TSM_nonosp, TSM_nonvis, TSM_visosp) ~ 1, 
+                   data=mice::complete(out,i)) # estimate the means of the three variables
+ mulest_hyp4[i,]<-coef(within_hyp4)[1:3] # store these means in the matrix `mulres`
+ covwithin_hyp4<-covwithin_hyp4 + 1/M * vcov(within_hyp4)[1:3,1:3] # compute the averages 
+}
+
+
+# Compute the average of the estimates ###############
+estimates_hyp4 <- colMeans(mulest_hyp4)
+names(estimates_hyp4) <- c("TSM_nonosp","TSM_nonvis","TSM_visosp")
+covbetween_hyp4 <- cov(mulest_hyp4) # between covariance matrix
+covariance_hyp4 <- covwithin_hyp4 + (1+1/M)*covbetween_hyp4 # total variance
+
+
+# Determine the effective and real sample sizes ######
+samp_hyp4 <- nrow(data_scales_wide) # real sample size
+nucom_hyp4<-samp_hyp4-length(estimates_hyp4)
+
+# corresponds to Equation (X) in Hoijtink, Gu, Mulder, & Rosseel (2019) ...
+lam_hyp4 <- (1+1/M)*(1/length(estimates_hyp4))* 
+  sum(diag(covbetween_hyp4 %*% 
+             MASS::ginv(covariance_hyp4))) # ... (43)
+nuold_hyp4<-(M-1)/(lam_hyp4^2) # ... (44)
+nuobs_hyp4<-(nucom_hyp4+1)/(nucom_hyp4+3)*nucom_hyp4*(1-lam_hyp4) # ... (46)
+nu_hyp4<- nuold_hyp4*nuobs_hyp4/(nuold_hyp4+nuobs_hyp4) # ... (47)
+fracmis_hyp4 <- (nu_hyp4+1)/(nu_hyp4+3)*lam_hyp4 + 2/(nu_hyp4+3) # ... (48)
+neff_hyp4<-samp_hyp4-samp_hyp4*fracmis_hyp4 # = 172 approx. 2/3* 270
+
+# coerce `covariance` to a list
+covariance_hyp4<-list(covariance_hyp4)
+
+
+# Test the hypotheses with bain ######################
+results_hyp4 <- bain(estimates_hyp4,
+               "TSM_nonosp=TSM_nonvis=TSM_visosp;
+                TSM_nonosp>TSM_nonvis>TSM_visosp;
+                (TSM_nonosp,TSM_nonvis)>TSM_visosp",
+                n = neff_hyp4, Sigma=covariance_hyp4,    
+                group_parameters=3, joint_parameters = 0)
+
+print(results_hyp4)
+results_hyp4$BFmatrix
+```
+
+
+

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<title>(Re)Building trust?</title>
+
+
+
+
+
+<link rel="stylesheet" href="www/style.css" type="text/css" />
+
+<!--
+Font-awesome icons ie github or twitter
+-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/brands.css" integrity="sha384-n9+6/aSqa9lBidZMRCQHTHKJscPq6NW4pCQBiMmHdUCvPN8ZOg2zJJTkC7WIezWv" crossorigin="anonymous">
+
+<!--
+Google fonts api stuff
+-->
+<link href='https://fonts.googleapis.com/css?family=Special Elite' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Rasa' rel='stylesheet'>
+
+<!--
+Here are the required style attributes for css to make this poster work :)
+-->
+<style>
+@page {
+size: 36in 48in;
+margin: 0;
+padding: 0;
+}
+body {
+margin: 0px;
+padding: 0px;
+width: 36in;
+height: 48in;
+text-align: justify;
+font-size: 45px;
+line-height: 1.05;
+}
+/* RMarkdown Class Styles */
+/* center align leaflet map,
+from https://stackoverflow.com/questions/52112119/center-leaflet-in-a-rmarkdown-document */
+.html-widget {
+margin: auto;
+position: sticky;
+margin-top: 2cm;
+margin-bottom: 2cm;
+}
+.leaflet.html-widget.html-widget-static-bound.leaflet-container.leaflet-touch.leaflet-fade-anim.leaflet-grab.leaflet-touch-drag.leaflet-touch-zoom {
+position: sticky;
+width: 100%;
+}
+pre.sourceCode.r {
+background-color: #dddddd40;
+border-radius: 4mm;
+padding: 4mm;
+width: 75%;
+margin: auto;
+margin-top: 1em;
+margin-bottom: 1em;
+/* align-items: center; */
+}
+code.sourceCode.r{
+background-color: transparent;
+font-size: 20pt;
+border-radius: 2mm;
+}
+code {
+font-size: 25pt;
+font-family: monospace;
+background-color: #c5797424;
+color: #a51e37;
+padding: 1.2mm;
+line-height: 1;
+border-radius: 2mm;
+}
+caption {
+margin-bottom: 10px;
+font-size: 20pt;
+font-style: italic;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #c5797420;
+}
+.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td{
+  border-spacing: 0;
+  font-size: 40%;
+  border-style: none;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 1em;
+  padding-left: 1em;
+  line-height: 1em;
+}
+table {
+  margin: auto;
+}
+th {
+  padding-left: 5mm;
+  padding-right: 5mm;
+}
+.caption {
+font-size: 20pt;
+font-style: italic;
+padding-top: 0;
+}
+.references {
+font-size: 20px;
+line-height: 90%;
+}
+/* Create three unequal columns that floats next to each other */
+.column {
+float: left;
+padding: 0px;
+}
+.outer {
+width: 36in;
+height: calc(48in *  (1 - 0.3 - 0.05 - 0.01) );
+-webkit-column-count: 3; /* Chrome, Safari, Opera */
+-moz-column-count: 3; /* Firefox */
+column-count: 3;
+-webkit-column-fill: auto;
+-moz-column-fill: auto;
+column-fill: auto;
+column-gap: 0;
+padding-left: 0cm;
+padding-right: 0cm;
+/* -webkit-column-rule-width: 50%;
+-moz-column-rule-width: 50%;
+column-rule-width: 50%; */
+-webkit-column-rule-style: none;
+-moz-column-rule-style: none;
+column-rule-style: none;
+-webkit-column-rule-color: black;
+-moz-column-rule-color: black;
+column-rule-color: black;
+background-color: #ffffff;
+font-family: Rasa;
+margin-top: calc(48in *  0.3 );
+padding-top: 1em;
+padding-bottom: 1em;
+}
+span.citation {
+  color: #c57974;
+  font-weight: bold;
+}
+a {
+text-decoration: none;
+color: #c57974;
+}
+#title {
+font-size: 115pt;
+text-align: left;
+margin: 0;
+line-height: 98%;
+border-bottom: 0;
+font-weight: normal;
+background: 0;
+}
+#author {
+color: #a51e37;
+margin: 0;
+line-height: 85%;
+font-size: 1.17em;
+}
+#affiliation {
+padding-top: 0.1em;
+color: ;
+font-style: italic;
+font-size: 25px;
+margin: 0;
+}
+sup {
+color: #82b9a0;
+}
+.affiliation sup {
+font-size: 20px;
+}
+.author {
+text-align: left;
+}
+.author sup {
+font-size: 30px;
+}
+.author_extra {
+color: #c57974;
+margin: 0;
+line-height: 85%;
+font-size: 35px;
+text-align: left;
+}
+.outer h1, h2, h3, h4, h5, h6 {
+text-align: center;
+margin: 0;
+font-weight: bold;
+}
+.section h1 {
+  text-align:center;
+  padding-bottom:5px;
+  background:
+    linear-gradient(
+      to left,
+      #ffffff 1%,
+      #ffffff 20%,
+      #a51e3775 33%,
+      #a51e37 50%,
+      #a51e3775 66%,
+      #ffffff 80%,
+      #ffffff 99%
+    )
+    left
+    bottom
+    #ffffff
+    no-repeat;
+  background-size:100% 5px ;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+.outer h2 {
+text-align: center;
+}
+.outer p, .level2 {
+color: #000000;
+}
+.outer ol {
+padding-left: 8%;
+padding-right: 8%;
+text-align: left;
+}
+.main {
+width: 36in;
+height: calc(48in * 0.3);
+position: absolute;
+background-color: #a51e37;
+color: #ffffff90;
+font-family: Special Elite;
+background-image: linear-gradient(#a51e37 50%,#c57974);
+}
+.main strong {
+color: #ffffff;
+}
+.main strong > sup {
+color: #ffffff;
+}
+.main sup {
+color: #ffffff90;
+}
+#main-img-left {
+width: 10%;
+left: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+#main-img-center {
+width: 10%;
+left: calc(36in * 0.45);
+bottom: 0.5in;
+position: absolute;
+}
+#main-img-right {
+width: 10%;
+right: 0.5in;
+bottom: 0.2in;
+position: absolute;
+}
+.main p {
+font-size: 150px;
+font-family: Special Elite;
+text-align: center;
+margin: 0;
+position: absolute;
+top: 50%;
+-ms-transform: translateY(-50%);
+transform: translateY(-50%);
+margin-left: 1em;
+}
+.fab {
+color: #00000030;
+font-size: 25px;
+}
+.twitter, i {
+color: #00000030;
+font-size: 35px;
+text-decoration: none;
+}
+a.email {
+text-decoration: none;
+color: #00000030;
+font-size: 35px;
+}
+.envelope {
+color: #00000030;
+font-size: 5px;
+text-decoration: none;
+}
+.poster_wrap {
+width: 36in;
+height: 48in;
+padding: 0cm;
+}
+.main_bottom {
+width: 36in;
+height: calc(48in * 0.05);
+margin-top: calc(48in * (1 - 0.05));
+position: absolute;
+background-color: #a51e37;
+background-image: linear-gradient(#c57974 10%, #a51e37);
+}
+.section {
+  padding-left: 10mm;
+  padding-right: 10mm;
+}
+span > #tab:mytable {
+  font-weight: bold;
+}
+.orcid img {
+  width: 3%;
+}
+.emphasis {
+  background-color: #008080;
+  color: #ffffff;
+  border: solid #0b2045 3mm;
+  margin: 1em;
+  padding-left: 0;
+  padding-right: 0;
+}
+.emphasis h1 {
+  font-weight: bold;
+  background: none;
+  background-color: #0b2045;
+  padding-bottom: 5mm;
+  padding-top: 1mm;
+  margin-top: -1mm;
+  margin-right: -1mm;
+  margin-left: -1mm;
+}
+.emphasis blockquote {
+  border: 0;
+}
+.emphasis ol {
+  padding: 0;
+  padding-left: 8%;
+  font-size: 100%;
+  font-weight: bold;
+}
+.emphasis p {
+  color: #ffffff;
+}
+</style>
+</head>
+<body>
+
+
+<div class="poster_wrap">
+
+<div class="column outer">
+<div class="section">
+<h1 id="title"><strong>(Re)Building trust?</strong></h1><br>
+<h3 id="author" class="author">
+
+<strong>Jürgen Schneider</strong><sup> 1, <a class="orcid" href="https://orcid.org/0000-0002-3772-4198"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup><br>
+<a class="twitter" href="https://mobile.twitter.com/artzyatfailing2"><i class="fab fa-twitter"></i>&nbsp;&nbsp;@artzyatfailing2</a><br>
+
+<a class='envelope'><i class="fas fa-envelope"></i></a> <a href="mailto:juergen.schneider@uni-tuebingen.de" class="email">juergen.schneider@uni-tuebingen.de</a> <br>
+  </h3>
+
+<h5 id="author_extra", class="author_extra">
+ Samuel Merk<sup>1, <a class="orcid" href="https://orcid.org/0000-0003-2594-5337"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>
+ Tom Rosman<sup>2, <a class="orcid" href="https://orcid.org/0000-0002-5386-0499"><img src="https://raw.githubusercontent.com/brentthorne/posterdown/master/images/orcid.jpg"></a></sup>
+</h5>
+
+
+<p id="affiliation" class="affiliation">
+<sup>1</sup> University of Tübingen<br> <sup>2</sup> Leibniz Institute for Psychology Information
+</p>
+</div>
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p><code>Trust in science and scientists</code> is generally high, but drops when learning about challenges in replication <span class="citation">(Hendriks et al., <a href="#ref-hendriks2020">2020</a>)</span>. Approaches to outline ‘open reforms’ in science on a general level do not seem to rebuild trust in science <span class="citation">(Anvari &amp; Lakens, <a href="#ref-anvarietal.2019">2019</a>; Wingen et al., <a href="#ref-wingenetal.2019">2019</a>)</span>. We thus shift the focus to concrete applications of open science practices (OSP) in journal articles such as <code>open practice badges</code>. As their effect may interact with epistemic beliefs <span class="citation">(Hofer &amp; Pintrich, <a href="#ref-hofer1997">1997</a>)</span>, we further will investigate their role in this context.<br />
+<br />
+</p>
+<div id="research-questions" class="section level2">
+<h2>Research Questions</h2>
+<ol style="list-style-type: decimal">
+<li>Does the <strong>visibility of OSP</strong> influence perceived <strong>trustworthiness</strong> in scientists?</li>
+<li>Is there a relationship between <strong>multiplistic epistemic beliefs</strong> and the perceived <strong>trustworthiness</strong> in scientists?</li>
+<li>Do <strong>multiplistic epistemic beliefs</strong> moderate the effect of [1.]?</li>
+<li>Does the <strong>visibility of OSP</strong> influence <strong>multiplistic epistemic beliefs</strong>?</li>
+</ol>
+<p>Preregistration: <a href="https://osf.io/ybs7f">osf.io/ybs7f</a><br />
+<br />
+<br />
+</p>
+</div>
+</div>
+<div id="methods" class="section level1">
+<h1>Methods</h1>
+<p><strong>Sample:</strong> 270 student teachers</p>
+<p><strong>Design:</strong></p>
+<ul>
+<li>Stimuli: title pages of artificial journal article research reports</li>
+<li>Conditions:
+<ul>
+<li>visOSP: author <em>engaged</em> in OSP, visible through badges</li>
+<li>nonOSP: author <em>did not engage</em> in OSP, visible through badges</li>
+<li>nonvis: no information about engagement in OSP, no badges</li>
+</ul></li>
+<li>randomized assignment to two of the conditions</li>
+</ul>
+<p><br />
+</p>
+<div class="figure" style="text-align: center"><span id="fig:condition"></span>
+<img src="www/cm_visOSP_poster.png" alt="Stimuli of condition visOSP" width="100%" />
+<p class="caption">
+Figure 1: Stimuli of condition visOSP
+</p>
+</div>
+<p><br />
+</p>
+<p><strong>Measures:</strong></p>
+<ul>
+<li>Laypeople’s Trust in Experts <span class="citation">(Hendriks et al., <a href="#ref-hendriksetal.2015">2015</a>)</span></li>
+<li>Topic specific multiplistic epistemic beliefs <span class="citation">(Merk et al., <a href="#ref-merketal.2017">2017</a>)</span></li>
+<li>Topic specific treatment check</li>
+</ul>
+<p>Questionnaire: <a href="https://rbt-demo.formr.org">rbt-demo.formr.org</a><br />
+<br />
+<br />
+<br />
+</p>
+</div>
+<div id="results" class="section level1">
+<h1>Results</h1>
+<p><br />
+</p>
+<p><a href=""><strong>Research Question 1</strong></a></p>
+<p>H1: <span class="math inline">\(\mu_{nonOSP}=\mu_{nonvis}=\mu_{visOSP}\)</span><br />
+H2: <span class="math inline">\(\mu_{nonOSP}&lt;\mu_{nonvis}&lt;\mu_{visOSP}\)</span><br />
+H3: <span class="math inline">\(\mu_{nonOSP}&lt;\mu_{nonvis}=\mu_{visOSP}\)</span></p>
+<p>Highest posterior probability for H2.<br />
+<span class="math inline">\(BF_{21}= 5.24\cdot10^7\)</span>; <span class="math inline">\(BF_{23}= 5.60\cdot10^1\)</span></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-2"></span>
+<img src="OSC_Poster_files/figure-html/unnamed-chunk-2-1.png" alt="Trustworthiness subscales by treatment. Violinplots and means ± 1*SD" width="100%" />
+<p class="caption">
+Figure 2: Trustworthiness subscales by treatment. Violinplots and means ± 1*SD
+</p>
+</div>
+<p><a href=""><strong>Research Question 2</strong></a></p>
+<p>H1: <span class="math inline">\(r_{mult-trust}&lt;0\)</span><br />
+H2: <span class="math inline">\(r_{mult-trust}=0\)</span></p>
+<p>Highest posterior probability for H1.<br />
+<span class="math inline">\(BF_{12}= 1.17\cdot10^{21}\)</span></p>
+<p><a href=""><strong>Research Question 3</strong></a></p>
+<p>H1: <span class="math inline">\(r_{(mult-trust)nonOSP}&lt;r_{(mult-trust)nonvis}&lt;r_{(mult-trust)visOSP}\)</span><br />
+H2: <span class="math inline">\((r_{(mult-trust)nonOSP}, r_{(mult-trust)nonvis})&lt;r_{(mult-trust)visOSP}\)</span>
+H3: <span class="math inline">\(r_{(mult-trust)nonOSP}=r_{(mult-trust)nonvis}=r_{(mult-trust)visOSP}\)</span></p>
+<p>Highest posterior probability for H3.<br />
+<span class="math inline">\(BF_{31}= 13.76\)</span>; <span class="math inline">\(BF_{32}= 17.38\)</span></p>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-3"></span>
+<img src="OSC_Poster_files/figure-html/unnamed-chunk-3-1.png" alt="Multiplistic epistemic beliefs with integrity per treatment." width="100%" />
+<p class="caption">
+Figure 3: Multiplistic epistemic beliefs with integrity per treatment.
+</p>
+</div>
+<p><a href=""><strong>Research Question 4</strong></a></p>
+<p>H1: <span class="math inline">\(\mu_{nonOSP}=\mu_{nonvis}=\mu_{visOSP}\)</span><br />
+H2: <span class="math inline">\(\mu_{nonOSP}&gt;\mu_{nonvis}&gt;\mu_{visOSP}\)</span><br />
+H3: <span class="math inline">\((\mu_{nonOSP},\mu_{nonvis})&gt;\mu_{visOSP}\)</span></p>
+Highest posterior probability for H2.<br />
+<span class="math inline">\(BF_{21}= 7.32\)</span>; <span class="math inline">\(BF_{23}= 1.85\)</span>
+<div class="figure" style="text-align: center"><span id="fig:unnamed-chunk-4"></span>
+<img src="OSC_Poster_files/figure-html/unnamed-chunk-4-1.png" alt="Treatment on multiplistic epistemic beliefs. Violinplots and means ± 1*SD" width="100%" />
+<p class="caption">
+Figure 4: Treatment on multiplistic epistemic beliefs. Violinplots and means ± 1*SD
+</p>
+</div>
+<div id="references" class="section level2 unnumbered">
+<h2>References</h2>
+<div id="refs" class="references">
+<div id="ref-anvarietal.2019">
+<p>Anvari, F., &amp; Lakens, D. (2019). <em>The Replicability Crisis and Public Trust in Psychological Science</em> [Preprint]. PsyArXiv. <a href="https://doi.org/10.31234/osf.io/vtmpc">https://doi.org/10.31234/osf.io/vtmpc</a></p>
+</div>
+<div id="ref-hendriks2020">
+<p>Hendriks, F., Kienhues, D., &amp; Bromme, R. (2020). Replication crisis = trust crisis? The effect of successful vs failed replications on laypeople’s trust in researchers and research. <em>Public Understanding of Science</em>, 0963662520902383. <a href="https://doi.org/10.1177/0963662520902383">https://doi.org/10.1177/0963662520902383</a></p>
+</div>
+<div id="ref-hendriksetal.2015">
+<p>Hendriks, F., Kienhues, D., &amp; Bromme, R. (2015). Measuring Laypeople’s Trust in Experts in a Digital Age: The Muenster Epistemic Trustworthiness Inventory (METI). <em>PLOS ONE</em>, <em>10</em>(10). <a href="https://doi.org/10.1371/journal.pone.0139309">https://doi.org/10.1371/journal.pone.0139309</a></p>
+</div>
+<div id="ref-hofer1997">
+<p>Hofer, B. K., &amp; Pintrich, P. R. (1997). The Development of Epistemological Theories: Beliefs About Knowledge and Knowing and Their Relation to Learning. <em>Review of Educational Research</em>, <em>67</em>(1), 88–140. <a href="https://doi.org/10.3102/00346543067001088">https://doi.org/10.3102/00346543067001088</a></p>
+</div>
+<div id="ref-merketal.2017">
+<p>Merk, S., Kelava, A., Schneider, J., Syring, M., &amp; Bohl, T. (2017). Epistemologische Überzeugungen von Lehramtsstudierenden bezüglich pädagogischen Wissens: Gegenstands-, Quellen- und Kontextspezifität. <em>Journal for Educational Research Online</em>, <em>9</em>(1), 169–189.</p>
+</div>
+<div id="ref-wingenetal.2019">
+<p>Wingen, T., Berkessel, J., &amp; Englich, B. (2019). <em>No Replication, no Trust? How Low Replicability Influences Trust in Psychology</em> [Preprint]. Open Science Framework. <a href="https://doi.org/10.31219/osf.io/4ukq5">https://doi.org/10.31219/osf.io/4ukq5</a></p>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="main">
+<p><strong>Open Science Badges</strong> foster lay people’s <strong>trust in scientists</strong></p>
+</div>
+<div class="main_bottom">
+<img id="main-img-left" src=www/logo.png>
+<img id="main-img-center" src=>
+<img id="main-img-right" src=www/Logo_ZPID_rgb.png>
+</div>
+</div>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+var script = document.createElement("script");
+script.type = "text/javascript";
+var src = "true";
+if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+if (location.protocol !== "file:" && /^https?:/.test(src))
+src = src.replace(/^https?:/, '');
+script.src = src;
+document.getElementsByTagName("head")[0].appendChild(script);
+})();
+</script>
+
+
+</body>
+</html>

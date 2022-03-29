@@ -1,0 +1,300 @@
+---
+main_topsize: 0.3 #percent coverage of the poster
+main_bottomsize: 0.05
+#ESSENTIALS
+title: '**(Re)Building trust?**'
+author:
+  - name: '**Jürgen Schneider**'
+    affil: 1
+    main: true
+    orcid: '0000-0002-3772-4198'
+    twitter: artzyatfailing2 
+    email: juergen.schneider@uni-tuebingen.de
+  - name: Samuel Merk
+    affil: 1
+    main: false
+    orcid: '0000-0003-2594-5337'
+    email: 'samuel.merk@uni-tuebingen.de'
+  - name: Tom Rosman
+    affil: 2
+    orcid: "0000-0002-5386-0499"
+    email: 'tr@leibniz-psychology.org'
+affiliation:
+  - num: 1
+    address: University of Tübingen
+  - num: 2
+    address: Leibniz Institute for Psychology Information
+main_findings:
+  - "**Open Science Badges** foster lay people's **trust in scientists**"
+logoleft_name: www/logo.png
+logoright_name: www/Logo_ZPID_rgb.png
+logocenter_name: 
+primary_colour: '#a51e37'
+secondary_colour: '#c57974'
+accent_colour: '#82b9a0'
+title_textsize: "115pt"
+output: 
+  posterdown::posterdown_betterport:
+    self_contained: false
+    pandoc_args: --mathjax
+    highlight: espresso
+    number_sections: false
+link-citations: true
+bibliography: 
+  - www/references.bib
+  - www/sas-zotero-library.bib
+csl: "https://raw.githubusercontent.com/citation-style-language/styles/master/apa.csl"
+css: www/style.css
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      tidy = FALSE,
+                      message = FALSE,
+                      fig.align = 'center',
+                      out.width = "100%")
+options(knitr.table.format = "html") 
+
+##### Download Bibliography ##### #
+# download.file("https://drive.google.com/uc?export=download&id=1wuMqL_Z8T9rxuGvn0VP6siag90kHDm2O",
+#               "www/references.bib", overwrite = T)
+# download.file("https://drive.google.com/uc?authuser=0&id=1TXJ-bD_3VA1g2BtJH38NdKetFRlnmpED&export=download", "../www/sas-zotero-library.bib", overwrite = T)
+
+#### build html and pdf ######### #
+# run in console:
+# pagedown::chrome_print("6_dissemination/OSC_Poster.Rmd")
+```
+
+# Introduction
+
+`Trust in science and scientists` is generally high, but drops when learning about challenges in replication [@hendriks2020]. Approaches to outline 'open reforms' in science on a general level do not seem to rebuild trust in science [@wingenetal.2019; @anvarietal.2019]. We thus shift the focus to concrete applications of open science practices (OSP) in journal articles such as `open practice badges`. As their effect may interact with epistemic beliefs [@hofer1997], we further will investigate their role in this context.
+\
+\
+
+## Research Questions
+
+1. Does the __visibility of OSP__ influence perceived __trustworthiness__ in scientists?
+2. Is there a relationship between __multiplistic epistemic beliefs__ and the perceived __trustworthiness__ in scientists?
+3. Do __multiplistic epistemic beliefs__  moderate the effect of [1.]?
+4. Does the __visibility of OSP__ influence __multiplistic epistemic beliefs__?
+
+Preregistration: [osf.io/ybs7f](https://osf.io/ybs7f)
+\
+\
+\
+
+# Methods
+
+__Sample:__ 270 student teachers  
+
+
+__Design:__  
+
+* Stimuli: title pages of artificial journal article research reports 
+* Conditions: 
+  * visOSP: author _engaged_ in OSP, visible through badges
+  * nonOSP: author _did not engage_ in OSP, visible through badges
+  * nonvis: no information about engagement in OSP, no badges
+* randomized assignment to two of the conditions
+
+\
+
+```{r condition, echo=FALSE, out.width='100%', fig.cap='Stimuli of condition visOSP', class = 'blueborder'}
+knitr::include_graphics('www/cm_visOSP_poster.png')
+# ![](www/cm_visOSP_poster.png)
+```
+
+
+
+\
+
+__Measures:__
+
+* Laypeople’s Trust in Experts [@hendriksetal.2015]
+* Topic specific multiplistic epistemic beliefs [@merketal.2017]
+* Topic specific treatment check
+
+Questionnaire: [rbt-demo.formr.org](https://rbt-demo.formr.org)
+\
+\
+\
+\
+
+# Results
+
+\
+
+[__Research Question 1__]()
+
+H1: $\mu_{nonOSP}=\mu_{nonvis}=\mu_{visOSP}$  
+H2: $\mu_{nonOSP}<\mu_{nonvis}<\mu_{visOSP}$  
+H3: $\mu_{nonOSP}<\mu_{nonvis}=\mu_{visOSP}$  
+  
+Highest posterior probability for H2.  
+$BF_{21}= 5.24\cdot10^7$; $BF_{23}= 5.60\cdot10^1$  
+
+
+````{r , echo = F, fig.cap = "Trustworthiness subscales by treatment. Violinplots and means ± 1*SD", fig.width = 12, fig.height = 8}
+library(tidyverse)
+# load data object `x` which contains the data
+load("www/rbt.RData") 
+# convert to tibble
+data_longest <- x%>%
+  as_tibble()%>%
+  mutate(session = as_factor(session))
+
+# A function to inverse the METI items
+inv7fct <- function(x) (8-as.numeric(x))
+
+data_psych_prop_METI <- 
+data_longest%>%
+  filter(substr(variable, 1, 3) == "tru")%>% # see codebook
+  mutate(item = substr(variable, 5, 9))%>%
+  select(session, item, treat, value)%>%
+  pivot_wider(names_from = item,
+              values_from = value)%>%
+  group_by(session)%>%
+  mutate(meas_rep = 1:n(),
+         treat = as.factor(treat))%>%
+  ungroup()%>%
+  mutate_at(vars(exp_1:ben_4),
+            list(~inv7fct(.))) # recoding 1-->5, 2-->4, ...))
+
+data_psych_prop_tsm <- 
+data_longest%>%
+  filter(substr(variable, 1, 3) == "tsm")%>% # see codebook
+  mutate(item = substr(variable, 1, 5))%>%
+  select(session, item, treat, value)%>%
+  pivot_wider(names_from = item,
+              values_from = value)%>%
+  group_by(session)%>%
+  mutate(meas_rep = 1:n(),
+         treat = as.factor(treat))%>%
+  ungroup()%>%
+  mutate_at(vars(starts_with("tsm")),
+            list(~as.numeric(as.factor(.))))
+  
+# Join the data frames
+data_psych_prop_joined <- full_join(data_psych_prop_METI, data_psych_prop_tsm)%>%
+  mutate(treat = as_factor(treat))
+
+# create a list of questionnaire session which are empty
+PID_list <- data_psych_prop_joined%>%
+  mutate(count_NAs = rowMeans(is.na(.)))%>%
+  filter(count_NAs < .8)%>%
+  pull(session)%>%
+  unique()
+
+# data frame with valid cases (not complete NA)
+data_psych_prop <- data_psych_prop_joined%>%
+  filter(session %in% PID_list)
+
+# data frames with sum scales
+data_scales <- data_psych_prop%>%
+  mutate(Treatment = factor(treat, levels = c("nonosp", "nonvis", "visosp")),
+         Experitse = rowMeans(data.frame(exp_1, exp_2, exp_3, 
+                                   exp_4, exp_5, exp_6), na.rm = T),
+         Integrity = rowMeans(data.frame(int_1, int_2, int_3, int_4), na.rm = T),
+         Benevolence = rowMeans(data.frame(ben_1, ben_2, ben_3, ben_4), na.rm = T),
+         TSM = rowMeans(data.frame(tsm_1, tsm_2, tsm_3, tsm_4), na.rm = T))
+
+data_scales_lables <- data_psych_prop%>%
+  mutate(Treatment = factor(treat, levels = c("nonosp", "nonvis", "visosp")),
+         Treatment = fct_recode(Treatment,
+                                `Visible OSP (badges)` = "visosp",
+                                `No Information about OSP` = "nonvis",
+                                `Visible rejection of OSP\n(greyed out badges)` = "nonosp"),
+         Experitse = rowMeans(data.frame(exp_1, exp_2, exp_3, 
+                                   exp_4, exp_5, exp_6), na.rm = T),
+         Integrity = rowMeans(data.frame(int_1, int_2, int_3, int_4), na.rm = T),
+         Benevolence = rowMeans(data.frame(ben_1, ben_2, ben_3, ben_4), na.rm = T),
+        `Topic specific multiplism` = rowMeans(data.frame(tsm_1, tsm_2, tsm_3, tsm_4), na.rm = T))
+
+data_scales_wide <- data_scales%>%
+  select(Experitse, Integrity, Benevolence,
+         TSM, Treatment, session)%>%
+  gather(Variable, Value, -session, -Treatment)%>%
+  mutate(Variable2 = paste(Variable, Treatment, sep = "_"))%>%
+  select(-Variable, -Treatment)%>%
+  spread(Variable2, Value)
+
+data_scales_lables_wide <- data_scales_lables%>%
+  select(Experitse, Integrity, Benevolence,
+         `Topic specific multiplism`, Treatment, session)%>%
+  gather(Variable, Value, -session, -Treatment)%>%
+  mutate(Variable2 = paste(Variable, Treatment, sep = "_"))%>%
+  select(-Variable, -Treatment)%>%
+  spread(Variable2, Value)
+
+library(hrbrthemes)
+
+data_scales_lables%>%
+  gather(Variable, Value, Experitse, Integrity, Benevolence)%>%
+  ggplot(., aes(x = Treatment, y = Value)) + 
+  geom_violin(adjust = 1.5) +
+  stat_summary(fun.data = "mean_sdl", fun.args = list(mult = 1)) +
+  coord_flip() +
+  facet_wrap(~ Variable, nrow = 1) + 
+  labs(title = "",
+       subtitle = "",
+       caption = "") +
+  ylim(1,7) +
+  xlab("") +
+  hrbrthemes::theme_ipsum_ps()
+```
+
+
+[__Research Question 2__]()
+
+H1: $r_{mult-trust}<0$  
+H2: $r_{mult-trust}=0$  
+
+Highest posterior probability for H1.  
+$BF_{12}= 1.17\cdot10^{21}$  
+
+[__Research Question 3__]()
+
+H1: $r_{(mult-trust)nonOSP}<r_{(mult-trust)nonvis}<r_{(mult-trust)visOSP}$  
+H2: $(r_{(mult-trust)nonOSP}, r_{(mult-trust)nonvis})<r_{(mult-trust)visOSP}$
+H3: $r_{(mult-trust)nonOSP}=r_{(mult-trust)nonvis}=r_{(mult-trust)visOSP}$  
+
+Highest posterior probability for H3.  
+$BF_{31}= 13.76$; $BF_{32}= 17.38$
+
+```{r, echo = F, fig.cap="Multiplistic epistemic beliefs with integrity per treatment.", fig.width= 12}
+plot_rq2_1 <- ggplot(data_scales_lables, aes(x=`Topic specific multiplism`, y = Integrity)) + 
+  geom_jitter() +
+  facet_wrap(~ Treatment, nrow = 1) + 
+  labs(title = "",
+       subtitle = "") +
+  hrbrthemes::theme_ipsum_ps()
+
+plot_rq2_1 + stat_smooth(method = "lm")
+```
+
+[__Research Question 4__]()
+
+
+H1: $\mu_{nonOSP}=\mu_{nonvis}=\mu_{visOSP}$  
+H2: $\mu_{nonOSP}>\mu_{nonvis}>\mu_{visOSP}$  
+H3: $(\mu_{nonOSP},\mu_{nonvis})>\mu_{visOSP}$  
+  
+Highest posterior probability for H2.  
+$BF_{21}= 7.32$; $BF_{23}= 1.85$
+```{r, echo = F, fig.cap = "Treatment on multiplistic epistemic beliefs. Violinplots and means ± 1*SD", fig.width = 12, fig.height = 7}
+data_scales_lables%>%
+  ggplot(., aes(x = Treatment, y = `Topic specific multiplism`)) + 
+  geom_violin(adjust = 1.5) +
+  stat_summary(fun.data = "mean_sdl", fun.args = list(mult = 1)) +
+  coord_flip() +
+  labs(title = "",
+       subtitle = "",
+       caption = "") +
+  ylim(1,4) +
+  xlab("") +
+  hrbrthemes::theme_ipsum_ps()
+```
+
+
+## References

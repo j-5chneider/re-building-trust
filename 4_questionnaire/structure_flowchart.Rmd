@@ -1,0 +1,103 @@
+---
+title: "Structure of questionnaire"
+description: |
+  3x2x2 design
+author:
+  - name: Jürgen Schneider 
+    url: https://uni-tuebingen.de/de/28915
+    affiliation: University of Tübingen
+date: "`r Sys.Date()`"
+output: radix::radix_article
+---
+
+# Associated Research Project
+
+[See OSF Project](http://doi.org/10.17605/OSF.IO/VGBRS)
+
+# randomized blocks
+
+creating random blocks to import in formr  
+
+```{r random blocks, layout="l-screen-inset", echo = T}
+set.seed(100)
+planned_sample_size <- 2400
+groups <- 12
+randblocks <- psych::block.random(planned_sample_size, groups)
+head(randblocks, n=24L)
+```
+
+# flowchart of questionnaire
+
+Second lines in flowchart doesn't appear in html
+
+```{r mermaid, layout="l-screen-inset", fig.width=12, out.width='100%', echo = T, cache = F}
+library("DiagrammeR")
+
+mermaid("
+graph TB
+A[Intro<br /><b>rbt_0</b><br /><i>Nr. 10</i>]-->BA{rbt_0$treat == 2<br /><i>Nr. 22</i>}
+BA-->|1 or 3-12| BB{rbt_0$treat == 3<br /><i>Nr. 23</i>}
+BB-->|1 or 4-12| BC{rbt_0$treat == 4<br /><i>Nr. 24</i>}
+BC-->|1 or 5-12| BD{rbt_0$treat == 5<br /><i>Nr. 25</i>}
+BD-->|1 or 6-12| BE{rbt_0$treat == 6<br /><i>Nr. 26</i>}
+BE-->|1 or 7-12| BF{rbt_0$treat == 7<br /><i>Nr. 27</i>}
+BF-->|1 or 8-12| BG{rbt_0$treat == 8<br /><i>Nr. 28</i>}
+BG-->|1 or 9-12| BH{rbt_0$treat == 9<br /><i>Nr. 29</i>}
+BH-->|1 or 10-12| BI{rbt_0$treat == 10<br /><i>Nr. 30</i>}
+BI-->|1 or 11-12| BJ{rbt_0$treat == 11<br /><i>Nr. 31</i>}
+BJ-->|1 or 12| BK{rbt_0$treat == 12<br /><i>Nr. 32</i>}
+
+BK-->|1| C[rbt_1_1<br /><i>Nr. 40</i>]
+C-->D{TRUE<br /><i>Nr. 41</i>}
+D-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BA-->|2| E[rbt_1_2<br /><i>Nr. 50</i>]
+E-->F{TRUE<br /><i>Nr. 51</i>}
+F-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BB-->|3| G[rbt_1_3<br /><i>Nr. 60</i>]
+G-->H{TRUE<br /><i>Nr. 61</i>}
+H-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BC-->|4| I[rbt_1_4<br /><i>Nr. 70</i>]
+I-->J{TRUE<br /><i>Nr. 71</i>}
+J-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BD-->|5| K[rbt_1_5<br /><i>Nr. 80</i>]
+K-->L{TRUE<br /><i>Nr. 81</i>}
+L-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BE-->|6| M[rbt_1_6<br /><i>Nr. 90</i>]
+M-->N{TRUE<br /><i>Nr. 91</i>}
+N-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BF-->|7| O[rbt_1_7<br /><i>Nr. 100</i>]
+O-->P{TRUE<br /><i>Nr. 101</i>}
+P-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BG-->|8| Q[rbt_1_8<br /><i>Nr. 110</i>]
+Q-->R{TRUE<br /><i>Nr. 111</i>}
+R-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BH-->|9| S[rbt_1_9<br /><i>Nr. 120</i>]
+S-->T{TRUE<br /><i>Nr. 121</i>}
+T-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BI-->|10| U[rbt_1_10<br /><i>Nr. 130</i>]
+U-->V{TRUE<br /><i>Nr. 131</i>}
+V-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BJ-->|11| W[rbt_1_11<br /><i>Nr. 140</i>]
+W-->X{TRUE<br /><i>Nr. 141</i>}
+X-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+BK-->|12| Y[rbt_1_12<br /><i>Nr. 150</i>]
+Y-->Z{TRUE<br /><i>Nr. 151</i>}
+Z-->ZA[rbt_2<br /><i>Nr. 900</i>]
+
+ZA --> ZB[rbt_mail<br /><i>Nr. 910</i>]
+",
+width = 3000, height = 2000)
+
+```
+

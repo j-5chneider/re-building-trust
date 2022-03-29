@@ -1,0 +1,311 @@
+---
+title: "Live Data Visualization"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+runtime: shiny
+---
+
+```{r setup, include=FALSE}
+######################################## BEGIN ############################
+# library(httr)
+# login <- list( # define login credentials
+#   client_id = "5ca370217d915874f52cf1a2af4325c7",
+#   client_secret = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9IjVjYTM3MDIxN2Q5MTU4NzRm",
+#   grant_type = "client_credentials"
+# )
+# request <- POST( # send POST request
+#   "https://api.formr.org/oauth/access_token",
+#   body = login,
+#   encode = "form"
+# )
+# # parse response to get access token
+# # If there an error then the response object would contain the details of the error in response$error
+# response <- content(request)
+# access_token <- response$access_token
+# 
+# #With a valid access token, call API to get the results of a particular study (run)
+# query <- list(
+#   access_token = access_token,
+#   "run[name]" = "rbt",
+#   "run[session]" = "",  # specify a specific session or leave blank for all sessions
+#   "surveys[rbt_2]" = "" # put survey name in square bracket
+#                         # comma separated list of items to get from the survey or leave empty string to get all items
+# )
+# request <- GET("https://api.formr.org/get/results", query=query)
+# results <- content(request)
+# 
+# # With a valid response you can, for example, extract the results of a particular survey say 'survey_1':
+# rbt_2 <- results$rbt_2
+######################################## END ############################
+
+library(formr)
+library(flexdashboard)
+library(tidyverse)
+
+formr_connect(email = 'juergen.schneider@uni-tuebingen.de', password = '' ) # can't share password,
+rbt_0    <- formr_raw_results(survey_name = 'rbt_0')                        # get the password here:
+rbt_1_1  <- formr_raw_results(survey_name = 'rbt_1_1')                      # youtube.com/watch?v=dQw4w9WgXcQ
+rbt_1_2  <- formr_raw_results(survey_name = 'rbt_1_2')
+rbt_1_3  <- formr_raw_results(survey_name = 'rbt_1_3')
+rbt_1_4  <- formr_raw_results(survey_name = 'rbt_1_4')
+rbt_1_5  <- formr_raw_results(survey_name = 'rbt_1_5')
+rbt_1_6  <- formr_raw_results(survey_name = 'rbt_1_6')
+rbt_1_7  <- formr_raw_results(survey_name = 'rbt_1_7')
+rbt_1_8  <- formr_raw_results(survey_name = 'rbt_1_8')
+rbt_1_9  <- formr_raw_results(survey_name = 'rbt_1_9')
+rbt_1_10 <- formr_raw_results(survey_name = 'rbt_1_10')
+rbt_1_11 <- formr_raw_results(survey_name = 'rbt_1_11')
+rbt_1_12 <- formr_raw_results(survey_name = 'rbt_1_12')
+
+
+# pivot them into long format to bind rows
+rbt_1_1_l <- pivot_longer(rbt_1_1, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+rbt_1_2_l <- pivot_longer(rbt_1_2, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+rbt_1_3_l <- pivot_longer(rbt_1_3, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+rbt_1_4_l <- pivot_longer(rbt_1_4, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+rbt_1_5_l <- pivot_longer(rbt_1_5, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+
+rbt_1_6_l <- pivot_longer(rbt_1_6, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+rbt_1_7_l <- pivot_longer(rbt_1_7, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+rbt_1_8_l <- pivot_longer(rbt_1_8, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+rbt_1_9_l <- pivot_longer(rbt_1_9, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+rbt_1_10_l <- pivot_longer(rbt_1_10, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+rbt_1_11_l <- pivot_longer(rbt_1_11, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+rbt_1_12_l <- pivot_longer(rbt_1_12, 
+                          cols = -(session:expired), 
+                          names_to = c("treat", "variable"), 
+                          names_pattern = "([:alpha:]+)_(t.+_[:digit:])", # divide col names in two colums
+                          values_to = "value")
+
+
+# bind rows
+rbt <- data.frame(bind_rows(rbt_1_1_l, 
+                            rbt_1_2_l, 
+                            rbt_1_3_l, 
+                            rbt_1_4_l, 
+                            rbt_1_5_l, 
+                            rbt_1_6_l, 
+                            rbt_1_7_l, 
+                            rbt_1_8_l, 
+                            rbt_1_9_l, 
+                            rbt_1_10_l, 
+                            rbt_1_11_l, 
+                            rbt_1_12_l)) %>%
+  filter(created > "2019-10-24" & !str_detect(session, "XXX"))   # filter out test runs before Oct 24th and test dummies containing XXX
+
+
+# prepare for matching
+rbt_0_l <- rbt_0 %>%
+  mutate(treat_nr = treat) %>% #treat in rbt_0 was the formr condition (rotation) the participants were allocated in 
+  select(session, treat_nr)
+
+# match to rbt
+
+rbt <- left_join(rbt, rbt_0_l, by = "session") # rbt_2 still pending
+
+
+# compute scales
+rbt_int <- rbt %>%
+  filter(str_detect(variable, "tru_int")) %>%
+  group_by(session, treat) %>%
+  summarize(sc_int = mean(value, na.rm = T)) %>%
+  mutate(sc_int = 8-sc_int) %>%     # reverse scale
+  ungroup()
+
+rbt_ben <- rbt %>%
+  filter(str_detect(variable, "tru_ben")) %>%
+  group_by(session, treat) %>%
+  summarize(sc_ben = mean(value, na.rm = T)) %>%
+  mutate(sc_ben = 8-sc_ben) %>%     # reverse scale
+  ungroup()
+
+rbt_exp<- rbt %>%
+  filter(str_detect(variable, "tru_exp")) %>%
+  group_by(session, treat) %>%
+  summarize(sc_exp = mean(value, na.rm = T)) %>%
+  mutate(sc_exp = 8-sc_exp) %>%     # reverse scale
+  ungroup()
+
+rbt_tch1 <- rbt %>%                          
+  filter(str_detect(variable, "tch_") & value != -999) %>%  
+  group_by(session, treat) %>%
+  summarize(sc_tch = mean(value, na.rm=T)) %>%
+  ungroup()
+
+rbt_tch2 <- rbt %>%                          # count of treatment check items participants say they "can't judge"
+  filter(str_detect(variable, "tch_") & !is.na(value)) %>%  # we suppose that'll be relevant for participants in the nonvis condition
+  group_by(session, treat) %>%
+  summarize(perc_na = sum(value == -999)) %>%
+  ungroup()
+
+```
+
+Column {.sidebar}
+-----------------------------------------------------------------------
+
+### Input
+
+```{r }
+
+wellPanel(
+selectInput('var',
+      label = strong('show data of...'),
+      choices = c("Treat. Check: rating" = "tch_",
+                  "Treat. Check: don't know" = "tch2",
+                  "Integrity" = "tru_int",
+                  "Benevolence" = "tru_ben",
+                  "Expertise" = "tru_exp")
+    ),
+conditionalPanel(condition = "input.var == 'tch_'",
+                 checkboxInput("sing", "single items", FALSE)),
+sliderInput("myad", strong("Smoothing"), 0.1, 2, 1.5, 0.1, ticks = F)
+)
+renderText("Note:")
+conditionalPanel(condition = "input.var == 'tru_int'",
+                 renderText("*preregistered* > confirmatory"))
+conditionalPanel(condition = "input.var != 'tru_int'",
+                 renderText("*preregistered* > exploratory"))
+
+```
+
+Column 
+-----------------------------------------------------------------------
+
+### Output
+
+```{r}
+
+source("R_rainclouds.R")
+
+
+renderPlot({
+    if(input$var == "tch_" & input$sing == FALSE){
+
+        p <- ggplot(rbt_tch1, aes(x=treat, y = sc_tch, fill = treat)) +
+                geom_flat_violin(position = position_nudge(x = .1, y = 0), adjust = input$myad, trim = FALSE, alpha = .5, colour = NA) +
+                geom_boxplot(outlier.shape = NA, alpha = .5, width = .1, colour = "black")+
+                theme(legend.position = "none") +
+                scale_colour_brewer(palette = "Dark2")+
+                scale_fill_brewer(palette = "Dark2") +
+                scale_y_continuous(limits = c(1,4), breaks = c(1,2,3,4), minor_breaks = NULL)
+    }
+  
+  if(input$var == "tch_" & input$sing == TRUE){
+
+        p <- ggplot(rbt%>%dplyr::filter(str_detect(variable, "tch_")), aes(x=variable, y = value, fill = treat)) +
+                geom_flat_violin(position = position_nudge(x = .1, y = 0), adjust = input$myad, trim = FALSE, alpha = .5, colour = NA) +
+                geom_boxplot(outlier.shape = NA, alpha = .5, width = .1, colour = "black")+
+                theme(legend.position = "none") +
+                scale_colour_brewer(palette = "Dark2")+
+                scale_fill_brewer(palette = "Dark2") +
+                scale_y_continuous(limits = c(1,4), breaks = c(1,2,3,4), minor_breaks = NULL)
+  }
+  
+  if(input$var == "tch2"){
+
+        p <- ggplot(rbt_tch2, aes(x=treat, y = perc_na, fill = treat)) +
+                geom_flat_violin(position = position_nudge(x = .1, y = 0), adjust = input$myad, trim = FALSE, alpha = .5, colour = NA) +
+                geom_boxplot(outlier.shape = NA, alpha = .5, width = .1, colour = "black")+
+                theme(legend.position = "none") +
+                scale_colour_brewer(palette = "Dark2")+
+                scale_fill_brewer(palette = "Dark2") +
+                scale_y_continuous(limits = c(1,5), breaks = c(1,2,3,4,5), minor_breaks = NULL)
+  }
+  
+  if(input$var == "tru_int"){
+
+        p <- ggplot(rbt_int, aes(x=treat, y = sc_int, fill = treat)) +
+                geom_flat_violin(position = position_nudge(x = .1, y = 0), adjust = input$myad, trim = FALSE, alpha = .5, colour = NA) +
+                geom_boxplot(outlier.shape = NA, alpha = .5, width = .1, colour = "black")+
+                theme(legend.position = "none") +
+                scale_colour_brewer(palette = "Dark2")+
+                scale_fill_brewer(palette = "Dark2") +
+                scale_y_continuous(limits = c(1,7), breaks = c(1,2,3,4,5,6,7), minor_breaks = NULL)
+  }
+  
+  if(input$var == "tru_exp"){
+
+        p <- ggplot(rbt_exp, aes(x=treat, y = sc_exp, fill = treat)) +
+                geom_flat_violin(position = position_nudge(x = .1, y = 0), adjust = input$myad, trim = FALSE, alpha = .5, colour = NA) +
+                geom_boxplot(outlier.shape = NA, alpha = .5, width = .1, colour = "black")+
+                theme(legend.position = "none") +
+                scale_colour_brewer(palette = "Dark2")+
+                scale_fill_brewer(palette = "Dark2") +
+                scale_y_continuous(limits = c(1,7), breaks = c(1,2,3,4,5,6,7), minor_breaks = NULL)
+  }
+  
+  if(input$var == "tru_ben"){
+
+        p <- ggplot(rbt_ben, aes(x=treat, y = sc_ben, fill = treat)) +
+                geom_flat_violin(position = position_nudge(x = .1, y = 0), adjust = input$myad, trim = FALSE, alpha = .5, colour = NA) +
+                geom_boxplot(outlier.shape = NA, alpha = .5, width = .1, colour = "black")+
+                theme(legend.position = "none") +
+                scale_colour_brewer(palette = "Dark2")+
+                scale_fill_brewer(palette = "Dark2") +
+                scale_y_continuous(limits = c(1,7), breaks = c(1,2,3,4,5,6,7), minor_breaks = NULL)
+  }
+  
+
+    p + theme_light() +
+        theme(axis.title.x = element_blank()) +
+        ylab("")
+
+})
+```
