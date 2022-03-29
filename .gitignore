@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+
+www/data_gen.R
+
+# there is my password in the script, so "scusa"
+5_analyses/wrangling+analyses.Rmd

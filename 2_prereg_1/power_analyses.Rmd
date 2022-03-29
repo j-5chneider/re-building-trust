@@ -1,0 +1,86 @@
+---
+title: "Bayes Factor Design Analyses 'Re-Building Trust'"
+author:
+- "Jürgen Schneider"
+- "Samuel Merk"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document:
+    toc: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Design
+
+We realize an intervention design with three conditions. Two if which will be randomly assigned to participants (within person design) - presenting all three would make variation too obvious and might create artifacts. As we assume $\mu 1$<$\mu 2$<$\mu 3$ with a small to medium effect ($d= .3-.4$), we computed power analyses for two t-tests with a power of $1-\beta = .90$ ($=.81$ for both tests). Below find power analyses with stopping rule at $BF= 10$ or $BF= \frac{1}{10}$ respectively and
+
+* an effect of $d= .4$
+* an effect of $d= .3$
+* no effect ($d= 0$)
+
+Out of financial and institutional reasons we aim for a $N_{max}= 250$. Due to expected variations in the BF with low $n$, we begin observing the data (optional stopping) at $n=150$.
+
+# Power Analyses
+
+## effect of $d= .4$
+
+```{r , message = FALSE, warning = FALSE}
+library(BFDA)
+
+s1.4 <- BFDA.sim(expected.ES=0.4,
+                 prior=list("Cauchy", list(prior.location=0, prior.scale=1)), 
+                 n.min=20, stepsize=10, n.max=250, 
+                 type="t.paired", 
+                 design="sequential", 
+                 alternative="greater", 
+                 B=10000, 
+                 cores=2, 
+                 verbose=TRUE)
+
+BFDA.analyze(s1.4, design="sequential", boundary=10)
+plot(s1.4, n.min=150, boundary=c(1/10, 10))
+                                               # As we plan to do 2 t-tests that supposed to have
+SSD(s1.4, power=.90, boundary=c(1/10, 10))     # .8 power together, we aim for .90 power for each test.
+```
+
+## effect of $d= .3$
+
+```{r , message = FALSE, warning = FALSE}
+
+s1.3 <- BFDA.sim(expected.ES=0.3,
+                 prior=list("Cauchy", list(prior.location=0, prior.scale=1)), 
+                 n.min=20, stepsize=10, n.max=250, 
+                 type="t.paired", 
+                 design="sequential", 
+                 alternative="greater", 
+                 B=10000, 
+                 cores=2, 
+                 verbose=TRUE)
+
+
+BFDA.analyze(s1.3, design="sequential", boundary=10)
+plot(s1.3, n.min=150, boundary=c(1/10, 10))
+SSD(s1.3, power=.90, boundary=c(1/10, 10))
+```
+
+## no effect ($d= 0$)
+
+```{r , message = FALSE, warning = FALSE}
+s0 <- BFDA.sim(expected.ES=0, 
+               prior=list("Cauchy", list(prior.location=0, prior.scale=1)), 
+               n.min=20, stepsize=10, n.max=250, 
+               type="t.paired", 
+               design="sequential", 
+               alternative="greater", 
+               B=10000, 
+               cores=2, 
+               verbose=TRUE)
+
+BFDA.analyze(s0, design="sequential", boundary=1/10)
+plot(s0, n.min=0, boundary=c(1/10, 10))
+SSD(s0, alpha=.0025, boundary=c(1/10, 10))     # We aim for a .05 alpha, that is .0025 for 2 tests.
+```
+

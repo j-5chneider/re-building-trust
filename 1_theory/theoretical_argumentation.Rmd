@@ -1,0 +1,22 @@
+---
+title: "Untitled"
+description: |
+  A new article created using the Radix format.
+author:
+  - name: Nora Jones 
+    url: https://example.com/norajones
+    affiliation: Spacely Sprockets
+    affiliation_url: https://example.com/spacelysprokets
+date: "`r Sys.Date()`"
+output: radix::radix_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+# library(kableExtra)
+```
+
+- Rplikationskrise: Ebersole, Atherton, Belanger, Skulborstad, Adams, Allen et al., 2014; Klein et al., 2014; Klein et al., 2016; Open Science Collaboration, 2015
+- Open Science Collaboration, 2015: 97% der Originalstudien hatten sign. Ergebnisse, 36% der Replikationsstudien
+- Betrifft v.a. Personen, die direkt mit wissenschaftlicher Forschung umgehen müssen: Lehramtsstudierende
+- 
