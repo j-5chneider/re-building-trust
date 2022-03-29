@@ -1,0 +1,259 @@
+---
+title           : "(Re)Building Trust? Investigating the effects of open science badges on perceived trustworthiness of journal articles. [EXPANSION: Social Sciences - pilot study]"
+shorttitle      : "Preregistration (Re)Building Trust"
+date            : "`r Sys.setlocale('LC_TIME', 'C'); format(Sys.time(), '%d\\\\. %B %Y')`"
+
+author: 
+  - name        : "Jürgen Schneider"
+    affiliation : 1
+  - name        : "Samuel Merk"
+    affiliation : 1
+  - name        : "Tom Rosman"
+    affiliation : 2
+  - name        : "Augustin Kelava"
+    affiliation : 1
+
+affiliation:
+  - id          : 1
+    institution : "University of Tübingen"
+  - id          : 2
+    institution : "Leibniz Institute for Psychology"
+header-includes:
+   - \usepackage{float}
+   - \usepackage{tabu}
+bibliography: ../../www/references.bib
+output: prereg::cos_prereg
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,  dev = "cairo_pdf")
+library(dplyr)
+library(kableExtra)
+# download.file("https://drive.google.com/uc?export=download&id=1wuMqL_Z8T9rxuGvn0VP6siag90kHDm2O",
+#               "../../www/references.bib", overwrite = T)
+```
+
+
+# Study Information
+
+## Title
+(Re)Building Trust. Investigating the effects of open science badges on perceived trustworthiness of journal articles. [EXPANSION: Social Sciences - pilot study]
+
+
+## Description
+This study is the pilot of an expansion to [@schneideretal.2020a], in which we investigated the effects of open science badges in journal articles on trust in scientists. Since college students are a population that engage with scientific studies on a regular basis, the sample of the first study focused on this population. Among other results, the study revealed an effect of open science badges on trust in scientists.  
+  
+In two expansion studies we investigate the robustness of the effects over other populations (external validity). We therefore created abstracts of journal articles for professionals in the social sciences (first expansion). The abstracts are fictitious empirical studies, but based on real journal articles to avoid confounding effects of potential familiarity with the publication or authors. This pilot study to the expansion tests the perceived authenticity of our fictitious abstracts compared to their respective original study.
+
+
+## Hypotheses
+
+1. The fictional abstracts are perceived not much less authentic in comparison to the original abstracts even if the readers know that they might be artificial. $Cohen's\; d < .35$. 
+
+# Design Plan
+<!-- In this section, you will be asked to describe the overall design of your study. Remember that this research plan is designed to register a single study, so if you have multiple experimental designs, please complete a separate preregistration. -->
+
+
+## Study type
+_Wording taken from OSF preregistration forms, since they are closed questions:_  
+
+**Experiment**. A researcher randomly assigns treatments to study subjects, this includes field or lab experiments. This is also known as an intervention experiment and includes randomized controlled trials.
+
+
+## Blinding
+<!-- Blinding describes who is aware of the experimental manipulations within a study. Select all that apply. Is there any additional blinding in this study? -->
+_Wording taken from OSF preregistration forms, since they are closed questions:_  
+
+* For studies that involve human subjects, they will not know the treatment group to which they have been assigned.
+* Personnel who interact directly with the study subjects (either human or non-human subjects) will not be aware of the assigned treatments.
+
+
+## Study design
+<!-- Describe your study design. Examples include two-group, factorial, randomized block, and repeated measures. Is it a between (unpaired), within-subject (paired), or mixed design? Describe any counterbalancing required. Typical study designs for observation studies include cohort, cross sectional, and case-control studies.
+
+This question has a variety of possible answers. The key is for a researcher to be as detailed as is necessary given the specifics of their design. Be careful to determine if every parameter has been specified in the description of the study design. There may be some overlap between this question and the following questions. That is OK, as long as sufficient detail is given in one of the areas to provide all of the requested information. For example, if the study design describes a complete factorial, 2 X 3 design and the treatments and levels are specified previously, you do not have to repeat that information.
+
+Example: We have a between subjects design with 1 factor (sugar by mass) with 4 levels. -->
+
+The design will include four conditions: Participants will be presented two abstracts addressing the topics "mobility of college graduates" and "factors of parental college savings" either as 
+
+1. two original abstracts, 
+2. two fictional abstracts, 
+3. a fictional and then an original abstract or 
+4. an original and then a fictional abstract. 
+
+Furthermore, the order of the two topics will be varied.  
+In the web-based questionnaire participants are asked to read the first abstract, evaluate its authenticity and state whether they know the study. They are then asked to repeat the procedure with the second abstract. We make sure that the participants evaluate both topics and not one topic as original and fictional abstract.
+
+
+## Randomization
+<!-- If you are doing a randomized study, how will you randomize, and at what level? Typical randomization techniques include: simple, block, stratified, and adaptive covariate randomization. If randomization is required for the study, the method should be specified here, not simply the source of random numbers.
+
+Example: We will use block randomization, where each participant will be randomly assigned to one of the four equally sized, predetermined blocks. The random number list used to create these four blocks will be created using the web applications available at http://random.org. -->
+
+* Randomization 1: Assignment to one of the four conditions.
+* Randomization 2: Order of the topics.
+
+
+# Sampling Plan
+<!-- In this section we’ll ask you to describe how you plan to collect samples, as well as the number of samples you plan to collect and your rationale for this decision. Please keep in mind that the data described in this section should be the actual data used for analysis, so if you are using a subset of a larger data set, please describe the subset that will actually be used in your study. -->
+
+
+## Existing data
+<!-- Preregistration is designed to make clear the distinction between confirmatory tests, specified prior to seeing the data, and exploratory analyses conducted after observing the data. Therefore, creating a research plan in which existing data will be used presents unique challenges. Please select the description that best describes your situation. Please do not hesitate to contact us if you have questions about how to answer this question (prereg@cos.io). -->
+_Wording taken from OSF preregistration forms, since they are closed questions:_  
+**Registration prior to analysis of the data**. As of the date of submission, the data collection has just begun.
+
+
+
+## Explanation of existing data
+<!-- If you indicate that you will be using some data that already exist in this study, please describe the steps you have taken to assure that you are unaware of any patterns or summary statistics in the data. This may include an explanation of how access to the data has been limited, who has observed the data, or how you have avoided observing any analysis of the specific data you will use in your study.
+
+An appropriate instance of using existing data would be collecting a sample size much larger than is required for the study, using a small portion of it to conduct exploratory analysis, and then registering one particular analysis that showed promising results. After registration, conduct the specified analysis on that part of the data set that had not been investigated by the researcher up to that point.
+
+Example: An appropriate instance of using existing data would be collecting a sample size much larger than is required for the study, using a small portion of it to conduct exploratory analysis, and then registering one particular analysis that showed promising results. After registration, conduct the specified analysis on that part of the data set that had not been investigated by the researcher up to that point. -->
+
+Preregistration parallel to the start of the survey.
+
+
+## Data collection procedures
+<!-- Please describe the process by which you will collect your data. If you are using human subjects, this should include the population from which you obtain subjects, recruitment efforts, payment for participation, how subjects will be selected for eligibility from the initial pool (e.g. inclusion and exclusion rules), and your study timeline. For studies that don't include human subjects, include information about how you will collect samples, duration of data gathering efforts, source or location of samples, or batch numbers you will use.
+
+The answer to this question requires a specific set of instructions so that another person could repeat the data collection procedures and recreate the study population. Alternatively, if the study population would be unable to be reproduced because it relies on a specific set of circumstances unlikely to be recreated (e.g., a community of people from a specific time and location), the criteria and methods for creating the group and the rationale for this unique set of subjects should be clear.
+
+Example: Participants will be recruited through advertisements at local pastry shops. Participants will be paid $10 for agreeing to participate (raised to $30 if our sample size is not reached within 15 days of beginning recruitment). Participants must be at least 18 years old and be able to eat the ingredients of the pastries. -->
+
+Data collection procedure involves directly contacting colleagues working in social sciences with professional experience of at least three years. As participation in the survey takes a limited amount of time (approx. 5 minutes) no compensation will be offered.
+
+
+## Sample size rationale
+We will use sequential Bayes factor design, starting $N=15$ participants and then updating after every participant.
+
+## Stopping rule
+Out stopping rule will be a Bayes Factor with $\frac{1}{3}<BF_{10}<3$.
+
+
+
+# Variables
+<!-- In this section you can describe all variables (both manipulated and measured variables) that will later be used in your confirmatory analysis plan. In your analysis plan, you will have the opportunity to describe how each variable will be used. If you have variables which you are measuring for exploratory analyses, you are not required to list them, though you are permitted to do so. -->
+
+
+
+## Manipulated variables
+<!-- Describe all variables you plan to manipulate and the levels or treatment arms of each variable. This is not applicable to any observational study. For any experimental manipulation, you should give a precise definition of each manipulated variable. This must include a precise description of the levels at which each variable will be set, or a specific definition for each categorical treatment. For example, “loud or quiet,” should instead give either a precise decibel level or a means of recreating each level. 'Presence/absence' or 'positive/negative' is an acceptable description if the variable is precisely described.
+
+Example: We manipulated the percentage of sugar by mass added to brownies. The four levels of this categorical variable are: 15%, 20%, 25%, or 40% cane sugar by mass. -->
+
+__Conditions__  
+Participants will be presented two abstracts addressing the topics "mobility of college graduates" and "factors of parental college savings" either as 
+
+1. two original abstracts, 
+2. two fictional abstracts, 
+3. a fictional and then an original abstract or 
+4. an original and then a fictional abstract. 
+
+__Order of topic__  
+Randomly varied.  
+\
+\
+
+__Abstract: Condition "original", topic "savings"__  
+_Race, Gender, and Parental College Savings: Assessing Economic and Academic Factors_  
+This article assesses the relationships between race, gender, and parental college savings. Some prior studies have investigated race differences in parental college savings, yet none have taken an intersectional approach, and most of these studies were conducted with cohorts of students who predate key demographic changes among U.S. college goers (e.g., the reversal of the gender gap in college completion). Drawing on theories of parental investment and data from the High School Longitudinal Study of 2009 (HSLS:09), we show that both race and gender are associated with whether parents save for college, as well as how much they save. Both black boys and black girls experience savings disadvantages relative to their white peers. However, black girls experience particularly striking disparities: Black girls with the strongest academic credentials receive savings equivalent to black girls with the weakest academic credentials. Results suggest this is due, at least in part, to the fact that high-achieving black girls tend to come from families that are much less well-off than high achievers in other race-gender groups. As a result, parents of black girls frequently rely on funding sources other than their own earnings or savings to pay for their children's college. These funding sources include private loans that may pose financial challenges for black girls and their families across generations, thus deepening inequalities along the lines of gender, race, and class. These findings demonstrate the power of taking an intersectional approach to the study of higher education in general and college funding in particular.  
+\
+
+__Abstract: Condition "original", topic "mobility"__  
+_Examining the Interstate Mobility of Recent College Graduates_  
+An increasingly important goal of state policymakers is to keep young, well-educated adults to remain in that state instead of moving elsewhere after college, as evidenced by New York’s recent move to tie state grant aid to staying in state after graduation. We used American Community Survey data from 2005–2015 to examine the prevalence of interstate mobility over the past decade as well as provide state-level rates of “brain drain.” We found substantial variations in interstate mobility across states, which has important policy implications.  
+\
+  
+__Abstract: Condition "fictional", topic "savings"__  
+_An intersectional approach to investigate parental college savings: Effects of race, gender, and English as second language_  
+The current work examines relationships between parental college savings, race, gender, and English as a second language. Although previous studies have investigated differences in parental college savings regarding race, gender, and mother tongue, none have taken an intersectional approach by looking at the effects of the combinations of such variables. We conducted a telephone survey using random digit dialing (N = 2413) to minimize selection bias for our sample. The resulting data indicate that all three variables (race, gender, and mother tongue) are associated with whether parents save for college as well as how much they save. This finding is in coherence with theories of parental investment. However, students in each intersection of these three categories experience particularly striking disparities. For example, girls of color with English as a second language are exposed to a particularly high amount of financial challenges. In these groups, parents thus rely on funding sources other than their own savings to pay for their childrens’ college. These funding sources include private loans which may pose financial challenges for students and their families across generations, hence deepening inequalities along the lines of race, gender, and mother tongue.  
+\
+
+__Abstract: Condition "fictional", topic "mobility"__  
+_Who contributes to “Brain Drain”? An analysis of inter-state mobility after college graduation across different groups_  
+Avoiding that college graduates move out of state after graduation has become a focus of state policymakers. To avoid this “brain drain”, some states have implemented countermeasures that are targeted at different parts of society. Examples to tie graduates to stay in state after graduation include state college grants for low-income students or the admission to tuition-free state colleges. However, it is still unclear whether these countermeasures are efficient in that they actually target the parts of society that display the greatest interstate mobility. In our study, we examine the extent to which different groups show a higher tendency to move out of state after graduation. In a representative sample of 3,582 Bachelor graduates, we found that female graduates and graduates with a high household income display higher interstate mobility. In contrast, academic achievement and race were not related with interstate mobility. Overall, mobility varied strongly between states. We conclude that state college grants targeting low-income and male students may not be as impactful to prevent “brain drain”. Further research comparing the effectiveness of different countermeasures, particularly targeting female high-income students, is needed.
+
+
+## Measured variables
+<!-- Describe each variable that you will measure. This will include outcome measures, as well as any predictors or covariates that you will measure. You do not need to include any variables that you plan on collecting if they are not going to be included in the confirmatory analyses of this study.
+
+Observational studies and meta-analyses will include only measured variables. As with the previous questions, the answers here must be precise. For example, 'intelligence,' 'accuracy,' 'aggression,' and 'color' are too vague. Acceptable alternatives could be 'IQ as measured by Wechsler Adult Intelligence Scale' 'percent correct,' 'number of threat displays,' and 'percent reflectance at 400 nm.'
+
+Example: The single outcome variable will be the perceived tastiness of the single brownie each participant will eat. We will measure this by asking participants ‘How much did you enjoy eating the brownie’ (on a scale of 1-7, 1 being 'not at all', 7 being 'a great deal') and 'How good did the brownie taste' (on a scale of 1-7, 1 being 'very bad', 7 being 'very good'). -->
+
+After each abstract participants respond to two items:
+
+* Question: "This abstract appears to me as..."; answer format: 7-point Likert scale from "not authentic at all" to "very authentic"
+* Question: "I already know this publication."; answer format: single-choice with "yes", "no"
+
+## Indices
+<!-- If any measurements are  going to be combined into an index (or even a mean), what measures will you use and how will they be combined? Include either a formula or a precise description of your method. If your are using a more complicated statistical method to combine measures (e.g. a factor analysis), you can note that here but describe the exact method in the analysis plan section.
+
+If you are using multiple pieces of data to construct a single variable, how will this occur? Both the data that are included and the formula or weights for each measure must be specified. Standard summary statistics, such as "means" do not require a formula, though more complicated indices require either the exact formula or, if it is an established index in the field, the index must be unambiguously defined. For example, "biodiversity index" is too broad, whereas "Shannon’s biodiversity index" is appropriate.
+
+Example: We will take the mean of the two questions above to create a single measure of 'brownie enjoyment.'  -->
+
+No indices.
+
+
+# Analysis Plan
+We will compute Approximate Adjusted Fractional Bayes Factors for informative Hypotheses [@guetal.2019].
+
+## Statistical models
+We will estimate 
+
+* cluster robust linear models 
+* with the measured variable »perceived authenticity« as dependent variable and
+* the manipulated variable »de facto authenticity« as a dummy coded independent variable.
+
+With `{bain}` we will estimate a Bayes factor for the hypotheses that the slope of the dummy-variable is
+
+* between $SD(perceived\;authenticity) \cdot -0.45$  and  $SD(perceived\;authenticity) \cdot 0.45$ (-.45 < Cohen's d < .45) vs. 
+* greater than $SD(perceived\;authenticity) \cdot 0.45$ (Cohen's d > .45) or smaller than $SD(perceived\;authenticity) \cdot -0.45$ (Cohen's d < -.45)
+
+
+## Transformations
+<!-- If you plan on transforming, centering, recoding the data, or will require a coding scheme for categorical variables, please describe that process. If any categorical predictors are included in a regression, indicate how those variables will be coded (e.g. dummy coding, summation coding, etc.) and what the reference category will be.
+
+Example: The "Effect of sugar on brownie tastiness" does not require any additional transformations. However, if it were using a regression analysis and each level of sweet had been categorically described (e.g. not sweet, somewhat sweet, sweet, and very sweet), 'sweet' could be dummy coded with 'not sweet' as the reference category. -->
+
+None planned.
+
+
+## Inference criteria
+$\frac{1}{3}<BF_{10}<3$
+
+
+## Data exclusion
+Participants taking less than 2 minutes for the survey may be eliminated for the analyses.  
+Participants that are already familiar with at least one of the studies (see item) may be excluded in a second, exploratory analysis.
+
+## Missing data
+Answers are mandatory in the questionnaire.
+
+
+## Exploratory analyses (optional)
+<!-- If you plan to explore your data set to look for unexpected differences or relationships, you may describe those tests here. An exploratory test is any test where a prediction is not made up front, or there are multiple possible tests that you are going to use. A statistically significant finding in an exploratory test is a great way to form a new confirmatory hypothesis, which could be registered at a later time.
+
+Example: We expect that certain demographic traits may be related to taste preferences. Therefore, we will look for relationships between demographic variables (age, gender, income, and marital status) and the primary outcome measures of taste preferences. -->
+None.
+
+
+# Other
+
+## Other (Optional)
+<!-- If there is any additional information that you feel needs to be included in your preregistration, please enter it here. Literature cited, disclosures of any related work such as replications or work that uses the same data, or other context that will be helpful for future readers would be appropriate here. -->
+
+
+
+
+# References
+## 
+\vspace{-2pc}
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{-1in}
+\setlength{\parskip}{8pt}
+\noindent

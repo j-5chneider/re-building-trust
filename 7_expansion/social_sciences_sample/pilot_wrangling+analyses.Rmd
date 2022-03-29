@@ -1,0 +1,122 @@
+---
+title: "Data Analyses 'Re-Building Trust - Extension: Social Sciences - pilot study'"
+author:
+- "Jürgen Schneider"
+- "Samuel Merk"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document:
+    toc: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data Wrangling
+
+```{r credentials1, message = FALSE, warning = FALSE, eval=T, echo=F}
+library(formr)
+library(lubridate)
+library(tidyverse)
+formr_connect(email = 'juergen.schneider@uni-tuebingen.de', 
+              password = rstudioapi::askForPassword("DemJuergenseinSuperpasswort")) # find password in video https://www.youtube.com/watch?v=dQw4w9WgXcQ🤓
+
+```
+
+
+
+```{r import, message = FALSE, warning = FALSE, eval = T}
+# get surveys
+ext_sci_pilot <- formr_raw_results(survey_name = 'rbt_ext_sci') %>%  # get results from survey 'rbt_ext_sci'
+        filter(!is.na(session) & !is.na(ended) & !str_detect(session, "XXX")) %>%   # filter out test runs and test dummies containing XXX
+        mutate(topic_2 = ifelse(topic_1 == "mobility", "savings", "mobility"), # topic second abstract
+               id = 1:nrow(.),                                                 # create id
+               auth1 = as.character(auth1),                           # need to convert auth1, auth2, 
+               auth2 = as.character(auth2),                           # bekannt1 and bekannt2 to
+               bekannt1 = as.character(bekannt1),                     # character vor pivot_longer
+               bekannt2 = as.character(bekannt2),
+               nature_1 = nature_first_abstract,                 # align var names
+               nature_2 = nature_second_abstract) %>%
+        select(id, nature_1, nature_2, topic_1, topic_2,         # drop unnecessary vars
+               auth1, auth2, bekannt1, bekannt2) %>%
+        pivot_longer(cols = 2:9,
+                     names_to = "variable",
+                     values_to = "value") %>%
+        mutate(abstract = case_when(
+                              str_detect(variable, "1") ~ 1,
+                              str_detect(variable, "2") ~ 2),
+               variable = case_when(
+                              str_detect(variable, "nature") ~ "nature",
+                              str_detect(variable, "topic") ~ "topic",
+                              str_detect(variable, "auth") ~ "auth",
+                              str_detect(variable, "bekannt") ~ "bekannt")
+               ) %>%
+        pivot_wider(id_cols = c(id, abstract), names_from = "variable", values_from = "value") %>%
+        mutate(auth = as.numeric(auth),
+               bekannt = as.numeric(bekannt),
+               nature = as.factor(nature),
+               topic = as.factor(topic))
+
+# write_csv(ext_sci_pilot, "7_expansion/social_sciences_sample/data/ext_sci_pilot.csv")
+```
+
+
+# Analyses
+
+## Descriptive results
+
+```{r, message = FALSE, warning = FALSE, eval = T}
+# ext_sci_pilot <- read_csv("7_expansion/social_sciences_sample/data/ext_sci_pilot.csv")
+# crosstabs of abstracts answered
+table(ext_sci_pilot$nature, ext_sci_pilot$topic)
+
+ggplot(ext_sci_pilot, aes(x=nature, y=auth)) + 
+  geom_dotplot(binaxis = "y", stackdir = "center") +
+  stat_summary(fun.data = mean_sdl, geom = "errorbar", fun.args = list(mult = 1), width = 0, color = "#a51e41") +
+  stat_summary(fun.data = mean_sdl, geom = "point", fun.args = list(mult = 1), color = "#a51e41") +
+  facet_wrap(~topic)
+
+ext_sci_pilot %>%
+    group_by(nature, topic) %>%
+    summarize(auth_m = mean(auth),
+              auth_sd = sd(auth))
+```
+
+## Bayes factors
+### Estimation of the statistical model
+```{r}
+library(estimatr)
+library(bain)
+robust_lm01_both <- lm_robust(scale(auth) ~ nature + topic, cluster = id, data = ext_sci_pilot)
+robust_lm01_savings <- 
+  lm_robust(scale(auth) ~ nature, cluster = id, 
+            data = ext_sci_pilot%>%
+              filter(topic == "savings"))
+
+robust_lm01_mobility <- 
+  lm_robust(scale(auth) ~ nature, cluster = id, 
+            data = ext_sci_pilot%>%
+              filter(topic == "mobility"))
+
+bain(coefficients(robust_lm01_both), "naturegenuine < .35", 
+     n = nrow(ext_sci_pilot), 
+     Sigma = list(vcov(robust_lm01_both)),
+     group_parameters = 3, # intercept and 2 slopes
+     joint_parameters = 0)
+
+bain(coefficients(robust_lm01_mobility), "naturegenuine < .35", 
+     n = nrow(ext_sci_pilot), 
+     Sigma = list(vcov(robust_lm01_mobility)),
+     group_parameters = 2, # intercept and 1 slopes
+     joint_parameters = 0)
+
+bain(coefficients(robust_lm01_savings), "naturegenuine < .35", 
+     n = nrow(ext_sci_pilot), 
+     Sigma = list(vcov(robust_lm01_savings)),
+     group_parameters = 2, # intercept and 1 slopes
+     joint_parameters = 0)
+```
+

@@ -1,0 +1,172 @@
+---
+title: "Codebook"
+subtitle: "Public Sample"
+output: 
+  html_document: 
+    code_folding: hide
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+    theme: flatly
+date: "July 12th 2021"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knit_by_pkgdown <- !is.null(knitr::opts_chunk$get("fig.retina"))
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, error = FALSE)
+ggplot2::theme_set(ggplot2::theme_bw())
+library(codebook)
+library(labelled)
+library(ufs)
+library(rio)
+library(dplyr)
+library(here)
+```
+
+# Description
+
+This is the codebook of "Study 3" from the manuscript http://dx.doi.org/10.23668/psycharchives.3364 .  
+Data is embeded in this file. To download the data as CSV `r xfun::embed_file(here("9_data+codebooks/rbt_study3_public.csv"), text ="click here")`.  
+  
+__Structure of the codebook:__
+  
+* Participants consecuatively received two abstracts (stimulus)
+* They answered the scales in response to one abstract (stimulus) at a time
+* The codebook reports each item and scale for the abstracts separately
+* "abs1_" or "abs2_" in the scale name indicates if the item/scale refers to the first or second abstract
+
+# Metadata
+
+
+
+```{r import}
+load(here("9_data+codebooks/rbt_study3_public.RData"))
+
+
+# define several variables as character so they get plotted better
+# rbt_public$position <- as.character(rbt_public$position)
+rbt_public$country <- as.character(rbt_public$country)
+
+rbt_public <- rbt_public %>%
+  rename_at(vars(abs1_tsc_2, abs2_tsc_2),  add_R)
+
+rbt_public <- rbt_public %>% 
+    mutate_at(vars(matches("\\dR$")), reverse_labelled_values)
+
+rbt_public <- rbt_public %>%
+  dplyr::select(treat1:education)
+
+
+rbt_public <- detect_scales(rbt_public, quiet = FALSE)
+```
+
+```{r metadata}
+metadata(rbt_public)$name <- "Journals’ Open Science Badges Foster Trust in Scientists. Study 3: Public Sample."
+metadata(rbt_public)$description <- "Code book to manuscript"
+metadata(rbt_public)$identifier <- ""
+metadata(rbt_public)$datePublished <- "2021-07-12"
+metadata(rbt_public)$creator <- list(
+      "@type" = "Person",
+      givenName = "Schneider", familyName = "Jürgen",
+      email = "juergen.schneider@uni-tuebingen.de", 
+      affiliation = list("@type" = "Organization",
+        name = "University of Tübingen"))
+metadata(rbt_public)$citation <- "Schneider, J. (2021). Journals’ Open Science Badges Foster Trust in Scientists. Codebook of Study 3: Public sample"
+```
+
+
+```{r labels}
+# add variable labels
+var_label(rbt_public) <- list(
+        treat1 = "First treatment condition, the participant was assigned to.",
+        treat2 = "Second treatment condition, the participant was assigned to.",
+        first_topic = "Topic the participant received first.",
+        education = "Which is the highest qualifiaction you have?",
+        abs1_tru_exp_1 = "competent - incompetent",
+        abs1_tru_exp_2 = "intelligent - unintelligent",
+        abs1_tru_exp_3 = "well educated -	poorly educated",
+        abs1_tru_exp_4 = "professional - unprofessional",
+        abs1_tru_exp_5 = "experienced - inexperienced",
+        abs1_tru_exp_6 = "qualified - unqualified",
+        abs1_tru_int_1 = "sincere - insincere",
+        abs1_tru_int_2 = "honest - dishonest",
+        abs1_tru_int_3 = "just - unjust",
+        abs1_tru_int_4 = "fair - unfair",
+        abs1_tru_ben_1 = "moral - immoral",
+        abs1_tru_ben_2 = "ethical - unethical",
+        abs1_tru_ben_3 = "responsible - irresponsible",
+        abs1_tru_ben_4 = "considerate - inconsiderate",
+        abs2_tru_exp_1 = "competent - incompetent",
+        abs2_tru_exp_2 = "intelligent - unintelligent",
+        abs2_tru_exp_3 = "well educated -	poorly educated",
+        abs2_tru_exp_4 = "professional - unprofessional",
+        abs2_tru_exp_5 = "experienced - inexperienced",
+        abs2_tru_exp_6 = "qualified - unqualified",
+        abs2_tru_int_1 = "sincere - insincere",
+        abs2_tru_int_2 = "honest - dishonest",
+        abs2_tru_int_3 = "just - unjust",
+        abs2_tru_int_4 = "fair - unfair",
+        abs2_tru_ben_1 = "moral - immoral",
+        abs2_tru_ben_2 = "ethical - unethical",
+        abs2_tru_ben_3 = "responsible - irresponsible",
+        abs2_tru_ben_4 = "considerate - inconsiderate",
+        country = "Country of residence",
+        country_oth = "please specify other country"
+)
+
+
+# add value labels ##################################
+val_labels(rbt_public$treat1) <- c("Greyed out badges (no adherence to Open Science standards)" = "gb",
+                                "Control Condition (no badges)" = "cc",
+                                "Colored out badges (adherence to Open Science standards)" = "cb")
+
+val_labels(rbt_public$treat2) <- c("Greyed out badges (no adherence to Open Science standards)" = "gb",
+                                "Control Condition (no badges)" = "cc",
+                                "Colored out badges (adherence to Open Science standards)" = "cb")
+
+
+# semantic differentials
+add_semantic_diff <- function(x) {
+  val_labels(x) <- c("1" = 1,
+                     "2" = 2,
+                     "3" = 3,
+                     "4" = 4,
+                     "5" = 5,
+                     "6" = 6,
+                     "7" = 7)
+  x
+}
+
+rbt_public <- rbt_public %>%
+  mutate_at(vars(abs1_tru_exp_1:abs1_tru_ben_4, abs2_tru_exp_1:abs2_tru_ben_4),  add_semantic_diff)
+
+# education
+val_labels(rbt_public$education) <- c("1 - 4 O levels / CSEs / GCSEs (any grades), ..." = "L12", # ...Entry Level, Foundation Diploma / NVQ Level 1, Foundation GNVQ, Basic Skills / 5+ O levels (passes) / CSEs (grade 1) / GCSEs (grades A*- C), School Certificate, 1 A level / 2 - 3 AS levels / VCEs, Higher Diploma / NVQ Level 2, Intermediate GNVQ, City and Guilds Craft, BTEC First / General Diploma, RSA Diploma, Baccalaureate Intermediate Diploma
+                                      "2+ A levels / VCEs, 4+ AS levels, Higher School Certificate, ..." = "L34", # Progression / Advanced Diploma, Baccalaureate Advanced Diploma / NVQ Level 3, Advanced GNVQ, City and Guilds Advanced Craft, ONC, OND, BTEC National, RSA Advanced Diploma / Degree (for example BA, BSc), Higher degree (for example MA, PhD, PGCE) / NVQ Level 4 - 5, HNC, HND, RSA Higher Diploma, BTEC Higher Level, Foundation degree (NI) / Professional qualifications (for example teaching, nursing, accountancy)
+                                      "Apprenticeship / Other vocational / work-related qualifications..." = "app") #  / Foreign qualifications / No academic or professional qualifications
+
+
+
+
+
+# country
+val_labels(rbt_public$country) <- c("United Kingdom" = "1",
+                                 "Republic of Ireland" = "2",
+                                 "USA" = "3",
+                                 "Canada" = "4",
+                                 "other" = "-999")
+```
+
+
+# Codebook
+
+```{r codebook, echo=FALSE}
+codebook(rbt_public, metadata_table = knit_by_pkgdown, metadata_json = TRUE)
+
+if (!knit_by_pkgdown) {
+  codebook:::escaped_table(codebook_table(rbt_public))
+}
+```
+

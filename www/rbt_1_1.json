@@ -1,0 +1,1263 @@
+{
+    "name": "rbt_1_1",
+    "items": [
+        {
+            "type": "note",
+            "choice_list": null,
+            "type_options": null,
+            "name": "note_nonosp",
+            "label": "<br \/>\n##Schauen Sie sich die Titelseite genau an. Wie wirkt die Seite auf Sie?\n_Lesen Sie nicht nur den Text, sondern schauen Sie sich die Seite als Ganzes an._<br \/><br \/><br \/>",
+            "label_parsed": "<p><br \/><\/p>\n<h2>Schauen Sie sich die Titelseite genau an. Wie wirkt die Seite auf Sie?<\/h2>\n<p><em>Lesen Sie nicht nur den Text, sondern schauen Sie sich die Seite als Ganzes an.<\/em><br \/><br \/><br \/><\/p>",
+            "optional": 1,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 3
+        },
+        {
+            "type": "note",
+            "choice_list": null,
+            "type_options": null,
+            "name": "stimuli_nonosp",
+            "label": "<img src=\"https:\/\/formr.org\/assets\/tmp\/admin\/QyUckRUOAdWJPcLXtlu2oXHp_JI7miee1mwYPPXHwYoa.png?v1569321458\" width=\"100%\" style=\"box-shadow: 0px 0px 6px\" alt=\"hier sollte ein Bild stehen\" \/>",
+            "label_parsed": "<img src=\"https:\/\/formr.org\/assets\/tmp\/admin\/QyUckRUOAdWJPcLXtlu2oXHp_JI7miee1mwYPPXHwYoa.png?v1569321458\" width=\"100%\" style=\"box-shadow: 0px 0px 6px\" alt=\"hier sollte ein Bild stehen\" \/>",
+            "optional": 1,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 4
+        },
+        {
+            "type": "note",
+            "choice_list": null,
+            "type_options": null,
+            "name": "nonosp_tsm_intro",
+            "label": "<br \/>\n###Inwieweit stimmen Sie den folgenden Aussagen zu?\n_Beziehen Sie sich bitte auf die gerade gelesene Studie._",
+            "label_parsed": "<p><br \/><\/p>\n<h3>Inwieweit stimmen Sie den folgenden Aussagen zu?<\/h3>\n<p><em>Beziehen Sie sich bitte auf die gerade gelesene Studie.<\/em><\/p>",
+            "optional": 1,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 7
+        },
+        {
+            "type": "mc_heading",
+            "choice_list": "heading_tsm_nonosp",
+            "type_options": "",
+            "name": "heading_tsm_nonosp",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "left500 mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 8,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tsm_1",
+            "type_options": "",
+            "name": "nonosp_tsm_1",
+            "label": "Die im Text formulierten Erkenntnisse sind beliebig.",
+            "label_parsed": "Die im Text formulierten Erkenntnisse sind beliebig.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 9,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tsm_2",
+            "type_options": "",
+            "name": "nonosp_tsm_2",
+            "label": "Das im Text enthaltene Wissen kann überhaupt nicht auf andere Situationen verallgemeinert werden.",
+            "label_parsed": "Das im Text enthaltene Wissen kann überhaupt nicht auf andere Situationen verallgemeinert werden.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 9,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tsm_3",
+            "type_options": "",
+            "name": "nonosp_tsm_3",
+            "label": "Das Gegenteil der im Text formulierten Erkenntnisse wäre genauso richtig\/falsch.",
+            "label_parsed": "Das Gegenteil der im Text formulierten Erkenntnisse wäre genauso richtig\/falsch.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 9,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tsm_4",
+            "type_options": "",
+            "name": "nonosp_tsm_4",
+            "label": "Die im Text formulierten Erkenntnisse können keinen Gültigkeitsanspruch für andere Situationen beanspruchen.",
+            "label_parsed": "Die im Text formulierten Erkenntnisse können keinen Gültigkeitsanspruch für andere Situationen beanspruchen.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 9,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tsc_1",
+            "type_options": "",
+            "name": "nonosp_tsc_1",
+            "label": "Die Aussagen des gerade gelesenen Textausschnittes decken sich sehr gut mit meiner persönlichen Meinung zu diesem Thema.",
+            "label_parsed": "Die Aussagen des gerade gelesenen Textausschnittes decken sich sehr gut mit meiner persönlichen Meinung zu diesem Thema.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 10,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tsc_2",
+            "type_options": "",
+            "name": "nonosp_tsc_2",
+            "label": "Die Aussagen des gerade gelesenen Textausschnittes stehen im Widerspruch dazu, was ich selbst über das Thema denke.",
+            "label_parsed": "Die Aussagen des gerade gelesenen Textausschnittes stehen im Widerspruch dazu, was ich selbst über das Thema denke.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 10,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tsc_3",
+            "type_options": "",
+            "name": "nonosp_tsc_3",
+            "label": "Ich stimme den Aussagen, die ich gerade in dem Textausschnitt gelesen habe, zu.",
+            "label_parsed": "Ich stimme den Aussagen, die ich gerade in dem Textausschnitt gelesen habe, zu.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 10,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "note",
+            "choice_list": null,
+            "type_options": null,
+            "name": "nonosp_tru_intro",
+            "label": "<br \/><br \/>\n###Im Folgenden bitten wir Sie einzuschätzen, welche Qualitäten Sie den Autorinnen\/Autoren der gerade gelesenen Studie in Bezug auf Ihre geäußerten Erkenntnisse zuweisen würden.\n\n_Die Autorinnen\/Autoren der vorherigen Studie erscheinen mir in Bezug auf ihre Erkenntnisse ..._",
+            "label_parsed": "<p><br \/><br \/><\/p>\n<h3>Im Folgenden bitten wir Sie einzuschätzen, welche Qualitäten Sie den Autorinnen\/Autoren der gerade gelesenen Studie in Bezug auf Ihre geäußerten Erkenntnisse zuweisen würden.<\/h3>\n<p><em>Die Autorinnen\/Autoren der vorherigen Studie erscheinen mir in Bezug auf ihre Erkenntnisse ...<\/em><\/p>",
+            "optional": 1,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 15
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_exp_1",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_exp_1",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "kompetent",
+                "2": "inkompetent"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_exp_2",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_exp_2",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "intelligent",
+                "2": "unintelligent"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_exp_3",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_exp_3",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "gut&nbsp;ausgebildet",
+                "2": "schlecht&nbsp;ausgebildet"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_exp_4",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_exp_4",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "fachmännisch",
+                "2": "unfachmännisch"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_exp_5",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_exp_5",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "erfahren",
+                "2": "unerfahren"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_exp_6",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_exp_6",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "qualifiziert",
+                "2": "unqualifiziert"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_int_1",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_int_1",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "aufrichtig",
+                "2": "unaufrichtig"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_int_2",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_int_2",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "ehrlich",
+                "2": "unehrlich"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_int_3",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_int_3",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "gerecht",
+                "2": "ungerecht"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_int_4",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_int_4",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "fair",
+                "2": "unfair"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_ben_1",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_ben_1",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "moralisch",
+                "2": "unmoralisch"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_ben_2",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_ben_2",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "ethisch",
+                "2": "unethisch"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_ben_3",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_ben_3",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "verantwortungsbewusst",
+                "2": "verantwortungslos"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonosp_tru_ben_4",
+            "type_options": "1,7,1",
+            "name": "nonosp_tru_ben_4",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 16,
+            "choices": {
+                "1": "rücksichtsvoll",
+                "2": "rücksichtslos"
+            }
+        },
+        {
+            "type": "note",
+            "choice_list": null,
+            "type_options": null,
+            "name": "nonosp_tch_intro",
+            "label": "<br \/>\n###Inwieweit stimmen Sie den folgenden Aussagen zu?\n_Beziehen Sie sich bitte auf die gerade gelesene Studie._",
+            "label_parsed": "<p><br \/><\/p>\n<h3>Inwieweit stimmen Sie den folgenden Aussagen zu?<\/h3>\n<p><em>Beziehen Sie sich bitte auf die gerade gelesene Studie.<\/em><\/p>",
+            "optional": 1,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 18
+        },
+        {
+            "type": "mc_heading",
+            "choice_list": "head_tch_nonosp",
+            "type_options": "",
+            "name": "head_tch_nonosp",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "left500 mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 19,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tch_1",
+            "type_options": "",
+            "name": "nonosp_tch_1",
+            "label": "Es ist transparent, welche Leistungstests und Daten der Studie zugrunde liegen.",
+            "label_parsed": "Es ist transparent, welche Leistungstests und Daten der Studie zugrunde liegen.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 20,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tch_2",
+            "type_options": "",
+            "name": "nonosp_tch_2",
+            "label": "Interessierte können sich sowohl den Fragebogen der beschriebenen Studie, als auch die Daten und deren Auswertung genau ansehen.",
+            "label_parsed": "Interessierte können sich sowohl den Fragebogen der beschriebenen Studie, als auch die Daten und deren Auswertung genau ansehen.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 20,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tch_3",
+            "type_options": "",
+            "name": "nonosp_tch_3",
+            "label": "In der Studie eingesetzte Materialien und erhobene Daten sind offen zugänglich.",
+            "label_parsed": "In der Studie eingesetzte Materialien und erhobene Daten sind offen zugänglich.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 20,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tch_4",
+            "type_options": "",
+            "name": "nonosp_tch_4",
+            "label": "Die Autoren machen es anderen Forscherinnen und Forschern leicht, Ihre statistischen Analysen nachzuvollziehen.",
+            "label_parsed": "Die Autoren machen es anderen Forscherinnen und Forschern leicht, Ihre statistischen Analysen nachzuvollziehen.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 20,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonosp_tch_5",
+            "type_options": "",
+            "name": "nonosp_tch_5",
+            "label": "Wenn andere Forscherinnen und Forscher die Studie wiederholen möchten, haben Sie leicht Zugang zu den eingesetzten Fragenbögen.",
+            "label_parsed": "Wenn andere Forscherinnen und Forscher die Studie wiederholen möchten, haben Sie leicht Zugang zu den eingesetzten Fragenbögen.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 20,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "submit",
+            "choice_list": null,
+            "type_options": null,
+            "name": "page4",
+            "label": "zum 2. Artikel",
+            "label_parsed": "zum 2. Artikel",
+            "optional": 0,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "C",
+            "item_order": 21
+        },
+        {
+            "type": "note",
+            "choice_list": null,
+            "type_options": null,
+            "name": "note_nonvis",
+            "label": "<br \/>\n##Schauen Sie sich die Titelseite genau an. Wie wirkt die Seite auf Sie?\n_Lesen Sie nicht nur den Text, sondern schauen Sie sich die Seite als Ganzes an._<br \/><br \/><br \/>",
+            "label_parsed": "<p><br \/><\/p>\n<h2>Schauen Sie sich die Titelseite genau an. Wie wirkt die Seite auf Sie?<\/h2>\n<p><em>Lesen Sie nicht nur den Text, sondern schauen Sie sich die Seite als Ganzes an.<\/em><br \/><br \/><br \/><\/p>",
+            "optional": 1,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 22
+        },
+        {
+            "type": "note",
+            "choice_list": null,
+            "type_options": null,
+            "name": "stimuli_nonvis",
+            "label": "<img src=\"https:\/\/formr.org\/assets\/tmp\/admin\/8jFe3s6aVxevYGwWc1J2GIIzsCQyABILHkmGghhFThPd.png?v1569321459\" width=\"100%\" style=\"box-shadow: 0px 0px 6px\" alt=\"hier sollte ein Bild stehen\" \/>",
+            "label_parsed": "<img src=\"https:\/\/formr.org\/assets\/tmp\/admin\/8jFe3s6aVxevYGwWc1J2GIIzsCQyABILHkmGghhFThPd.png?v1569321459\" width=\"100%\" style=\"box-shadow: 0px 0px 6px\" alt=\"hier sollte ein Bild stehen\" \/>",
+            "optional": 1,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 23
+        },
+        {
+            "type": "note",
+            "choice_list": null,
+            "type_options": null,
+            "name": "nonvis_tsm_intro",
+            "label": "<br \/>\n###Inwieweit stimmen Sie den folgenden Aussagen zu?\n_Beziehen Sie sich bitte auf die gerade gelesene Studie._",
+            "label_parsed": "<p><br \/><\/p>\n<h3>Inwieweit stimmen Sie den folgenden Aussagen zu?<\/h3>\n<p><em>Beziehen Sie sich bitte auf die gerade gelesene Studie.<\/em><\/p>",
+            "optional": 1,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 24
+        },
+        {
+            "type": "mc_heading",
+            "choice_list": "heading_tsm_nonvis",
+            "type_options": "",
+            "name": "heading_tsm_nonvis",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "left500 mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 25,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tsm_1",
+            "type_options": "",
+            "name": "nonvis_tsm_1",
+            "label": "Die im Text formulierten Erkenntnisse sind beliebig.",
+            "label_parsed": "Die im Text formulierten Erkenntnisse sind beliebig.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 26,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tsm_2",
+            "type_options": "",
+            "name": "nonvis_tsm_2",
+            "label": "Das im Text enthaltene Wissen kann überhaupt nicht auf andere Situationen verallgemeinert werden.",
+            "label_parsed": "Das im Text enthaltene Wissen kann überhaupt nicht auf andere Situationen verallgemeinert werden.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 26,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tsm_3",
+            "type_options": "",
+            "name": "nonvis_tsm_3",
+            "label": "Das Gegenteil der im Text formulierten Erkenntnisse wäre genauso richtig\/falsch.",
+            "label_parsed": "Das Gegenteil der im Text formulierten Erkenntnisse wäre genauso richtig\/falsch.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 26,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tsm_4",
+            "type_options": "",
+            "name": "nonvis_tsm_4",
+            "label": "Die im Text formulierten Erkenntnisse können keinen Gültigkeitsanspruch für andere Situationen beanspruchen.",
+            "label_parsed": "Die im Text formulierten Erkenntnisse können keinen Gültigkeitsanspruch für andere Situationen beanspruchen.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 26,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tsc_1",
+            "type_options": "",
+            "name": "nonvis_tsc_1",
+            "label": "Die Aussagen des gerade gelesenen Textausschnittes decken sich sehr gut mit meiner persönlichen Meinung zu diesem Thema.",
+            "label_parsed": "Die Aussagen des gerade gelesenen Textausschnittes decken sich sehr gut mit meiner persönlichen Meinung zu diesem Thema.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 27,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tsc_2",
+            "type_options": "",
+            "name": "nonvis_tsc_2",
+            "label": "Die Aussagen des gerade gelesenen Textausschnittes stehen im Widerspruch dazu, was ich selbst über das Thema denke.",
+            "label_parsed": "Die Aussagen des gerade gelesenen Textausschnittes stehen im Widerspruch dazu, was ich selbst über das Thema denke.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 27,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tsc_3",
+            "type_options": "",
+            "name": "nonvis_tsc_3",
+            "label": "Ich stimme den Aussagen, die ich gerade in dem Textausschnitt gelesen habe, zu.",
+            "label_parsed": "Ich stimme den Aussagen, die ich gerade in dem Textausschnitt gelesen habe, zu.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 27,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__"
+            }
+        },
+        {
+            "type": "note",
+            "choice_list": null,
+            "type_options": null,
+            "name": "nonvis_tru_intro",
+            "label": "<br \/><br \/>\n###Im Folgenden bitten wir Sie einzuschätzen, welche Qualitäten Sie den Autorinnen\/Autoren der gerade gelesenen Studie in Bezug auf Ihre geäußerten Erkenntnisse zuweisen würden.\n\n_Die Autorinnen\/Autoren der vorherigen Studie erscheinen mir in Bezug auf ihre Erkenntnisse ..._",
+            "label_parsed": "<p><br \/><br \/><\/p>\n<h3>Im Folgenden bitten wir Sie einzuschätzen, welche Qualitäten Sie den Autorinnen\/Autoren der gerade gelesenen Studie in Bezug auf Ihre geäußerten Erkenntnisse zuweisen würden.<\/h3>\n<p><em>Die Autorinnen\/Autoren der vorherigen Studie erscheinen mir in Bezug auf ihre Erkenntnisse ...<\/em><\/p>",
+            "optional": 1,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 28
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_exp_1",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_exp_1",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "kompetent",
+                "2": "inkompetent"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_exp_2",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_exp_2",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "intelligent",
+                "2": "unintelligent"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_exp_3",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_exp_3",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "gutausgebildet",
+                "2": "schlechtausgebildet"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_exp_4",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_exp_4",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "fachmännisch",
+                "2": "unfachmännisch"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_exp_5",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_exp_5",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "erfahren",
+                "2": "unerfahren"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_exp_6",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_exp_6",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "qualifiziert",
+                "2": "unqualifiziert"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_int_1",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_int_1",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "aufrichtig",
+                "2": "unaufrichtig"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_int_2",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_int_2",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "ehrlich",
+                "2": "unehrlich"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_int_3",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_int_3",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "gerecht",
+                "2": "ungerecht"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_int_4",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_int_4",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "fair",
+                "2": "unfair"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_ben_1",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_ben_1",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "moralisch",
+                "2": "unmoralisch"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_ben_2",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_ben_2",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "ethisch",
+                "2": "unethisch"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_ben_3",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_ben_3",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "verantwortungsbewusst",
+                "2": "verantwortungslos"
+            }
+        },
+        {
+            "type": "rating_button",
+            "choice_list": "nonvis_tru_ben_4",
+            "type_options": "1,7,1",
+            "name": "nonvis_tru_ben_4",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "answer_align_center left0 space_bottom_10 rating_button_label_width150",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 29,
+            "choices": {
+                "1": "rücksichtsvoll",
+                "2": "rücksichtslos"
+            }
+        },
+        {
+            "type": "note",
+            "choice_list": null,
+            "type_options": null,
+            "name": "nonvis_tch_intro",
+            "label": "<br \/>\n###Inwieweit stimmen Sie den folgenden Aussagen zu?\n_Beziehen Sie sich bitte auf die gerade gelesene Studie._",
+            "label_parsed": "<p><br \/><\/p>\n<h3>Inwieweit stimmen Sie den folgenden Aussagen zu?<\/h3>\n<p><em>Beziehen Sie sich bitte auf die gerade gelesene Studie.<\/em><\/p>",
+            "optional": 1,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 30
+        },
+        {
+            "type": "mc_heading",
+            "choice_list": "head_tch_nonvis",
+            "type_options": "",
+            "name": "head_tch_nonvis",
+            "label": "",
+            "label_parsed": "",
+            "optional": 0,
+            "class": "left500 mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 31,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tch_4",
+            "type_options": "",
+            "name": "nonvis_tch_4",
+            "label": "Die Autoren machen es anderen Forscherinnen und Forschern leicht, Ihre statistischen Analysen nachzuvollziehen.",
+            "label_parsed": "Die Autoren machen es anderen Forscherinnen und Forschern leicht, Ihre statistischen Analysen nachzuvollziehen.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 32,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tch_5",
+            "type_options": "",
+            "name": "nonvis_tch_5",
+            "label": "Wenn andere Forscherinnen und Forscher die Studie wiederholen möchten, haben Sie leicht Zugang zu den eingesetzten Fragenbögen.",
+            "label_parsed": "Wenn andere Forscherinnen und Forscher die Studie wiederholen möchten, haben Sie leicht Zugang zu den eingesetzten Fragenbögen.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 32,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tch_1",
+            "type_options": "",
+            "name": "nonvis_tch_1",
+            "label": "Es ist transparent, welche Leistungstests und Daten der Studie zugrunde liegen.",
+            "label_parsed": "Es ist transparent, welche Leistungstests und Daten der Studie zugrunde liegen.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 32,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tch_2",
+            "type_options": "",
+            "name": "nonvis_tch_2",
+            "label": "Interessierte können sich sowohl den Fragebogen der beschriebenen Studie, als auch die Daten und deren Auswertung genau ansehen.",
+            "label_parsed": "Interessierte können sich sowohl den Fragebogen der beschriebenen Studie, als auch die Daten und deren Auswertung genau ansehen.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 32,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "mc",
+            "choice_list": "nonvis_tch_3",
+            "type_options": "",
+            "name": "nonvis_tch_3",
+            "label": "In der Studie eingesetzte Materialien und erhobene Daten sind offen zugänglich.",
+            "label_parsed": "In der Studie eingesetzte Materialien und erhobene Daten sind offen zugänglich.",
+            "optional": 0,
+            "class": "left500 hide_label mc_width70",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 32,
+            "choices": {
+                "1": "__stimme nicht zu__",
+                "2": "&nbsp;",
+                "3": "&nbsp;&nbsp;",
+                "4": "__stimme zu__",
+                "-999": "(weiß nicht)"
+            }
+        },
+        {
+            "type": "submit",
+            "choice_list": null,
+            "type_options": null,
+            "name": "lastpage",
+            "label": "weiter",
+            "label_parsed": "weiter",
+            "optional": 0,
+            "class": "",
+            "showif": "",
+            "value": "",
+            "block_order": "F",
+            "item_order": 33
+        }
+    ],
+    "settings": {
+        "maximum_number_displayed": 0,
+        "displayed_percentage_maximum": 85,
+        "add_percentage_points": 5,
+        "enable_instant_validation": 0,
+        "expire_after": 0,
+        "google_file_id": "1EZpjaVJzGrZ0M3XPw6D3SfHv-rPTBAhoK8Yu0xkkDGo",
+        "unlinked": 0,
+        "expire_invitation_after": 0,
+        "expire_invitation_grace": 0,
+        "hide_results": 0,
+        "use_paging": 0
+    },
+    "google_sheet": "https:\/\/docs.google.com\/spreadsheets\/d\/1EZpjaVJzGrZ0M3XPw6D3SfHv-rPTBAhoK8Yu0xkkDGo\/edit"
+}

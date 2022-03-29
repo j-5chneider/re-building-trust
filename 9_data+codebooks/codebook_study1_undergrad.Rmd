@@ -1,0 +1,197 @@
+---
+title: "Codebook"
+subtitle: "Undergraduates (pre-service teachers) Sample"
+output: 
+  html_document: 
+    code_folding: hide
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+    theme: flatly
+date: "July 12th 2021"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knit_by_pkgdown <- !is.null(knitr::opts_chunk$get("fig.retina"))
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, error = FALSE)
+ggplot2::theme_set(ggplot2::theme_bw())
+library(codebook)
+library(labelled)
+library(ufs)
+library(rio)
+library(dplyr)
+library(here)
+```
+
+# Description
+
+This is the codebook of "Study 1" from the manuscript http://dx.doi.org/10.23668/psycharchives.3364 .  
+Data is embeded in this file. To download the data as CSV `r xfun::embed_file(here("9_data+codebooks/rbt_study1_undergrad.csv"), text ="click here")`.  
+  
+__Structure of the codebook:__
+  
+* Participants consecuatively received two abstracts (stimulus)
+* They answered the scales in response to one abstract (stimulus) at a time
+* The codebook reports each item and scale for the abstracts together (as in data set), therefore the reliability scores are not necessarily as reported in the manuscript
+* for analyses that distinguish between the two measurement times, download the data and separate by variable `meas_rep`
+
+# Metadata
+
+
+
+```{r import}
+rbt_ugr <- rio::import(here("9_data+codebooks/rbt_study1_undergrad.csv"))
+
+# we need to invert items back to original format
+inv7fct <- function(x) (8-as.numeric(x))
+
+rbt_ugr <- rbt_ugr %>%
+    mutate_at(vars(exp_1:exp_6, int_1:int_4, ben_1:ben_4),
+              list(~inv7fct(.)))
+```
+
+```{r metadata}
+metadata(rbt_ugr)$name <- "Journals’ Open Science Badges Foster Trust in Scientists. Study 1: Undergraduates Sample."
+metadata(rbt_ugr)$description <- "Code book to manuscript"
+metadata(rbt_ugr)$identifier <- ""
+metadata(rbt_ugr)$datePublished <- "2021-07-12"
+metadata(rbt_ugr)$creator <- list(
+      "@type" = "Person",
+      givenName = "Schneider", familyName = "Jürgen",
+      email = "juergen.schneider@uni-tuebingen.de", 
+      affiliation = list("@type" = "Organization",
+        name = "University of Tübingen"))
+metadata(rbt_ugr)$citation <- "Schneider, J. (2021). Journals’ Open Science Badges Foster Trust in Scientists. Codebook of Study 1: Undergraduates sample"
+```
+
+
+```{r labels}
+# add variable labels #########################################################################
+var_label(rbt_ugr) <- list(
+        treat = "Treatment condition, the participant was assigned to.",
+        exp_1 = "competent - incompetent",
+        exp_2 = "intelligent - unintelligent",
+        exp_3 = "well educated -	poorly educated",
+        exp_4 = "professional - unprofessional",
+        exp_5 = "experienced - inexperienced",
+        exp_6 = "qualified - unqualified",
+        int_1 = "sincere - insincere",
+        int_2 = "honest - dishonest",
+        int_3 = "just - unjust",
+        int_4 = "fair - unfair",
+        ben_1 = "moral - immoral",
+        ben_2 = "ethical - unethical",
+        ben_3 = "responsible - irresponsible",
+        ben_4 = "considerate - inconsiderate",
+        meas_rep = "Measurement repetition, first and second measurement",
+        tsm_1 = "The insights from the text are arbitrary.",
+        tsm_2 = "The knowledge contained in the text cannot be generalized to other situations at all.",
+        tsm_3 = "The opposite of the knowledge formulated in the text would be equally right/wrong.",
+        tsm_4 = "The knowledge formulated in the text cannot claim validity for other situations.",
+        tch_1 = "It is transparent which data form the basis of the study.",
+        tch_2 = "Interested parties can have a close look at the questionnaire of the described study.",
+        tch_3 = "The data collected in the study are publicly available.",
+        tch_4 = "The authors make it easy for other researchers to understand their statistical analyses.",
+        tch_5 = "If other researchers want to repeat the study, they have easy access to the questionnaires used.",
+        semester = "How many semesters of teaching/education-related coursework are you in (counting bachelor's degrees)?",
+        sex = "Sex",
+        age = "Age"
+)
+
+
+# add value labels ###########################################################################
+# Treatment
+val_labels(rbt_ugr$treat) <- c("Greyed out badges (no adherence to Open Science standards)" = "GB",
+                               "Control Condition (no badges)" = "CC",
+                               "Colored out badges (adherence to Open Science standards)" = "CB")
+
+# add value labels (without "don't know" option) 
+add_likert_labels4 <- function(x) {
+  val_labels(x) <- c("fully disagree" = 1, 
+                     "[empty 1]" = 2, 
+                     "[empty 2]" = 3,
+                     "fully agree" = 4)
+  x
+}
+
+rbt_ugr <- rbt_ugr %>%
+  mutate_at(vars(tsm_1:tsm_4),  add_likert_labels4)
+
+
+# add value labels (with "don't know" option)
+add_likert_labels4dk <- function(x) {
+  val_labels(x) <- c("fully disagree" = 1, 
+                     "[empty 1]" = 2, 
+                     "[empty 2]" = 3,
+                     "fully agree" = 4,
+                     "don't know" = -999)
+  x
+}
+
+rbt_ugr <- rbt_ugr %>%
+  mutate_at(vars(tch_1:tch_5),  add_likert_labels4dk)
+
+
+# semantic differentials
+add_semantic_diff <- function(x) {
+  val_labels(x) <- c("1" = 1,
+                     "2" = 2,
+                     "3" = 3,
+                     "4" = 4,
+                     "5" = 5,
+                     "6" = 6,
+                     "7" = 7)
+  x
+}
+
+rbt_ugr <- rbt_ugr %>%
+  mutate_at(vars(exp_1:exp_6, int_1:int_4, ben_1:ben_4),  add_semantic_diff)
+
+# sex
+val_labels(rbt_ugr$sex) <- c("female" = 1,
+                             "male" = 2,
+                             "other" = 3)
+
+# measurement time
+val_labels(rbt_ugr$meas_rep) <- c("first measurement" = 1,
+                                  "second measurement" = 2)
+ 
+
+# Define scales ##########################################################################
+rbt_ugr$exp <- rbt_ugr %>% 
+  select(exp_1:exp_6) %>% 
+  aggregate_and_document_scale()
+
+rbt_ugr$int <- rbt_ugr %>% 
+  select(int_1:int_4) %>% 
+  aggregate_and_document_scale()
+
+rbt_ugr$ben <- rbt_ugr %>% 
+  select(ben_1:ben_4) %>% 
+  aggregate_and_document_scale()
+
+rbt_ugr$tsm <- rbt_ugr %>% 
+  select(tsm_1:tsm_4) %>% 
+  aggregate_and_document_scale()
+
+rbt_ugr$tch <- rbt_ugr %>% 
+  select(tch_1:tch_5) %>% 
+  aggregate_and_document_scale()
+
+
+# detect scales #########################################################################
+rbt_ugr <- detect_scales(rbt_ugr, quiet = FALSE)
+```
+
+
+# Codebook
+
+```{r codebook, echo=FALSE}
+codebook(rbt_ugr, metadata_table = knit_by_pkgdown, metadata_json = TRUE)
+
+if (!knit_by_pkgdown) {
+  codebook:::escaped_table(codebook_table(rbt_ugr))
+}
+```

@@ -1,0 +1,1104 @@
+---
+title: "Reproducible Documentation of Analyses"
+subtitle: "Public sample"
+header-includes:
+   - \usepackage{sansmath}
+   - \sansmath
+output: 
+  html_document: 
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+    theme: flatly
+editor_options: 
+  chunk_output_type: console
+---
+
+
+# Data import
+```{r setup, include=FALSE}
+library(tidyverse)
+library(hrbrthemes)
+library(lavaan)
+library(hrbrthemes)
+library(bain)
+library(skimr)
+library(psych) 
+library(mice) 
+library(ggbeeswarm)
+library(here)
+
+rbt_public_1 <- read_csv("../rbt_students_w.csv")
+rbt_public_0 <- read_csv("../rbt_students_w_demogr.csv")
+```
+
+The data is included within this reproducible report and can be downloaded `r xfun::embed_file(here("8_reproducible_documentation_of_analyses", "rbt_students_w.csv"), text ="here (object 'rbt_public_1')")` and  `r xfun::embed_file(here("8_reproducible_documentation_of_analyses", "rbt_students_w_demogr.csv"), text ="here (object 'rbt_public_0')")`.
+
+## Data wrangling
+```{r wrangling_psychprop_meti_tsm, warning=FALSE}
+# wrangling
+rbt_public_l <- pivot_longer(rbt_public_1, 
+                             cols = (abs1_tsm_1:abs2_tch_5), 
+                             names_to = "variable", 
+                             values_to = "value") %>%
+    mutate(treat = case_when(                    # create treatment variable
+        str_detect(variable, "abs1_") ~ toupper(treat1),
+        str_detect(variable, "abs2_") ~ toupper(treat2)),
+        variable = str_sub(variable, 6, -1)) # delete title page substring
+
+# pivot them into wide format
+rbt_public_w <- pivot_wider(rbt_public_l,
+                            names_from = variable,
+                            values_from = value,
+                            id_cols = c(session, treat))
+
+# invert trust items & build scales
+inv7fct <- function(x) (8-as.numeric(x))
+data_rbt <- rbt_public_w %>%
+    mutate_at(vars(tru_exp_1:tru_ben_4),
+              list(~inv7fct(.))) %>% # recoding 1-->7, 2-->6, ...
+    rename(exp_1 = tru_exp_1, 
+           exp_2 = tru_exp_2, 
+           exp_3 = tru_exp_3, 
+           exp_4 = tru_exp_4, 
+           exp_5 = tru_exp_5, 
+           exp_6 = tru_exp_6,
+           int_1 = tru_int_1, 
+           int_2 = tru_int_2, 
+           int_3 = tru_int_3, 
+           int_4 = tru_int_4,
+           ben_1 = tru_ben_1, 
+           ben_2 = tru_ben_2, 
+           ben_3 = tru_ben_3, 
+           ben_4 = tru_ben_4) %>% 
+    group_by(session) %>% 
+    mutate(meas_rep = 1:n()) %>% 
+    ungroup() %>% 
+    full_join(., rbt_public_0)
+
+
+# data frames with sum scales
+data_scales <- data_rbt%>%
+  mutate(Treatment = factor(treat, levels = c("GB", "CC", "CB")),
+         Experitse = rowMeans(data.frame(exp_1, exp_2, exp_3, 
+                                   exp_4, exp_5, exp_6), na.rm = T),
+         Integrity = rowMeans(data.frame(int_1, int_2, int_3, int_4), na.rm = T),
+         Benevolence = rowMeans(data.frame(ben_1, ben_2, ben_3, ben_4), na.rm = T),
+         TSM = rowMeans(data.frame(tsm_1, tsm_2, tsm_3, tsm_4), na.rm = T))
+
+data_scales_lables <- data_rbt%>%
+  mutate(Treatment = factor(treat, levels = c("GB", "CC", "CB")),
+         Treatment = fct_recode(Treatment,
+                                `Colored badges` = "CB",
+                                `Control Condition` = "CC",
+                                `Greyed out badges` = "GB"),
+         Experitse = rowMeans(data.frame(exp_1, exp_2, exp_3, 
+                                   exp_4, exp_5, exp_6), na.rm = T),
+         Integrity = rowMeans(data.frame(int_1, int_2, int_3, int_4), na.rm = T),
+         Benevolence = rowMeans(data.frame(ben_1, ben_2, ben_3, ben_4), na.rm = T),
+        `Topic specific multiplism` = rowMeans(data.frame(tsm_1, tsm_2, tsm_3, tsm_4), 
+                                               na.rm = T))
+
+data_scales_wide <- data_scales%>%
+  select(Experitse, Integrity, Benevolence,
+         TSM, Treatment, session)%>%
+  gather(Variable, Value, -session, -Treatment)%>%
+  mutate(Variable2 = paste(Variable, Treatment, sep = "_"))%>%
+  select(-Variable, -Treatment)%>%
+  spread(Variable2, Value)
+
+data_scales_lables_wide <- data_scales_lables%>%
+  select(Experitse, Integrity, Benevolence,
+         `Topic specific multiplism`, Treatment, session)%>%
+  gather(Variable, Value, -session, -Treatment)%>%
+  mutate(Variable2 = paste(Variable, Treatment, sep = "_"))%>%
+  select(-Variable, -Treatment)%>%
+  spread(Variable2, Value)
+
+# Data of treatment check
+data_tch <- data_rbt %>% 
+  select(starts_with("tch"), meas_rep, treat)
+
+data_tch_n <- data_tch%>%
+  mutate_all(function(x) ifelse(x == -999, NA, x)) %>% 
+  filter(rowSums(is.na(data.frame(tch_1, tch_2, tch_3, tch_4))) != 4)
+
+PID_list <- data_rbt$session %>% unique()
+```
+
+# Sample
+## Sample size
+```{r}
+length(PID_list)
+
+data_rbt %>%
+  filter(meas_rep == 2) %>%
+  select(session) %>% 
+  distinct() %>% 
+  nrow()
+```
+
+## Skipped after first measurement
+```{r}
+sum(is.na(data_rbt%>%
+            filter(meas_rep == 2)%>%
+            pull(exp_1)))
+```
+
+
+## Demographics
+```{r}
+data_rbt %>% 
+  filter(meas_rep == 2)%>%
+  mutate(education = as.factor(education),
+         sex = as.factor(sex),
+         age = as.factor(age)) %>% 
+  select(age, education, sex) %>% 
+  skim(.)
+```
+
+### Count on sex
+```{r}
+data_rbt %>%
+  filter(meas_rep == 2)%>%
+  pull(sex) %>% 
+  table(.)
+```
+
+### Count on education
+```{r}
+data_rbt %>%
+  filter(meas_rep == 2)%>%
+  pull(education) %>% 
+  table(.)
+```
+
+### Count on age
+```{r}
+data_rbt %>%
+  filter(meas_rep == 2)%>%
+  pull(age) %>% 
+  table(.)
+```
+
+# Psychometric properties of the measurements
+## Descriptive overview
+```{r}
+skewn <- function(x) DescTools::Skew(x, na.rm = T)
+kurto <- function(x) DescTools::Kurt(x, na.rm = T)
+maxabszvalue <- function(x) max(abs(scale(na.omit(x))))
+
+my_skim <- skim_with(numeric = sfl(skewn, kurto, maxabszvalue))
+
+data_scales%>%
+  my_skim(.)
+```
+
+
+## METI
+### Dimensionality (CFA)
+First we specified two consecutive threedimensional CFA models
+```{r cfa_meti, results='asis'}
+# onedimensional model
+cfa_meti_model_1d <- "exp =~ exp_1 + exp_2 + exp_3 + exp_4 + exp_5 + exp_6 +
+                             int_1 + int_2 + int_3 + int_4 +
+                             ben_1 + ben_2 + ben_3 + ben_4"
+
+cfa1d_meti_1 <- cfa(cfa_meti_model_1d, data = data_rbt%>%filter(meas_rep == 1))
+cfa1d_meti_2 <- cfa(cfa_meti_model_1d, data = data_rbt%>%filter(meas_rep == 2))
+
+cfa_meti_model_1 <- "exp =~ exp_1 + exp_2 + exp_3 + exp_4 + exp_5 + exp_6
+                     int =~ int_1 + int_2 + int_3 + int_4 
+                     ben =~ ben_1 + ben_2 + ben_3 + ben_4"
+
+cfa_meti_model_2 <- "exp =~ exp_1 + exp_2 + exp_3 + exp_4 + exp_5 + exp_6
+                     int =~ int_1 + int_2 + int_3 + int_4 
+                     ben =~ ben_1 + ben_2 + ben_3 + ben_4"
+
+cfa_meti_1 <- cfa(cfa_meti_model_1, data = data_rbt%>%filter(meas_rep == 1))
+
+# define a function which prints the fit
+fpf <- function(x){  
+  fm_tmp <- fitmeasures(x)
+  return(cat(sprintf(
+          "χ^2^ = %s, _df_ = %s, CFI = %s, TLI = %s, RMSEA = %s, SRMR = %s, SRMR~between~ = %s, SRMR~within~ = %s",
+           round(fm_tmp[c("chisq")],3), 
+                 fm_tmp[c("df")],
+           round(fm_tmp[c("cfi")],3),
+           round(fm_tmp[c("tli")],3),
+           round(fm_tmp[c("rmsea")],3),
+           round(fm_tmp[c("srmr")],3),
+           round(fm_tmp[c("srmr_between")],3),
+           round(fm_tmp[c("srmr_within")],3))))
+}
+
+# print the fit for cfa_meti_1
+fpf(cfa1d_meti_1)
+fpf(cfa_meti_1)
+
+cfa_meti_2 <- cfa(cfa_meti_model_2, data = data_rbt%>%filter(meas_rep == 2))
+fpf(cfa1d_meti_2)
+fpf(cfa_meti_2)
+```
+
+
+```{r cfa_meti_anovas}
+anova(cfa1d_meti_1, cfa_meti_1)
+anova(cfa1d_meti_2, cfa_meti_2)
+```
+
+In an next step we ran a two-level CFA ...
+```{r mcfa_meti, warning=FALSE, results='asis'}
+# onedimensional model
+mcfa1d_meti_model <- "level: 1
+                    meti =~ exp_1 + exp_2 + exp_3 + exp_4 + exp_5 + exp_6 +
+                            int_1 + int_2 + int_3 + int_4 +
+                            ben_1 + ben_2 + ben_3 + ben_4
+                    
+                    level: 2
+                    meti =~ exp_1 + exp_2 + exp_3 + exp_4 + exp_5 + exp_6 +
+                            int_1 + int_2 + int_3 + int_4 +
+                            ben_1 + ben_2 + ben_3 + ben_4"
+
+
+
+mcfa_meti_model <- "level: 1
+                    exp_w =~ exp_1 + exp_2 + exp_3 + exp_4 + exp_5 + exp_6
+                    int_w =~ int_1 + int_2 + int_3 + int_4 
+                    ben_w =~ ben_1 + ben_2 + ben_3 + ben_4
+                    
+                    level: 2
+                    exp_b =~ exp_1 + exp_2 + exp_3 + exp_4 + exp_5 + exp_6
+                    int_b =~ int_1 + int_2 + int_3 + int_4 
+                    ben_b =~ ben_1 + ben_2 + ben_3 + ben_4"
+mcfa1d_meti <- cfa(mcfa1d_meti_model, data = data_rbt, cluster = "session")
+mcfa_meti <- cfa(mcfa_meti_model, data = data_rbt, cluster = "session")
+fpf(mcfa1d_meti)
+fpf(mcfa_meti)
+```
+
+
+```{r mcfa_meti_anova, warning=FALSE}
+anova(mcfa1d_meti, mcfa_meti)
+```
+
+
+
+### Reliability (McDonalds $\omega$)
+```{r rel_METI}
+# First Measurement
+## Expertise
+MBESS::ci.reliability(data_rbt%>%filter(meas_rep == 1) %>% select(starts_with("exp")))$est
+# Integrity
+MBESS::ci.reliability(data_rbt%>%filter(meas_rep == 1) %>% select(starts_with("int")))$est
+# Benevolence
+MBESS::ci.reliability(data_rbt%>%filter(meas_rep == 1) %>% select(starts_with("ben")))$est
+
+# Second Measurement
+## Expertise
+MBESS::ci.reliability(data_rbt%>%filter(meas_rep == 2) %>% select(starts_with("exp")))$est
+# Integrity
+MBESS::ci.reliability(data_rbt%>%filter(meas_rep == 2) %>% select(starts_with("int")))$est
+# Benevolence
+MBESS::ci.reliability(data_rbt%>%filter(meas_rep == 2) %>% select(starts_with("ben")))$est
+```
+
+
+## Topic specific multiplism
+### Dimensionality (CFA)
+First we specified two consecutive onedimensional CFA models
+```{r cfa_tsm, results='asis'}
+cfa_tsm_model <- "tsm =~ a*tsm_1 + a*tsm_2 + a*tsm_3 + a*tsm_4
+                  tsm_2 ~~ tsm_4"
+
+cfa_tsm_1 <-
+  cfa(cfa_tsm_model, 
+      data = data_rbt %>% 
+        filter(meas_rep == 1),
+      missing = "fiml")
+fpf(cfa_tsm_1)
+
+cfa_tsm_2 <-
+  cfa(cfa_tsm_model, 
+      data = data_rbt %>% 
+        filter(meas_rep == 2))
+fpf(cfa_tsm_2)
+```
+
+In an next step, we ran a two-level CFA ...
+```{r mcfa_tsm, warning= F, results='asis'}
+mcfa_tsm_model <- "level: 1
+                    tsm_w =~ tsm_1 + tsm_2 + tsm_3 + tsm_4
+                    tsm_2 ~~ tsm_4
+                    
+
+                    level: 2
+                    tsm_b =~ tsm_1 + tsm_2 + tsm_3 + tsm_4
+                    tsm_2 ~~ 0*tsm_2
+tsm_1 ~~ tsm_2"
+
+mcfa_tsm <- cfa(mcfa_tsm_model, data = data_rbt, cluster = "session")
+fpf(mcfa_tsm)
+```
+
+
+### Reliability (McDonalds $\omega$)
+```{r rel_tsm}
+# First Measurement
+MBESS::ci.reliability(data_rbt %>% filter(meas_rep ==1) %>% select(starts_with("tsm")))$est
+# Second Measurement
+MBESS::ci.reliability(data_rbt %>% filter(meas_rep ==2) %>% select(starts_with("tsm")))$est
+```
+
+
+## Treatment check
+### Dimensionality (CFA)
+We specified two consecutive onedimensional CFA models
+```{r cfa_tch, results='asis'}
+cfa_tch_model <- "tch =~ tch_1 + tch_2 + tch_3 + tch_4 + tch_5
+                  tch_1 ~~ tch_2"
+
+cfa_tch_model2 <- "tch =~ tch_1 + tch_2 + tch_3 + tch_4 + tch_5"
+
+cfa_tch_1 <- cfa(cfa_tch_model, 
+                 data = data_tch_n%>%
+                   filter(meas_rep == 1))
+fpf(cfa_tch_1)
+cfa_tch_2 <- cfa(cfa_tch_model2, data = data_tch_n%>%filter(meas_rep == 2))
+fpf(cfa_tch_2)
+```
+
+
+### Reliability (Ordinal McDonalds $\omega$)
+```{r rel_tch, warning = F}
+# First Measurement
+MBESS::ci.reliability(data_rbt %>% filter(meas_rep == 1) %>% select(starts_with("tch")))$est
+# Second Measurement
+MBESS::ci.reliability(data_rbt %>% filter(meas_rep == 2) %>% select(starts_with("tch")))$est
+```
+
+
+## Table of (M)CFA fit-indices
+```{r}
+tibble(`1d CFA METI 1` = fitmeasures(cfa1d_meti_1)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       `1d CFA METI 2` = fitmeasures(cfa1d_meti_2)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       `3d CFA METI 1` = fitmeasures(cfa_meti_1)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       `3d CFA METI 2` = fitmeasures(cfa_meti_2)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       `1d MCFA METI` = fitmeasures(mcfa1d_meti)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       `3d MCFA METI` = fitmeasures(mcfa_meti)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       `1d CFA TSM 1` = fitmeasures(cfa_tsm_1)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       `1d CFA TSM 2` = fitmeasures(cfa_tsm_2)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       `1d MCFA TSM` = fitmeasures(mcfa_tsm)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       `1d CFA TCH 1` = fitmeasures(cfa_tch_1)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       `1d CFA TCH 2` = fitmeasures(cfa_tch_2)[c("chisq", "df", "cfi", "tli", "rmsea", 
+                                              "srmr", "srmr_between", "srmr_within", "bic", "aic")],
+       rownames = c("χ^2^", "_df_", "CFI", "TLI", "RMSEA", "SRMR", "SRMR~between~", "SRMR~within~", "BIC", "AIC"))%>%
+  column_to_rownames(var = "rownames")%>%
+  knitr::kable(., digits = 3)
+```
+
+
+# Results of the treatmentcheck
+## Plot
+```{r, fig.width = 12, fig.height = 6}
+res_tch_data <- data_tch%>%
+  gather(variable, value, starts_with("tch_"))%>%
+  group_by(treat, variable, value)%>%
+  mutate(value = as.character(value)) %>% 
+  summarize(freq = n())%>%
+  ungroup()%>%
+  mutate(treat = case_when(treat == "GB" ~ "Greyed out badges",
+                           treat == "CB" ~ "Colored badges",
+                           treat == "CC" ~ "Control condition",
+                           T ~ treat),
+         value = case_when(value =="-999" ~ "don't know",
+                           T ~ value),
+         variable = case_when(variable == "tch_1" ~ "item 1", 
+                              variable == "tch_2" ~ "item 2", 
+                              variable == "tch_3" ~ "item 3", 
+                              variable == "tch_4" ~ "item 4", 
+                              variable == "tch_5" ~ "item 5"),
+         Frequency = freq)
+
+res_tch_plot <- ggplot(res_tch_data, aes(variable, value)) + 
+  geom_point(aes(size = Frequency, color = Frequency), shape = 15) +
+  scale_size_continuous(range = c(3,15)) + 
+  scale_color_gradient(low = "grey95", high = "grey65") +
+  guides(color=guide_legend(), size = guide_legend()) +
+  facet_wrap(~treat) + 
+  theme_ipsum_ps() + 
+  ggtitle("Results of the treatment check", "Frequency per item and experimental condition") + 
+  ylab("") + 
+  xlab("")
+  
+res_tch_plot
+
+
+res_tch_plot_pub <- ggplot(res_tch_data %>%
+                         mutate(treat = case_when(treat == "Greyed out badges" ~ "Grayed out badges",
+                                                  TRUE ~ treat)), aes(variable, value)) + 
+  geom_point(aes(size = Frequency, color = Frequency), shape = 15) +
+  scale_size_continuous(range = c(3,15)) + 
+  scale_color_gradient(low = "grey95", high = "grey65") +
+  guides(color=guide_legend(), size = guide_legend()) +
+  facet_wrap(~treat) + 
+  theme_ipsum() + 
+  ylab("") + 
+  xlab("")
+
+#ggsave("Fig/res_tch_plot_public.svg", res_tch_plot, width = 11, height = 6)
+ggsave("8_reproducible_documentation_of_analyses/Fig/Fig6.jpg", res_tch_plot_pub, width = 130, height = 50, units = "mm", dpi = 300, scale = 2.4)
+```
+
+## Effect size
+```{r}
+res_tch_data_A <- data_tch_n%>%
+  filter(treat != "CC")%>%
+  filter(tch_1 != -999)
+
+effsize::VD.A(tch_1 ~ treat, data = res_tch_data_A)   
+```
+
+
+
+# Graphical exploration
+## Plot Hyp 1
+```{r hyp1_graph, fig.width=12, fig.height=6}
+data_scales_lables%>%
+  gather(Variable, Value, Experitse, Integrity, Benevolence)%>%
+  ggplot(., aes(x = Treatment, y = Value)) + 
+  geom_violin(adjust = 1.5) +
+  stat_summary(fun.data = "mean_sdl", fun.args = list(mult = 1)) +
+  coord_flip() +
+  facet_wrap(~ Variable, nrow = 1) + 
+  labs(title = "Graphical overview (Hyp 1)",
+       subtitle = "Violinplots and means ± 1*SD",
+       caption = "") +
+  ylim(1,7) +
+  hrbrthemes::theme_ipsum_ps()
+
+# Export data for combined plot
+#data_scales_lables %>% 
+#  mutate(Study = "Study 3") %>% 
+#  write_csv(., "8_reproducible_documentation_of_analyses/Fig/data_scales_lables_study_3.csv")
+```
+
+## Descriptive Effect Sizes Hyp 1
+```{r effsizes_hyp1}
+A_GB_CC <- data_scales_lables%>%
+  filter(treat != "CB")%>%
+  mutate(treat = as.character(treat))%>%
+  effsize::VD.A(Integrity ~ treat, data = .)%>%
+  .$estimate
+
+
+A_CC_CB <- data_scales_lables%>%
+  filter(treat != "GB")%>%
+  mutate(treat = as.character(treat))%>%
+  effsize::VD.A(Integrity ~ treat, data = .)%>%
+  .$estimate
+
+
+A_GB_CB <- data_scales_lables%>%
+  filter(treat != "CC")%>%
+  mutate(treat = as.character(treat))%>%
+  effsize::VD.A(Integrity ~ treat, data = .)%>%
+  .$estimate
+```
+
+|        | GB                                                                               | CC                                                                                |
+|--------|--------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------|
+| CC | A = `r round(A_GB_CC, 2)`, d = `r round(qnorm(A_GB_CC)*sqrt(2), 2)`  |                                                                                       |
+| CB | A = `r round(A_GB_CB, 2)`, d = `r round(qnorm(A_GB_CB)*sqrt(2), 2)`  | A = `r round(A_CC_CB, 2)`, d = `r round(qnorm(A_CC_CB)*sqrt(2), 2)`   |
+
+
+## Hyp 2/3
+```{r hyp2_hyp3_graph, fig.width=12, fig.height=6}
+plot_hyp2_1 <- ggplot(data_scales_lables, 
+                      aes(x=`Topic specific multiplism`, y = Integrity)) + 
+  geom_jitter() +
+  facet_wrap(~ Treatment, nrow = 1) + 
+  labs(title = "Graphical overview (Hyp 2/3)",
+       subtitle = "Jitter plot per treatment") +
+  hrbrthemes::theme_ipsum_ps()
+
+
+plot_hyp2_1 + stat_smooth()
+plot_hyp2_1 + stat_smooth(method = "lm")
+
+```
+
+## Descriptive Effect Sizes Hyp 3/4
+Spearman and Kendall correlations:
+```{r effsizes_hyp2}
+r_GB <- round(cor(data_scales_lables%>%
+                        filter(treat == "GB")%>%
+                        pull(Integrity),
+                      data_scales_lables%>%
+                        filter(treat == "GB")%>%
+                        pull(`Topic specific multiplism`),
+                      method = "pearson", use = "pairwise.complete.obs"), 2)
+t_GB <- round(cor(data_scales_lables%>%
+                        filter(treat == "GB")%>%
+                        pull(Integrity),
+                      data_scales_lables%>%
+                        filter(treat == "GB")%>%
+                        pull(`Topic specific multiplism`),
+                      method = "kendall", use = "pairwise.complete.obs"), 2)
+
+r_CC <- round(cor(data_scales_lables%>%
+                        filter(treat == "CC")%>%
+                        pull(Integrity),
+                      data_scales_lables%>%
+                        filter(treat == "CC")%>%
+                        pull(`Topic specific multiplism`),
+                      method = "pearson", use = "pairwise.complete.obs"), 2)
+t_CC <- round(cor(data_scales_lables%>%
+                        filter(treat == "CC")%>%
+                        pull(Integrity),
+                      data_scales_lables%>%
+                        filter(treat == "CC")%>%
+                        pull(`Topic specific multiplism`),
+                      method = "kendall", use = "pairwise.complete.obs"), 2)
+
+r_CB <- round(cor(data_scales_lables%>%
+                        filter(treat == "CB")%>%
+                        pull(Integrity),
+                      data_scales_lables%>%
+                        filter(treat == "CB")%>%
+                        pull(`Topic specific multiplism`),
+                      method = "pearson", use = "pairwise.complete.obs"), 2)
+t_CB <- round(cor(data_scales_lables%>%
+                        filter(treat == "CB")%>%
+                        pull(Integrity),
+                      data_scales_lables%>%
+                        filter(treat == "CB")%>%
+                        pull(`Topic specific multiplism`),
+                      method = "kendall", use = "pairwise.complete.obs"), 2)
+```
+
+|                               | GB       | CC       | CB       |
+|-------------------------------|--------------|--------------|--------------|
+| $r(integrity, multiplism)$    | `r r_GB` | `r r_CC` | `r r_CB` |
+| $\tau(integrity, multiplism)$ | `r t_GB` | `r t_CC` | `r t_CB` |
+
+## Hyp 4
+```{r hyp4_graph, fig.width=8, fig.height=6, out.width="70%"}
+data_scales_lables%>%
+  mutate(Treatment = case_when(treat == "GB" ~ "Greyed out badges",
+                               treat == "CB" ~ "Colored badges",
+                               treat == "CC" ~ "Control condition",
+                               T ~ "treat"))%>%
+  ggplot(., aes(x = Treatment, y = `Topic specific multiplism`)) + 
+  geom_violin(adjust = 1.5, alpha = .5) +
+  stat_summary(fun.data = "mean_sdl", fun.args = list(mult = 1)) +
+  coord_flip() +
+  labs(title = "Graphical overview (Hyp 4)",
+       subtitle = "Violinplots and means ± 1*SD",
+       caption = "") +
+  xlab("") +
+  ylim(1,4) +
+  hrbrthemes::theme_ipsum_ps()
+
+
+fig4 <- data_scales_lables%>%
+ mutate(Treatment = case_when(treat == "GB" ~ "Greyed out badges",
+                              treat == "CB" ~ "Colored badges",
+                              treat == "CC" ~ "Control condition",
+                              T ~ "treat"))%>%
+ ggplot(., aes(x = Treatment, y = `Topic specific multiplism`)) + 
+ geom_violin(adjust = 1.5, alpha = .5) +
+ stat_summary(fun.data = "mean_sdl", fun.args = list(mult = 1)) +
+ coord_flip() +
+ xlab("") +
+ ylim(1,4) +
+ hrbrthemes::theme_ipsum_ps()
+```
+
+## Descriptive Effect Sizes Hyp 4
+```{r effsizes_hyp4}
+A_mult_GB_CC <- effsize::VD.A(`Topic specific multiplism` ~ treat, 
+                               data = data_scales_lables%>%
+                                 filter(treat != "CB")%>%
+                                 mutate(treat = as.character(treat)))$estimate
+d_mult_GB_CC <- qnorm(A_mult_GB_CC)*sqrt(2)
+
+
+A_mult_CC_CB <- effsize::VD.A(`Topic specific multiplism` ~ treat, 
+                               data = data_scales_lables%>%
+                                 filter(treat != "GB")%>%
+                                 mutate(treat = as.character(treat)))$estimate
+d_mult_CC_CB <- qnorm(A_mult_CC_CB)*sqrt(2)
+
+
+A_mult_GB_CB <- effsize::VD.A(`Topic specific multiplism` ~ treat, 
+                               data = data_scales_lables%>%
+                                 filter(treat != "CC")%>%
+                                 mutate(treat = as.character(treat)))$estimate
+d_mult_GB_CB <- qnorm(A_mult_GB_CB)*sqrt(2)
+``` 
+
+
+|        | GB                                                                                         | CC                                                                                          |
+|--------|------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| CC | A = `r round(A_mult_GB_CC, 2)`, d = `r round(d_mult_GB_CC, 2)`  |                                                                                                 |
+| CB | A = `r round(A_mult_GB_CB, 2)`, d = `r round(d_mult_GB_CB, 2)`  | A = `r round(A_mult_CC_CB, 2)`, d = `r round(d_mult_CC_CB, 2)`   |
+
+
+
+# Inference statistics (Hyp 1)
+## Description of the variables
+All of the following analyses are based on the data frame object `data_scales_wide` which is why we describe it here somewhat more detailed.  
+All analyses are based on measured variables *Integrity* (`Integrity`, is information source sincere, honest, just, unselfish and fair?) and *Topic Specific Multiplism* (`TSM`, is knowledge and knowing about a topic arbitrary?). As this data set is in wide format, the experimental conditions are encoded wtihin the variable names:  
+
+* `GB` means, that the participants of the study could learn from the grey out badges (ans corresponding explanations) within the abstract, that the authors of the study denied to use Open Practices
+* `CC` means, that the participants of the study could not learn if or if not the authors of the study used Open Practices
+* `CB`means,  that the participants of the study could learn from the colored badges (ans corresponding explanations) within the abstract, that the authors of the study used Open Practices
+
+Finally, the variable `session` identified the study participants.
+
+If we look descriptively at these variables:
+```{r}
+data_scales_wide%>%
+  my_skim(.)
+```
+
+## Investigating the missingness
+### Missingness per Variable
+```{r}
+library(naniar)
+visdat::vis_miss(data_scales_wide%>%select(-session)) + 
+  ggtitle("Missingness per Variable") + 
+  theme(plot.margin = margin(1, 2, 1, 1, "cm"))
+```
+
+### Marginal distributions `Integrity_GB`
+```{r, fig.width=15, fig.height=7}
+library(patchwork)
+ggplot(data_scales_wide, aes(Integrity_GB, Integrity_GB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CC, Integrity_GB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CB, Integrity_GB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_GB,       Integrity_GB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CC,       Integrity_GB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CB,       Integrity_GB)) + 
+  geom_miss_point(alpha = .2) + plot_layout(guides = 'collect') +
+  theme_ipsum_ps()
+```
+
+### Marginal distributions `Integrity_CC`
+```{r, fig.width=15, fig.height=7}
+ggplot(data_scales_wide, aes(Integrity_GB, Integrity_CC)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CC, Integrity_CC)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CB, Integrity_CC)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_GB,       Integrity_CC)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CC,       Integrity_CC)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CB,       Integrity_CC)) + 
+  geom_miss_point(alpha = .2) + plot_layout(guides = 'collect') +
+  theme_ipsum_ps()
+```
+
+### Marginal distributions `Integrity_CB`
+```{r, fig.width=15, fig.height=7}
+ggplot(data_scales_wide, aes(Integrity_GB, Integrity_CB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CC, Integrity_CB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CB, Integrity_CB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_GB,       Integrity_CB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CC,       Integrity_CB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CB,       Integrity_CB)) + 
+  geom_miss_point(alpha = .2) + plot_layout(guides = 'collect') +
+  theme_ipsum_ps()
+```
+
+### Marginal distributions `TSM_GB`
+```{r, fig.width=15, fig.height=7}
+ggplot(data_scales_wide, aes(Integrity_GB, TSM_GB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CC, TSM_GB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CB, TSM_GB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_GB,       TSM_GB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CC,       TSM_GB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CB,       TSM_GB)) + 
+  geom_miss_point(alpha = .2) + plot_layout(guides = 'collect') +
+  theme_ipsum_ps()
+```
+
+### Marginal distributions `TSM_CC`
+```{r, fig.width=15, fig.height=7}
+ggplot(data_scales_wide, aes(Integrity_GB, TSM_CC)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CC, TSM_CC)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CB, TSM_CC)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_GB,       TSM_CC)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CC,       TSM_CC)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CB,       TSM_CC)) + 
+  geom_miss_point(alpha = .2) + plot_layout(guides = 'collect') +
+  theme_ipsum_ps()
+```
+
+### Marginal distributions `TSM_CB`
+```{r, fig.width=15, fig.height=7}
+ggplot(data_scales_wide, aes(Integrity_GB, TSM_CB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CC, TSM_CB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(Integrity_CB, TSM_CB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_GB,       TSM_CB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CC,       TSM_CB)) + 
+  geom_miss_point(alpha = .2) +
+  theme_ipsum_ps() +
+ggplot(data_scales_wide, aes(TSM_CB,       TSM_CB)) + 
+  geom_miss_point(alpha = .2) + plot_layout(guides = 'collect') +
+  theme_ipsum_ps()
+```
+
+### Cohen's d of missing/not-missing per variable
+```{r}
+d_matrix_missings <- miceadds::mi_dstat(data_scales_wide%>%select(starts_with("Int"), starts_with("TSM")))%>%
+  round(.,4)
+
+knitr::kable(d_matrix_missings, caption = "Boxplot of Cohen's d of missing/not-missing per variable")
+
+boxplot(as.vector(d_matrix_missings))
+title("Boxplot of Cohen's d of missing/not-missing per variable")
+```
+
+
+
+## Imputation  
+```{r hyp1_imp_and_bain0, cache = T}
+M <- 1000
+out <- mice(data = data_scales_wide%>%select(-session),
+            m = M,
+            meth=c("norm","norm","norm",
+                   "norm","norm","norm",
+                   "norm","norm","norm",
+                   "norm","norm","norm"), 
+            diagnostics = FALSE,
+            printFlag = F,
+            seed = 83851)
+```
+
+
+## Check of first 10 imputation
+```{r hyp1_imp_and_bain1, cache = T}
+out_first10 <-   mice(data = data_scales_wide%>%select(-session),
+            m = 10,
+            meth=c("norm","norm","norm",
+                   "norm","norm","norm",
+                   "norm","norm","norm",
+                   "norm","norm","norm"), 
+            diagnostics = FALSE,
+            printFlag = F,
+            seed = 83851)
+
+densityplot(out_first10)
+plot(out_first10)
+```
+
+
+## Parameter and BF estimation
+```{r hyp1_imp_and_bain2, cache = T}
+# Set up the matrices for the estimates ##############
+# setup of matrices to store multiple estimates
+mulest_hyp1 <- matrix(0,nrow=M,ncol=3) 
+# and covariance matrices
+covwithin_hyp1 <- matrix(0,nrow=3,ncol=3) 
+
+
+# Estimate the coefficients for each data frame ######
+for(i in 1:M) {
+ within_hyp1 <- lm(cbind(Integrity_GB,Integrity_CC,Integrity_CB)~1, 
+                   data=mice::complete(out,i)) # estimate the means of the three variables
+ mulest_hyp1[i,]<-coef(within_hyp1)[1:3] # store these means in the matrix `mulres`
+ covwithin_hyp1<-covwithin_hyp1 + 1/M * vcov(within_hyp1)[1:3,1:3] # compute the averages 
+}
+
+
+# Compute the average of the estimates ###############
+estimates_hyp1 <- colMeans(mulest_hyp1)
+names(estimates_hyp1) <- c("Integrity_GB","Integrity_CC","Integrity_CB")
+covbetween_hyp1 <- cov(mulest_hyp1) # between covariance matrix
+covariance_hyp1 <- covwithin_hyp1 + (1+1/M)*covbetween_hyp1 # total variance
+
+
+# Determine the effective and real sample sizes ######
+samp_hyp1 <- nrow(data_scales_wide) # real sample size
+nucom_hyp1<-samp_hyp1-length(estimates_hyp1)
+
+# corresponds to Equation (X) in Hoijtink, Gu, Mulder, & Rosseel (2019) ...
+lam_hyp1 <- (1+1/M)*(1/length(estimates_hyp1))* 
+  sum(diag(covbetween_hyp1 %*% 
+             MASS::ginv(covariance_hyp1))) # ... (43)
+nuold_hyp1<-(M-1)/(lam_hyp1^2) # ... (44)
+nuobs_hyp1<-(nucom_hyp1+1)/(nucom_hyp1+3)*nucom_hyp1*(1-lam_hyp1) # ... (46)
+nu_hyp1<- nuold_hyp1*nuobs_hyp1/(nuold_hyp1+nuobs_hyp1) # ... (47)
+fracmis_hyp1 <- (nu_hyp1+1)/(nu_hyp1+3)*lam_hyp1 + 2/(nu_hyp1+3) # ... (48)
+neff_hyp1<-samp_hyp1-samp_hyp1*fracmis_hyp1 # = 172 approx. 2/3* 270
+
+# coerce `covariance` to a list
+covariance_hyp1<-list(covariance_hyp1)
+
+
+# Test the hypotheses with bain ######################
+set.seed(6346)
+results_hyp1 <- bain(estimates_hyp1,
+               "Integrity_GB<Integrity_CC<Integrity_CB;
+                Integrity_GB=Integrity_CC=Integrity_CB;
+                Integrity_GB<Integrity_CC=Integrity_CB",
+                n = neff_hyp1, Sigma=covariance_hyp1,    
+                group_parameters=3, joint_parameters = 0)
+print(results_hyp1)
+summary(results_hyp1)
+results_hyp1$BFmatrix
+```
+
+
+# Inference statistics (Hyp 2)
+## Parameter estimation
+```{r hyp2_3_estimation, cache = T}
+path_mod <- "Integrity_GB ~ TSM_GB
+             Integrity_CC ~ TSM_CC             
+             Integrity_CB ~ TSM_CB"
+
+# Set up the matrices for the estimates ##############
+best_hyp2 <- matrix(0,nrow=M,ncol=3) # setup of matrices to store multiple estimates
+covwithin_hyp2 <- matrix(0,nrow=3,ncol=3) # and covariance matrices
+
+
+# Estimate the coefficients for each data frame ######
+for(i in 1:M) {
+ path_fit <- sem(path_mod, 
+                 data = mice::complete(out, i), 
+                 std.lv = T) # estimate the path coefficients 
+ best_hyp2[i,] <- parameterestimates(path_fit, standardized = T)%>% # store path coefficients
+                     filter(op == "~")%>%
+                     pull(std.all) 
+ covwithin_hyp2 <- covwithin_hyp2 + # compute the average of the covariance matrices
+                  1/M * lavInspect(path_fit, 
+                                   "vcov.std.all")[c("Integrity_GB~TSM_GB", 
+                                                     "Integrity_CC~TSM_CC", 
+                                                     "Integrity_CB~TSM_CB"),
+                                                   c("Integrity_GB~TSM_GB", 
+                                                     "Integrity_CC~TSM_CC", 
+                                                     "Integrity_CB~TSM_CB")]
+}
+
+# Compute the average of the estimates ###############
+estimates_hyp2 <- colMeans(best_hyp2)
+names(estimates_hyp2) <- c("Int_on_TSM_GB", "Int_on_TSM_CC", "Int_on_TSM_CB")
+round(estimates_hyp2, 2)
+```
+
+## Visual path model
+```{tikz, fig.ext = 'svg'}
+\usetikzlibrary{arrows,positioning}
+\usetikzlibrary{calc}
+\begin{tikzpicture}[auto,>=latex,align=center,
+latent/.style={circle,draw, thick,inner sep=0pt,minimum size=10mm},
+manifest/.style={rectangle,draw, thick,inner sep=2pt,minimum size=15mm},
+manifestcov/.style={rectangle,draw, thick,inner sep=1pt,minimum size=8mm},
+mean/.style={regular polygon,regular polygon sides=3,draw,thick,inner sep=0pt,minimum size=10mm},
+paths/.style={->, thick, >=latex, font = \footnotesize\sffamily, fill = white},
+variance/.style={<->, thin, >=latex, bend left=270, looseness=2.5, font = \footnotesize},
+covariance/.style={<->, thin, >=latex, bend left=290, looseness=.5, font = \footnotesize},
+dotsdots/.style={circle, draw, fill = black, minimum size = 1mm, maximum size = 1mm}
+]
+
+%% AVs
+\node [manifest] (AV1) at (0, -2)       {$int_{gb}$};
+\node [manifest] (AV2) [right = of AV1] {$int_{cc}$};
+\node [manifest] (AV3) [right = of AV2] {$int_{cb}$};
+
+
+%% UVs
+\node [manifest] (UV1) at (0, 2)        {$tsm_{gb}$};    
+\node [manifest] (UV2) [right =of UV1]  {$tsm_{cc}$};    
+\node [manifest] (UV3) [right =of UV2]  {$tsm_{cb}$};    
+
+%% Paths
+\draw [paths] (UV1) to node [midway]{-.03} (AV1);
+\draw [paths] (UV2) to node [midway]{-.13} (AV2);
+\draw [paths] (UV3) to node [midway]{-.09} (AV3);
+
+%\draw [covariance] (UV2) to node {} (UV1);
+\end
+{tikzpicture}
+```
+
+
+```{r hyp2_3_estimation2, cache = T}
+covbetween_hyp2 <- cov(best_hyp2) # between covariance matrix
+covariance_hyp2 <- covwithin_hyp2 + (1+1/M)*covbetween_hyp2 # total variance
+
+# Determine the effective and real sample sizes ######
+samp_hyp2 <- nrow(data_scales_wide) # real sample size
+nucom_hyp2 <- samp_hyp2-length(estimates_hyp2)
+
+# corresponds to Equation (X) in Hoijtink, Gu, Mulder, & Rosseel (2019) ...
+lam_hyp2 <- (1+1/M)*(1/length(estimates_hyp2))* 
+  sum(diag(covbetween_hyp2 %*% 
+             MASS::ginv(covariance_hyp2))) # ... (43)
+nuold_hyp2 <- (M-1)/(lam_hyp2^2) # ... (44)
+nuobs_hyp2 <- (nucom_hyp2+1)/(nucom_hyp2+3)*nucom_hyp2*(1-lam_hyp2) # ... (46)
+nu_hyp2 <- nuold_hyp2*nuobs_hyp2/(nuold_hyp2+nuobs_hyp2) # ... (47)
+fracmis_hyp2 <- (nu_hyp2+1)/(nu_hyp2+3)*lam_hyp2 + 2/(nu_hyp2+3) # ... (48)
+neff_hyp2 <- samp_hyp2-samp_hyp2*fracmis_hyp2 # = 114 approx. 2/3* 270
+
+# coerce `covariance` to a list
+covariance_hyp2 <- list(covariance_hyp2)
+```
+
+## Bayes Factor estimation (Hyp 2)
+```{r hyp2_BF}
+set.seed(6346)
+results_hyp2 <- bain(estimates_hyp2, 
+                     "Int_on_TSM_GB < 0 & Int_on_TSM_CC < 0 & Int_on_TSM_CB < 0;
+                     Int_on_TSM_GB = 0 & Int_on_TSM_CC = 0 & Int_on_TSM_CB = 0",
+                    Sigma = covariance_hyp2,
+                    n = neff_hyp2,
+                    group_parameters = 3,
+                    joint_parameters = 0,
+                    standardize = F)
+print(results_hyp2)
+results_hyp2$BFmatrix
+```
+
+
+# Inference statistics (Hyp 3)
+```{r hyp3_BF}
+set.seed(6346)
+results_hyp3 <- bain(estimates_hyp2, 
+                    "Int_on_TSM_GB < Int_on_TSM_CC < Int_on_TSM_CB;
+                     (Int_on_TSM_GB, Int_on_TSM_CC) < Int_on_TSM_CB;
+                     Int_on_TSM_GB = Int_on_TSM_CC = Int_on_TSM_CB",
+                    Sigma = covariance_hyp2,
+                    n = neff_hyp2,
+                    group_parameters = 3,
+                    joint_parameters = 0,
+                    standardize = T)
+
+print(results_hyp3)
+results_hyp3$BFmatrix
+```
+
+
+# Inference statistics (Hyp 4)
+```{r hyp4_estimation_BF}
+# Set up the matrices for the estimates ##############
+mulest_hyp4 <- matrix(0,nrow=M,ncol=3) # setup of matrices to store multiple estimates
+covwithin_hyp4 <- matrix(0,nrow=3,ncol=3) # and covariance matrices
+
+
+# Estimate the coefficients for each data frame ######
+for(i in 1:M) {
+ within_hyp4 <- lm(cbind( TSM_GB, TSM_CC, TSM_CB) ~ 1, 
+                   data=mice::complete(out,i)) # estimate the means of the three variables
+ mulest_hyp4[i,]<-coef(within_hyp4)[1:3] # store these means in the matrix `mulres`
+ covwithin_hyp4<-covwithin_hyp4 + 1/M * vcov(within_hyp4)[1:3,1:3] # compute the averages 
+}
+
+
+# Compute the average of the estimates ###############
+estimates_hyp4 <- colMeans(mulest_hyp4)
+names(estimates_hyp4) <- c("TSM_GB","TSM_CC","TSM_CB")
+covbetween_hyp4 <- cov(mulest_hyp4) # between covariance matrix
+covariance_hyp4 <- covwithin_hyp4 + (1+1/M)*covbetween_hyp4 # total variance
+
+
+# Determine the effective and real sample sizes ######
+samp_hyp4 <- nrow(data_scales_wide) # real sample size
+nucom_hyp4<-samp_hyp4-length(estimates_hyp4)
+
+# corresponds to Equation (X) in Hoijtink, Gu, Mulder, & Rosseel (2019) ...
+lam_hyp4 <- (1+1/M)*(1/length(estimates_hyp4))* 
+  sum(diag(covbetween_hyp4 %*% 
+             MASS::ginv(covariance_hyp4))) # ... (43)
+nuold_hyp4<-(M-1)/(lam_hyp4^2) # ... (44)
+nuobs_hyp4<-(nucom_hyp4+1)/(nucom_hyp4+3)*nucom_hyp4*(1-lam_hyp4) # ... (46)
+nu_hyp4<- nuold_hyp4*nuobs_hyp4/(nuold_hyp4+nuobs_hyp4) # ... (47)
+fracmis_hyp4 <- (nu_hyp4+1)/(nu_hyp4+3)*lam_hyp4 + 2/(nu_hyp4+3) # ... (48)
+neff_hyp4<-samp_hyp4-samp_hyp4*fracmis_hyp4 # = 172 approx. 2/3* 270
+
+# coerce `covariance` to a list
+covariance_hyp4<-list(covariance_hyp4)
+
+
+# Test the hypotheses with bain ######################
+set.seed(6346)
+results_hyp4 <- bain(estimates_hyp4,
+               "TSM_GB>TSM_CC>TSM_CB;
+                TSM_GB=TSM_CC=TSM_CB;
+                (TSM_GB,TSM_CC)>TSM_CB",
+                n = neff_hyp4, Sigma=covariance_hyp4,    
+                group_parameters=3, joint_parameters = 0)
+
+print(results_hyp4)
+results_hyp4$BFmatrix
+```
+
+
+

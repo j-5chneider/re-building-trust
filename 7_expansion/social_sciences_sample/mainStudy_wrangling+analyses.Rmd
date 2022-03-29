@@ -1,0 +1,92 @@
+---
+title: "Data Analyses 'Re-Building Trust - Extension: Social Sciences - pilot study'"
+author:
+- "Jürgen Schneider"
+- "Samuel Merk"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output: 
+  html_document: 
+    number_sections: yes
+    toc: yes
+    toc_float: yes
+    theme: flatly
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Data Wrangling
+
+```{r credentials1, message = FALSE, warning = FALSE, eval=T}
+library(formr)
+# library(lubridate)
+library(tidyverse)
+formr_connect(email = 'juergen.schneider@uni-tuebingen.de', 
+              password = rstudioapi::askForPassword("DemJuergenseinSuperpasswort") ) # find password in video https://www.youtube.com/watch?v=dQw4w9WgXcQ
+
+```
+
+
+
+```{r import, message = FALSE, warning = FALSE, eval = T}
+# get surveys
+rbt_0 <- formr_raw_results(survey_name = 'rbt_ext_sci_pre') %>%
+                filter(!is.na(session) & !is.na(ended) & !str_detect(session, "XXX")) %>%
+                select(session, treat1, treat2, first_topic)
+
+rbt_1 <- formr_raw_results(survey_name = 'rbt_ext_sci_main') %>%
+                filter(!is.na(session) & !is.na(ended) & !str_detect(session, "XXX")) %>%
+                select(-c(created, modified, ended, expired))
+
+# match
+rbt <- left_join(rbt_1, rbt_0, by="session")
+  
+
+# pivot them into long format
+rbt_l <- pivot_longer(rbt, 
+                      cols = (abs1_tsm_1:abs2_tch_5), 
+                      names_to = "variable", 
+                      values_to = "value") %>%
+            mutate(treat = case_when(                    # create treatment variable
+                                  str_detect(variable, "abs1_") ~ toupper(treat1),
+                                  str_detect(variable, "abs2_") ~ toupper(treat2)),
+                   variable = str_sub(variable, 6, -1)) # delete title page substring
+
+# pivot them into wide format
+rbt_w <- pivot_wider(rbt_l,
+                     names_from = variable,
+                     values_from = value,
+                     id_cols = c(session, treat))
+
+# invert trust items & build scales
+inv7fct <- function(x) (8-as.numeric(x))
+rbt_w <- rbt_w %>%
+            mutate_at(vars(tru_exp_1:tru_ben_4),
+                      list(~inv7fct(.))) %>% # recoding 1-->7, 2-->6, ...
+            mutate(Treatment = factor(treat, levels = c("GB", "CC", "CB")),
+                   Experitse = rowMeans(data.frame(tru_exp_1, tru_exp_2, tru_exp_3, 
+                                             tru_exp_4, tru_exp_5, tru_exp_6), na.rm = T),
+                   Integrity = rowMeans(data.frame(tru_int_1, tru_int_2, tru_int_3, tru_int_4), na.rm = T),
+                   Benevolence = rowMeans(data.frame(tru_ben_1, tru_ben_2, tru_ben_3, tru_ben_4), na.rm = T),
+                   TSM = rowMeans(data.frame(tsm_1, tsm_2, tsm_3, tsm_4), na.rm = T))
+
+```
+
+
+# Analyses
+
+## Descriptive results
+
+```{r, message = FALSE, warning = FALSE, eval = T}
+rbt_w %>%
+  group_by(Treatment) %>%
+  summarize(Integrity_M = mean(Integrity, na.rm = T),
+            Integrity_SD = sd(Integrity, na.rm = T))
+
+ggplot(rbt_w, aes(x=Treatment, y=Integrity, fill = Treatment)) + 
+  geom_violin() +
+  geom_boxplot(fill = "white", alpha = .4, width = .2)
+```

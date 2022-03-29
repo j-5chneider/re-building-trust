@@ -1,0 +1,541 @@
+session,treat,exp_1,exp_2,exp_3,exp_4,exp_5,exp_6,int_1,int_2,int_3,int_4,ben_1,ben_2,ben_3,ben_4,meas_rep,tsm_1,tsm_2,tsm_3,tsm_4,age,semester,sex,tch_1,tch_2,tch_3,tch_4,Treatment,Experitse,Integrity,Benevolence,Topic specific multiplism,Study
+P3g53COrmCua8w_YaV0R49RuilkrohMCmJTk5w9fOpXxPfDXnsvGmgYc25zva4jb,GB,3,3,3,3,3,3,3,3,4,4,4,4,4,4,1,2,2,2,2,26,9,2,1,1,1,1,Greyed out badges,3,3.5,4,2,Study 1
+P3g53COrmCua8w_YaV0R49RuilkrohMCmJTk5w9fOpXxPfDXnsvGmgYc25zva4jb,CC,5,5,5,5,5,5,4,5,4,4,4,4,4,4,2,1,1,1,2,26,9,2,-999,-999,-999,1,Control Condition,5,4.25,4,1.25,Study 1
+nN7xyeorz_CnSmS4AMFbOmKr7Uhj4quNWaEhTyT4hGq_MSCxIrFVHtH78b-sDdqh,GB,7,5,7,5,5,6,7,7,7,6,6,6,6,5,1,1,1,2,1,19,1,2,1,1,-999,2,Greyed out badges,5.833333333333333,6.75,5.75,1.25,Study 1
+nN7xyeorz_CnSmS4AMFbOmKr7Uhj4quNWaEhTyT4hGq_MSCxIrFVHtH78b-sDdqh,CC,7,7,7,7,7,7,7,7,6,7,7,7,7,5,2,1,1,2,2,19,1,2,3,-999,3,3,Control Condition,7,6.75,6.5,1.5,Study 1
+ujSjQ06KsYj0Beq8-EejiqTLCwImAUTX4txnBeokScdvSOBb69saSweit24o_QQr,GB,7,7,7,7,7,6,6,6,6,6,6,6,6,6,1,2,4,1,4,21,1,1,1,1,1,1,Greyed out badges,6.833333333333333,6,6,2.75,Study 1
+ujSjQ06KsYj0Beq8-EejiqTLCwImAUTX4txnBeokScdvSOBb69saSweit24o_QQr,CC,7,7,7,7,7,7,6,6,6,6,6,6,6,6,2,1,4,1,2,21,1,1,2,1,3,2,Control Condition,7,6,6,2,Study 1
+jn2OwzVRl4oRQu3P9t4Kvlpeyk_dMzKwTVa6GJpjE-bjjMtV_9Y2pcPhwKyZniBq,GB,3,4,3,3,3,4,4,4,4,4,5,5,4,4,1,2,1,2,2,23,7,2,1,1,1,1,Greyed out badges,3.3333333333333335,4,4.5,1.75,Study 1
+jn2OwzVRl4oRQu3P9t4Kvlpeyk_dMzKwTVa6GJpjE-bjjMtV_9Y2pcPhwKyZniBq,CC,6,6,6,6,6,6,5,5,5,5,5,5,5,4,2,2,3,2,3,23,7,2,3,-999,-999,3,Control Condition,6,5,4.75,2.5,Study 1
+AFIdsArPPJQqF7R_df9h4INH81aiHoeLR1z6oi6vbe_Bb5q0zfGbJ78BEQBgb7kq,GB,6,5,6,7,3,5,7,7,5,7,5,7,3,5,1,2,3,2,3,26,3,1,-999,-999,-999,-999,Greyed out badges,5.333333333333333,6.5,5,2.5,Study 1
+AFIdsArPPJQqF7R_df9h4INH81aiHoeLR1z6oi6vbe_Bb5q0zfGbJ78BEQBgb7kq,CC,5,7,5,5,4,5,6,7,7,7,7,7,5,4,2,1,2,2,3,26,3,1,1,1,1,1,Control Condition,5.166666666666667,6.75,5.75,2,Study 1
+BcE6tMk6BZKbgzA_aX44M7YhSZLdqgzbmev2C1khowLS2a8vrbHa1frwOWb0oC_X,GB,4,4,4,3,3,4,4,3,4,4,4,4,4,4,1,3,3,3,3,24,11,2,-999,-999,-999,-999,Greyed out badges,3.6666666666666665,3.75,4,3,Study 1
+BcE6tMk6BZKbgzA_aX44M7YhSZLdqgzbmev2C1khowLS2a8vrbHa1frwOWb0oC_X,CC,3,2,2,3,3,2,3,3,3,2,2,3,3,3,2,4,4,4,4,24,11,2,-999,-999,-999,-999,Control Condition,2.5,2.75,2.75,4,Study 1
+L6UFer9gRx-_1sS14A5KwqmjCvEJQB0ob8WQATyR28aK6Ia5-bT7VJ-r0rSZL4Gi,GB,7,7,6,6,5,6,7,7,7,6,6,7,6,6,1,1,1,2,1,28,13,2,2,2,-999,4,Greyed out badges,6.166666666666667,6.75,6.25,1.25,Study 1
+L6UFer9gRx-_1sS14A5KwqmjCvEJQB0ob8WQATyR28aK6Ia5-bT7VJ-r0rSZL4Gi,CC,7,6,7,6,7,7,6,5,7,7,7,7,7,7,2,2,3,3,1,28,13,2,4,-999,-999,3,Control Condition,6.666666666666667,6.25,7,2.25,Study 1
+teyjV9dVPzl4Z0AdJaJiCiZNJJxCc9ul8IEMjLGTy-mXQ9-_XmASCh4bHNJkCg4C,GB,5,6,6,3,6,3,6,6,6,6,7,6,6,6,1,1,1,4,1,20,3,2,-999,1,1,-999,Greyed out badges,4.833333333333333,6,6.25,1.75,Study 1
+teyjV9dVPzl4Z0AdJaJiCiZNJJxCc9ul8IEMjLGTy-mXQ9-_XmASCh4bHNJkCg4C,CC,5,6,5,6,5,5,6,6,5,5,6,5,5,5,2,1,4,4,1,20,3,2,-999,-999,-999,-999,Control Condition,5.333333333333333,5.5,5.25,2.5,Study 1
+K1dzBhFJNPeeHje5h88qNRcRV6DwpVkHWhIkWN-BIMG50vyt8E0iH-PceBJGCWoR,GB,5,4,4,5,5,5,4,4,5,5,3,3,4,4,1,2,2,2,2,20,3,1,2,-999,-999,2,Greyed out badges,4.666666666666667,4.5,3.5,2,Study 1
+K1dzBhFJNPeeHje5h88qNRcRV6DwpVkHWhIkWN-BIMG50vyt8E0iH-PceBJGCWoR,CC,5,4,4,4,5,4,4,5,5,5,3,3,3,4,2,2,2,1,2,20,3,1,2,-999,-999,3,Control Condition,4.333333333333333,4.75,3.25,1.75,Study 1
+Ll3MTBsvDi0pnIu7Gv8qGx2cMgenwF2ptcEi3kCjaBVtZWiJdwQWPS5_46-TvHIe,GB,6,6,6,6,6,6,6,6,4,6,6,4,7,6,1,2,2,2,3,24,11,2,2,1,1,4,Greyed out badges,6,5.5,5.75,2.25,Study 1
+Ll3MTBsvDi0pnIu7Gv8qGx2cMgenwF2ptcEi3kCjaBVtZWiJdwQWPS5_46-TvHIe,CC,4,5,5,5,5,4,5,5,5,5,5,4,5,5,2,2,2,2,2,24,11,2,1,1,1,1,Control Condition,4.666666666666667,5,4.75,2,Study 1
+_7Q3HzYuH9HBt7QwIwUSwXYZXtuQQauiun2AF5KbvyCY4Grb7udFW9-i63X4jwqX,GB,4,5,4,4,5,5,5,5,6,6,6,6,4,5,1,1,2,1,3,20,5,1,1,1,1,2,Greyed out badges,4.5,5.5,5.25,1.75,Study 1
+_7Q3HzYuH9HBt7QwIwUSwXYZXtuQQauiun2AF5KbvyCY4Grb7udFW9-i63X4jwqX,CC,6,5,5,6,5,6,7,6,6,6,7,7,6,6,2,2,2,1,2,20,5,1,2,-999,-999,3,Control Condition,5.5,6.25,6.5,1.75,Study 1
+OmkL3wyoXeG0PlLzol80PuOZjiz1sngjuCBkchTjRuNAnNOAs5QT_DI3zWsxSs8D,GB,6,5,6,5,4,6,6,4,5,6,4,4,5,4,1,1,1,1,2,20,1,2,1,1,1,2,Greyed out badges,5.333333333333333,5.25,4.25,1.25,Study 1
+OmkL3wyoXeG0PlLzol80PuOZjiz1sngjuCBkchTjRuNAnNOAs5QT_DI3zWsxSs8D,CC,6,5,7,6,6,7,4,4,4,4,4,4,4,4,2,1,1,1,2,20,1,2,4,-999,-999,3,Control Condition,6.166666666666667,4,4,1.25,Study 1
+cumo6sX-pTGMXc_caDkkw0eDl0I4MlHdpILCoNSJnyG4z2aLUxTF4mzeb1DBiizu,GB,3,3,3,3,3,4,4,4,3,3,4,3,2,3,1,3,4,2,4,21,7,2,1,1,1,1,Greyed out badges,3.1666666666666665,3.5,3,3.25,Study 1
+cumo6sX-pTGMXc_caDkkw0eDl0I4MlHdpILCoNSJnyG4z2aLUxTF4mzeb1DBiizu,CC,4,3,4,4,3,4,3,3,3,3,3,3,3,3,2,2,4,2,4,21,7,2,1,-999,-999,-999,Control Condition,3.6666666666666665,3,3,3,Study 1
+nGIh1JI-sRkjDszfDUjZfmSOUPXGTYGnjftxJBa4Rov2s9ZpcWM1Jq1syF3Ip6IW,GB,6,5,5,5,6,5,6,5,5,5,4,4,5,5,1,1,1,1,2,29,9,2,1,1,1,1,Greyed out badges,5.333333333333333,5.25,4.5,1.25,Study 1
+nGIh1JI-sRkjDszfDUjZfmSOUPXGTYGnjftxJBa4Rov2s9ZpcWM1Jq1syF3Ip6IW,CC,5,5,6,5,6,5,6,4,5,6,4,6,4,5,2,1,2,2,2,29,9,2,2,2,1,2,Control Condition,5.333333333333333,5.25,4.75,1.75,Study 1
+apj5LlTuriV1dY89uu1J_uslK4br7GNsqA5iCIAgMo-_TItrggsF3Hx4rhT770y-,GB,6,5,6,3,6,6,4,2,4,2,3,4,4,4,1,4,3,3,3,25,11,2,1,1,1,1,Greyed out badges,5.333333333333333,3,3.75,3.25,Study 1
+apj5LlTuriV1dY89uu1J_uslK4br7GNsqA5iCIAgMo-_TItrggsF3Hx4rhT770y-,CC,5,5,6,6,7,6,6,4,6,7,6,4,5,6,2,1,2,2,1,25,11,2,3,4,-999,3,Control Condition,5.833333333333333,5.75,5.25,1.5,Study 1
+Y7ILlGdlvua0iusJbAhwLavzlCBBBwSfeEqEFtJiBaSNeDS9-1jBr11g375AkqRJ,GB,5,6,6,5,5,5,4,6,4,4,4,4,4,4,1,1,1,1,2,28,12,2,1,1,-999,2,Greyed out badges,5.333333333333333,4.5,4,1.25,Study 1
+Y7ILlGdlvua0iusJbAhwLavzlCBBBwSfeEqEFtJiBaSNeDS9-1jBr11g375AkqRJ,CC,6,6,6,7,7,6,4,4,4,4,4,4,4,4,2,1,1,2,3,28,12,2,1,1,1,2,Control Condition,6.333333333333333,4,4,1.75,Study 1
+gn50U3_X1og26Pm7X2XIADhTAOHCoQ_0TbUSpAFeFWr_TlDhFqhpjHBqQU5hA3fw,GB,6,7,4,7,5,6,5,5,7,7,7,7,7,5,1,3,3,2,2,27,3,2,1,1,1,1,Greyed out badges,5.833333333333333,6,6.5,2.5,Study 1
+gn50U3_X1og26Pm7X2XIADhTAOHCoQ_0TbUSpAFeFWr_TlDhFqhpjHBqQU5hA3fw,CC,4,5,4,5,5,6,6,5,4,5,6,5,5,6,2,2,4,3,3,27,3,2,1,1,1,1,Control Condition,4.833333333333333,5,5.5,3,Study 1
+f8bBgGch7vpvm2b5ICzNlz_HSRA122emdkYQgXTn3kauU-vuXMkgCAFr4HIFim6B,GB,7,6,6,7,6,6,7,7,7,7,7,7,7,7,1,1,1,1,2,25,3,2,1,1,1,1,Greyed out badges,6.333333333333333,7,7,1.25,Study 1
+f8bBgGch7vpvm2b5ICzNlz_HSRA122emdkYQgXTn3kauU-vuXMkgCAFr4HIFim6B,CC,5,5,5,5,5,5,6,7,6,6,7,7,7,6,2,2,1,3,1,25,3,2,1,-999,-999,1,Control Condition,5,6.25,6.75,1.75,Study 1
+jADy2f5B7thWtBmi7iiSmnWMMJsF7J1-ZTaunAiPuMJQoXkpitkzp2sceR0m0IvV,GB,6,5,6,6,6,6,6,6,5,5,5,5,6,5,1,1,2,2,3,22,1,2,3,2,-999,2,Greyed out badges,5.833333333333333,5.5,5.25,2,Study 1
+jADy2f5B7thWtBmi7iiSmnWMMJsF7J1-ZTaunAiPuMJQoXkpitkzp2sceR0m0IvV,CC,5,6,6,6,6,6,6,6,6,6,5,6,5,4,2,3,2,2,3,22,1,2,3,3,2,3,Control Condition,5.833333333333333,6,5,2.5,Study 1
+5W1biJIKoF_MPfRYSL4pdLf5wI0ALJSBgvC7dVbk7Xi8DFi7Hvxv7kSKUTO6GqtW,GB,6,6,6,6,6,6,5,5,5,6,5,5,5,5,1,2,3,2,2,23,9,1,1,1,1,2,Greyed out badges,6,5.25,5,2.25,Study 1
+5W1biJIKoF_MPfRYSL4pdLf5wI0ALJSBgvC7dVbk7Xi8DFi7Hvxv7kSKUTO6GqtW,CC,6,5,6,5,5,6,4,4,5,5,4,5,5,5,2,2,2,2,3,23,9,1,2,2,2,2,Control Condition,5.5,4.5,4.75,2.25,Study 1
+S_tUZLU4DOjr5mgeOd4_Z29yCUq1Al83IhcOLyxWqBzIRqtc0Pj7w-CIFoBobIcR,GB,6,6,6,6,6,6,5,6,6,6,6,6,5,5,1,2,2,2,3,20,5,2,2,2,1,3,Greyed out badges,6,5.75,5.5,2.25,Study 1
+S_tUZLU4DOjr5mgeOd4_Z29yCUq1Al83IhcOLyxWqBzIRqtc0Pj7w-CIFoBobIcR,CC,5,5,4,4,3,4,5,5,6,6,5,6,5,5,2,3,3,1,3,20,5,2,2,2,1,1,Control Condition,4.166666666666667,5.5,5.25,2.5,Study 1
+W6TQwdQOttWcwIpGePcrjVO0z806bIGyZGxaMp8sJOyBjkw7GhwRAcOs1g3ms99V,GB,6,5,5,6,5,6,4,4,5,4,5,4,4,4,1,1,1,1,1,25,11,1,2,-999,-999,-999,Greyed out badges,5.5,4.25,4.25,1,Study 1
+W6TQwdQOttWcwIpGePcrjVO0z806bIGyZGxaMp8sJOyBjkw7GhwRAcOs1g3ms99V,CC,6,5,5,6,5,5,4,4,4,4,4,4,4,4,2,1,1,1,2,25,11,1,-999,-999,-999,3,Control Condition,5.333333333333333,4,4,1.25,Study 1
+Bcxt2GKrsdO9ytMq6_UiGnMve1SE4t0f7y0_bFcMyLcR95FNrzKP1tc1LFt_nl0m,GB,6,6,6,6,6,6,6,6,5,5,5,4,6,4,1,1,3,1,4,21,7,2,2,1,1,1,Greyed out badges,6,5.5,4.75,2.25,Study 1
+Bcxt2GKrsdO9ytMq6_UiGnMve1SE4t0f7y0_bFcMyLcR95FNrzKP1tc1LFt_nl0m,CC,6,6,6,6,6,6,6,5,5,5,5,5,6,5,2,1,2,1,2,21,7,2,2,-999,-999,-999,Control Condition,6,5.25,5.25,1.5,Study 1
+z5rSO8iPLCFYrjIhSHivyxJsYUG2tGgvaRnZpJJCyEVt7vIdeVPx1uGEHsOblU9V,GB,4,4,4,4,4,4,4,4,4,4,4,3,4,4,1,3,3,4,3,NA,NA,NA,2,-999,-999,2,Greyed out badges,4,4,3.75,3.25,Study 1
+z5rSO8iPLCFYrjIhSHivyxJsYUG2tGgvaRnZpJJCyEVt7vIdeVPx1uGEHsOblU9V,CC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Control Condition,NA,NA,NA,NA,Study 1
+ktBVWkm2uyO1DoJlLaPBlsUbbvdUXWR2dRaClgyMpbYjRthhny5k7caLoTNO-X87,GB,4,4,4,6,5,4,3,2,4,2,4,4,4,4,1,1,2,2,3,20,3,2,3,4,2,3,Greyed out badges,4.5,2.75,4,2,Study 1
+ktBVWkm2uyO1DoJlLaPBlsUbbvdUXWR2dRaClgyMpbYjRthhny5k7caLoTNO-X87,CC,2,4,4,4,3,4,3,4,3,4,4,4,2,4,2,3,3,1,2,20,3,2,3,1,2,1,Control Condition,3.5,3.5,3.5,2.25,Study 1
+aeHBrnbsSqece0kbJjPyElwvVlIT3FOBRXSDF00I8zAFvUPkMxnh9KwT9fTNJRsk,GB,6,5,3,1,4,5,2,3,6,6,7,2,6,3,1,1,2,3,3,26,11,1,-999,-999,-999,-999,Greyed out badges,4,4.25,4.5,2.25,Study 1
+aeHBrnbsSqece0kbJjPyElwvVlIT3FOBRXSDF00I8zAFvUPkMxnh9KwT9fTNJRsk,CC,7,4,3,5,5,7,5,6,7,7,7,5,3,3,2,1,4,3,2,26,11,1,4,1,2,2,Control Condition,5.166666666666667,6.25,4.5,2.5,Study 1
+KZxGWyN6kpw5AmweO0ZGMD8GFoBQIuhBjDNcglPCpWdfbx0K-s_X56MH2u001JUH,GB,5,5,5,5,5,5,4,5,4,4,4,4,5,5,1,2,2,2,3,22,5,2,1,2,1,1,Greyed out badges,5,4.25,4.5,2.25,Study 1
+KZxGWyN6kpw5AmweO0ZGMD8GFoBQIuhBjDNcglPCpWdfbx0K-s_X56MH2u001JUH,CC,5,5,4,5,6,4,6,4,5,5,4,4,4,5,2,2,1,2,3,22,5,2,3,2,2,2,Control Condition,4.833333333333333,5,4.25,2,Study 1
+vgW84Ube7RxuTOB2SSVA2LOSNn6uMkSqNCw4Ljb213sGJXHudRXwClor7AXjWhDO,GB,2,6,2,2,2,4,2,2,2,2,2,1,1,3,1,2,3,4,3,26,11,2,1,1,1,1,Greyed out badges,3,2,1.75,3,Study 1
+vgW84Ube7RxuTOB2SSVA2LOSNn6uMkSqNCw4Ljb213sGJXHudRXwClor7AXjWhDO,CC,5,6,4,5,4,5,5,5,4,4,4,5,5,4,2,2,3,1,3,26,11,2,1,-999,-999,3,Control Condition,4.833333333333333,4.5,4.5,2.25,Study 1
+qfjeRdYH4pRj9-Tmz5JEsPZtGhrxlTVdhgVhjo_7nc1RyVpqLRQ55b4T-FNRtBD-,GB,5,4,4,4,4,5,5,5,6,5,5,4,4,5,1,2,1,2,3,25,5,2,2,-999,1,2,Greyed out badges,4.333333333333333,5.25,4.5,2,Study 1
+qfjeRdYH4pRj9-Tmz5JEsPZtGhrxlTVdhgVhjo_7nc1RyVpqLRQ55b4T-FNRtBD-,CC,6,4,6,6,6,5,4,4,6,6,6,5,5,6,2,1,1,1,2,25,5,2,2,3,4,4,Control Condition,5.5,5,5.5,1.25,Study 1
+ykRx_xkxV4HYtB-JQnABFlmVJLHtYAF6zXLT-m3GBCVjlhDFMlVWrKJ1QHmzMt2n,GB,3,5,4,5,4,4,4,4,4,4,5,4,4,3,1,2,3,3,3,26,8,2,1,1,1,1,Greyed out badges,4.166666666666667,4,4,2.75,Study 1
+ykRx_xkxV4HYtB-JQnABFlmVJLHtYAF6zXLT-m3GBCVjlhDFMlVWrKJ1QHmzMt2n,CC,6,5,6,6,6,6,5,6,4,4,4,4,6,4,2,1,1,2,2,26,8,2,3,-999,-999,3,Control Condition,5.833333333333333,4.75,4.5,1.5,Study 1
+SKOtzZaSBGtKJezsCTYUQs1QrvnJ-e-Whnduh5I39xXnei4u5xQY770cAkcG1OfL,GB,4,6,5,3,2,3,5,5,4,3,6,5,6,4,1,3,2,3,3,20,3,2,4,3,2,2,Greyed out badges,3.8333333333333335,4.25,5.25,2.75,Study 1
+SKOtzZaSBGtKJezsCTYUQs1QrvnJ-e-Whnduh5I39xXnei4u5xQY770cAkcG1OfL,CC,6,5,5,6,4,6,6,5,6,6,5,4,6,5,2,1,1,2,1,20,3,2,4,3,-999,4,Control Condition,5.333333333333333,5.75,5,1.25,Study 1
+KVICeTF1roHfmDFYw6dQ-uXA0LczwtSv5sn6YO3hFlKhBogE-TwTOW81QyTOH9uQ,GB,7,7,7,5,6,6,5,4,7,7,4,3,3,7,1,2,1,4,1,27,11,2,1,1,1,1,Greyed out badges,6.333333333333333,5.75,4.25,2,Study 1
+KVICeTF1roHfmDFYw6dQ-uXA0LczwtSv5sn6YO3hFlKhBogE-TwTOW81QyTOH9uQ,CC,7,7,6,6,6,6,6,6,7,6,5,5,6,6,2,2,1,2,2,27,11,2,1,-999,-999,1,Control Condition,6.333333333333333,6.25,5.5,1.75,Study 1
+MroJxtQqjeJPsRlItN8lxhBcoWAZ-q_vijdLsLA-UkqdGEoXse7HixmO7dF8dfys,GB,3,3,3,3,3,3,2,4,4,5,5,3,3,4,1,2,3,3,3,21,5,2,1,1,1,1,Greyed out badges,3,3.75,3.75,2.75,Study 1
+MroJxtQqjeJPsRlItN8lxhBcoWAZ-q_vijdLsLA-UkqdGEoXse7HixmO7dF8dfys,CC,5,5,4,5,4,5,5,5,4,5,5,5,5,5,2,2,2,2,3,21,5,2,-999,-999,-999,-999,Control Condition,4.666666666666667,4.75,5,2.25,Study 1
+b7wlgfPbmIO57EhH7_UZgI-1AMZSC8QmezfJbSYiUHeyoNhXn5a5Ym7_a6VPFwFn,GB,2,3,2,2,2,3,4,4,4,3,4,3,3,3,1,2,2,2,1,21,5,2,1,1,1,1,Greyed out badges,2.3333333333333335,3.75,3.25,1.75,Study 1
+b7wlgfPbmIO57EhH7_UZgI-1AMZSC8QmezfJbSYiUHeyoNhXn5a5Ym7_a6VPFwFn,CC,6,5,5,5,7,7,6,5,4,4,5,4,5,4,2,1,2,1,1,21,5,2,4,-999,-999,-999,Control Condition,5.833333333333333,4.75,4.5,1.25,Study 1
+JGqDdrUREqtQT4MZC7zFSNYrERCGKq4FaoQyAhUvkpG41IVshk1SsRZXsnk0reOO,GB,4,4,4,4,7,4,4,4,4,4,1,1,1,1,1,1,4,1,4,NA,NA,NA,1,1,1,1,Greyed out badges,4.5,4,1,2.5,Study 1
+JGqDdrUREqtQT4MZC7zFSNYrERCGKq4FaoQyAhUvkpG41IVshk1SsRZXsnk0reOO,CC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Control Condition,NA,NA,NA,NA,Study 1
+d_nRgcsRqD6EBPH3czV3KoikojcuFbl6Y8l4VphLNZk7UNxabr24YpW2uUmsZP7G,GB,3,5,4,3,4,5,3,3,4,4,4,4,4,4,1,3,3,4,3,23,9,2,1,1,1,2,Greyed out badges,4,3.5,4,3.25,Study 1
+d_nRgcsRqD6EBPH3czV3KoikojcuFbl6Y8l4VphLNZk7UNxabr24YpW2uUmsZP7G,CC,5,5,5,5,5,5,5,5,4,4,4,4,5,4,2,2,3,4,3,23,9,2,3,1,1,3,Control Condition,5,4.5,4.25,3,Study 1
+Ww6VSVoUMFgn0mv7VfXtoAycMkLPt-gl6uRCs1AsWAvldiUg9qHMQW8vuVFfRmEP,GB,5,5,5,5,5,5,6,6,4,5,4,5,6,4,1,3,2,3,3,20,1,2,3,4,3,4,Greyed out badges,5,5.25,4.75,2.75,Study 1
+Ww6VSVoUMFgn0mv7VfXtoAycMkLPt-gl6uRCs1AsWAvldiUg9qHMQW8vuVFfRmEP,CC,5,5,5,6,6,5,6,5,6,7,5,6,5,5,2,3,2,3,2,20,1,2,3,2,2,3,Control Condition,5.333333333333333,6,5.25,2.5,Study 1
+UgAxSPY9RQCgReHvoRlyy7EvB8TsWKWMZyoMpxJFwpv58GH3ySJHvaezwbjqeTMH,GB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,1,1,1,4,1,28,10,2,1,1,1,1,Greyed out badges,7,7,7,1.75,Study 1
+UgAxSPY9RQCgReHvoRlyy7EvB8TsWKWMZyoMpxJFwpv58GH3ySJHvaezwbjqeTMH,CC,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,1,1,1,28,10,2,4,1,1,4,Control Condition,7,7,7,1,Study 1
+YnUOKokrYAVV0rBlCnpyZLVGtkvUaAyYII03JEjFTECiFECHnifeW_rW9RfYplBh,GB,5,5,5,5,5,5,5,5,5,5,5,5,5,5,1,3,3,3,3,26,13,2,1,1,1,1,Greyed out badges,5,5,5,3,Study 1
+YnUOKokrYAVV0rBlCnpyZLVGtkvUaAyYII03JEjFTECiFECHnifeW_rW9RfYplBh,CC,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,1,1,1,26,13,2,-999,-999,-999,-999,Control Condition,7,7,7,1,Study 1
+zOzqsnE4PCaanbZtyIegZvYAfVHfhFI0edodWXuQcYLiDqjskBqZynDyE5kqAI1y,GB,6,6,5,6,4,6,7,7,7,5,7,7,7,5,1,1,1,1,1,23,8,1,1,1,1,2,Greyed out badges,5.5,6.5,6.5,1,Study 1
+zOzqsnE4PCaanbZtyIegZvYAfVHfhFI0edodWXuQcYLiDqjskBqZynDyE5kqAI1y,CC,6,6,6,6,6,6,7,7,7,6,7,7,6,7,2,1,1,1,1,23,8,1,-999,-999,-999,1,Control Condition,6,6.75,6.75,1,Study 1
+0LbDGn8sF0BH9pU2NeeCGN4Rh-rWAePSZAHo-83PElqmqLt8WNSXb7_Y2_HAXjxw,GB,3,4,4,4,4,5,4,3,3,3,4,3,5,3,1,3,3,2,3,26,8,2,3,2,3,-999,Greyed out badges,4,3.25,3.75,2.75,Study 1
+0LbDGn8sF0BH9pU2NeeCGN4Rh-rWAePSZAHo-83PElqmqLt8WNSXb7_Y2_HAXjxw,CC,5,4,5,5,5,5,5,5,4,5,5,5,6,6,2,2,3,3,2,26,8,2,2,-999,3,3,Control Condition,4.833333333333333,4.75,5.5,2.5,Study 1
+R4Aef5szQmhpBo9QrIzPC8mzIARfDyK4paUjc7BUnuhHKJF9H3RdQdeA8AI2Qu9z,GB,4,3,3,3,3,3,5,5,4,5,3,4,4,3,1,3,3,2,3,21,4,2,2,2,3,4,Greyed out badges,3.1666666666666665,4.75,3.5,2.75,Study 1
+R4Aef5szQmhpBo9QrIzPC8mzIARfDyK4paUjc7BUnuhHKJF9H3RdQdeA8AI2Qu9z,CC,6,7,5,6,5,5,6,7,6,6,6,5,6,6,2,3,4,2,2,21,4,2,3,3,4,4,Control Condition,5.666666666666667,6.25,5.75,2.75,Study 1
+vF-wbrcYuxI7NHxR5YduhbJi-fbeqSiDg8uhBI5g5f7_ZzXKqlC6m3G6Inbfzajv,GB,6,5,5,5,3,6,6,7,4,6,4,4,6,4,1,1,3,1,4,28,16,1,-999,-999,-999,1,Greyed out badges,5,5.75,4.5,2.25,Study 1
+vF-wbrcYuxI7NHxR5YduhbJi-fbeqSiDg8uhBI5g5f7_ZzXKqlC6m3G6Inbfzajv,CC,7,6,4,7,6,4,6,6,4,6,4,5,6,4,2,1,3,1,3,28,16,1,3,-999,-999,3,Control Condition,5.666666666666667,5.5,4.75,2,Study 1
+YBrRqWzk2C3Fgw8OtHp2ZivfcW3iFaeximocwA_X8GqRmhbmMFr10I7Mi6eklRpN,GB,2,3,3,1,2,2,2,1,4,3,4,2,1,4,1,2,3,3,4,19,3,2,1,1,1,1,Greyed out badges,2.1666666666666665,2.5,2.75,3,Study 1
+YBrRqWzk2C3Fgw8OtHp2ZivfcW3iFaeximocwA_X8GqRmhbmMFr10I7Mi6eklRpN,CC,5,4,4,4,5,4,4,4,4,4,4,4,5,4,2,1,1,1,2,19,3,2,2,-999,-999,2,Control Condition,4.333333333333333,4,4.25,1.25,Study 1
+kBhl_X4m76ot-IYGT3BYYlktu4VIG7DuOTdvjYsZcAMCYpaeNgrCWJmZFbC5ZcFI,GB,5,3,5,6,4,6,5,6,5,5,5,5,5,4,1,2,1,2,1,23,9,2,1,1,1,1,Greyed out badges,4.833333333333333,5.25,4.75,1.5,Study 1
+kBhl_X4m76ot-IYGT3BYYlktu4VIG7DuOTdvjYsZcAMCYpaeNgrCWJmZFbC5ZcFI,CC,4,4,4,4,4,4,6,6,6,5,6,6,4,5,2,2,2,2,2,23,9,2,1,1,1,1,Control Condition,4,5.75,5.25,2,Study 1
+Tnl2S9O2xhP9TkUSRGUOnt1QR28QmT4tCTBymYIHdyNcQ5HgoKVMnZlNI-UkAz0C,GB,6,6,6,6,5,7,6,6,6,6,6,6,6,6,1,1,1,1,1,22,7,1,1,4,-999,4,Greyed out badges,6,6,6,1,Study 1
+Tnl2S9O2xhP9TkUSRGUOnt1QR28QmT4tCTBymYIHdyNcQ5HgoKVMnZlNI-UkAz0C,CC,7,7,7,7,7,7,6,6,6,6,6,6,7,6,2,1,1,1,1,22,7,1,4,-999,4,4,Control Condition,7,6,6.25,1,Study 1
+c7QrUmdFdEO0ukjM6BGz7iuTfOZMx1rm9ABjLL0tR8ajGzRxG4HzKN-k1wL7Wexy,GB,4,6,5,3,5,6,4,4,4,3,5,4,4,3,1,2,3,1,3,24,11,2,1,1,1,1,Greyed out badges,4.833333333333333,3.75,4,2.25,Study 1
+c7QrUmdFdEO0ukjM6BGz7iuTfOZMx1rm9ABjLL0tR8ajGzRxG4HzKN-k1wL7Wexy,CC,6,6,6,6,4,6,5,5,5,5,5,5,5,4,2,1,1,1,3,24,11,2,3,-999,-999,3,Control Condition,5.666666666666667,5,4.75,1.5,Study 1
+TCTv_l6ZMjpWSfpQco_peNIMVBRXSCJ7md8x_rXahpQi1EnuD4mRzb4d5TDVWI2F,CC,5,5,5,5,4,5,6,6,6,6,6,6,5,6,1,1,1,2,1,23,9,2,4,3,2,2,Control Condition,4.833333333333333,6,5.75,1.25,Study 1
+TCTv_l6ZMjpWSfpQco_peNIMVBRXSCJ7md8x_rXahpQi1EnuD4mRzb4d5TDVWI2F,GB,3,4,4,2,4,3,4,2,3,4,4,4,3,4,2,2,2,2,3,23,9,2,1,1,1,1,Greyed out badges,3.3333333333333335,3.25,3.75,2.25,Study 1
+aKyIe7iHOmCWGMym1AvSNE92yX8WSIQbs8-LgCr_zjVxyn3jfcrBTyyyB8g2vDw4,CC,4,5,5,4,5,5,5,4,4,4,4,4,5,4,1,3,3,3,3,19,1,2,4,-999,-999,3,Control Condition,4.666666666666667,4.25,4.25,3,Study 1
+aKyIe7iHOmCWGMym1AvSNE92yX8WSIQbs8-LgCr_zjVxyn3jfcrBTyyyB8g2vDw4,GB,6,6,6,6,6,6,5,5,5,5,5,4,6,5,2,2,3,2,3,19,1,2,4,1,1,1,Greyed out badges,6,5,5,2.5,Study 1
+iGgGUcdLWO6zsRnTqY3x0covgAtM_NQ89W3koyRnm_B6ETruyLG_CNNpuVFwJ9B6,CC,6,6,5,5,6,6,5,5,5,6,5,6,5,5,1,1,1,3,1,19,3,1,3,-999,-999,2,Control Condition,5.666666666666667,5.25,5.25,1.5,Study 1
+iGgGUcdLWO6zsRnTqY3x0covgAtM_NQ89W3koyRnm_B6ETruyLG_CNNpuVFwJ9B6,GB,6,6,5,6,5,6,5,5,6,6,6,5,5,5,2,2,1,3,1,19,3,1,4,4,4,4,Greyed out badges,5.666666666666667,5.5,5.25,1.75,Study 1
+Qf6p6b7OM17VmHAeonFm-qSijqnjuGg_4axJ9iHRBaBUbklQLRkd8gYbbDF0KSbQ,CC,7,6,6,7,6,6,7,6,6,6,7,7,6,6,1,2,3,1,3,21,5,1,1,-999,-999,-999,Control Condition,6.333333333333333,6.25,6.5,2.25,Study 1
+Qf6p6b7OM17VmHAeonFm-qSijqnjuGg_4axJ9iHRBaBUbklQLRkd8gYbbDF0KSbQ,GB,6,6,6,7,6,6,5,6,6,6,6,6,6,5,2,3,1,1,1,21,5,1,1,1,1,1,Greyed out badges,6.166666666666667,5.75,5.75,1.5,Study 1
+Zy0n77D_iwv2f4cJ3tcoWj1EoLY5PijSyBkU3ncLRdGgEFbyJ2x4CEy3wnTfzuNX,CC,6,7,7,7,6,7,7,7,6,7,7,7,7,7,1,2,1,1,2,20,1,1,2,1,-999,2,Control Condition,6.666666666666667,6.75,7,1.5,Study 1
+Zy0n77D_iwv2f4cJ3tcoWj1EoLY5PijSyBkU3ncLRdGgEFbyJ2x4CEy3wnTfzuNX,GB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,1,1,1,20,1,1,1,1,1,4,Greyed out badges,7,7,7,1,Study 1
+iw67v-6bSTViwwwA3ITr9j6TwwwsiuBM42efCvE0BcRAWnqj7ojZ4aGEQL0ZSRYo,CC,4,5,5,5,5,5,3,3,3,4,4,4,4,3,1,3,2,3,2,25,10,2,2,-999,-999,2,Control Condition,4.833333333333333,3.25,3.75,2.5,Study 1
+iw67v-6bSTViwwwA3ITr9j6TwwwsiuBM42efCvE0BcRAWnqj7ojZ4aGEQL0ZSRYo,GB,5,5,5,4,5,5,4,4,5,4,5,5,5,4,2,2,1,2,1,25,10,2,2,1,1,1,Greyed out badges,4.833333333333333,4.25,4.75,1.5,Study 1
+xZbffEudxnrH5h6K2fRViT2b0kyeVoXl0yebuQvHvrz7xi7hnthEXAOPHOaY1PdD,CC,4,6,3,3,3,5,4,4,4,4,4,4,4,4,1,2,3,2,3,22,6,2,-999,-999,-999,3,Control Condition,4,4,4,2.5,Study 1
+xZbffEudxnrH5h6K2fRViT2b0kyeVoXl0yebuQvHvrz7xi7hnthEXAOPHOaY1PdD,GB,4,6,6,5,5,5,4,5,4,4,4,4,4,4,2,1,2,4,2,22,6,2,1,1,1,1,Greyed out badges,5.166666666666667,4.25,4,2.25,Study 1
+bFjrWNkiI2OVR_ls_6mjOi7dQf-czwkDHVqgIxapcKxz6mROJQWyb-1lEIL-YHM8,CC,6,6,6,6,6,6,6,5,6,5,6,6,5,5,1,2,3,2,2,21,5,2,2,2,2,2,Control Condition,6,5.5,5.5,2.25,Study 1
+bFjrWNkiI2OVR_ls_6mjOi7dQf-czwkDHVqgIxapcKxz6mROJQWyb-1lEIL-YHM8,GB,6,6,7,6,6,6,6,6,6,6,6,6,6,6,2,2,2,2,2,21,5,2,2,1,1,1,Greyed out badges,6.166666666666667,6,6,2,Study 1
+LwxoWhljY3bprTLl7tI728CVRaAj7p-up7LK38iA3qnv--b3viFgy7R89PTXJ0tX,CC,4,5,4,7,4,4,4,4,4,4,7,7,4,4,1,2,1,1,1,25,7,1,-999,-999,-999,-999,Control Condition,4.666666666666667,4,5.5,1.25,Study 1
+LwxoWhljY3bprTLl7tI728CVRaAj7p-up7LK38iA3qnv--b3viFgy7R89PTXJ0tX,GB,4,4,4,7,7,4,4,4,4,4,4,4,4,4,2,1,4,1,4,25,7,1,-999,1,1,-999,Greyed out badges,5,4,4,2.5,Study 1
+DXsQk7UccyR4R7KXnqMGwFpbJcvkFNRYG6Y4sHiYmbwzzharxjIcOHlkfSKHAxUz,CC,6,6,6,7,6,3,7,7,5,6,4,4,4,4,1,3,2,1,3,21,3,1,1,2,1,1,Control Condition,5.666666666666667,6.25,4,2.25,Study 1
+DXsQk7UccyR4R7KXnqMGwFpbJcvkFNRYG6Y4sHiYmbwzzharxjIcOHlkfSKHAxUz,GB,7,7,6,7,6,7,6,7,7,7,4,4,4,4,2,1,1,1,1,21,3,1,3,1,1,-999,Greyed out badges,6.666666666666667,6.75,4,1,Study 1
+jvr7I1OaAIvSK-fPdY182nmdr8FIS8p4Q8F8zZHmVmE1bYeutgA2odFvhAp_F6fw,CC,6,5,4,6,4,5,5,4,5,6,7,4,5,5,1,1,1,3,4,21,4,2,2,-999,-999,3,Control Condition,5,5,5.25,2.25,Study 1
+jvr7I1OaAIvSK-fPdY182nmdr8FIS8p4Q8F8zZHmVmE1bYeutgA2odFvhAp_F6fw,GB,5,5,5,5,6,5,5,5,6,6,4,5,6,5,2,1,1,2,4,21,4,2,1,1,1,2,Greyed out badges,5.166666666666667,5.5,5,2,Study 1
+_CYt7eW4UeH0XKtMb2Ejn9UbvrSNRt-5Av48CqeDXFCUgNCtzXiF6HB_VfS32ZSp,CC,4,4,4,4,3,5,4,5,4,5,5,6,5,4,1,2,2,2,2,24,12,2,1,-999,-999,1,Control Condition,4,4.5,5,2,Study 1
+_CYt7eW4UeH0XKtMb2Ejn9UbvrSNRt-5Av48CqeDXFCUgNCtzXiF6HB_VfS32ZSp,GB,5,5,6,6,5,5,5,5,4,5,5,4,5,4,2,1,1,2,2,24,12,2,3,3,1,4,Greyed out badges,5.333333333333333,4.75,4.5,1.5,Study 1
+KNDWyiC8FGMsCqXla362iuvOSDfm2bsCI2hX2t5OaKV0COkUYIXz2hsjoxSpJNGb,CC,6,5,6,5,5,6,7,6,6,5,6,6,7,6,1,1,1,4,1,19,1,2,3,-999,4,4,Control Condition,5.5,6,6.25,1.75,Study 1
+KNDWyiC8FGMsCqXla362iuvOSDfm2bsCI2hX2t5OaKV0COkUYIXz2hsjoxSpJNGb,GB,7,7,7,7,6,7,7,7,7,7,7,7,7,7,2,1,1,4,1,19,1,2,4,-999,4,4,Greyed out badges,6.833333333333333,7,7,1.75,Study 1
+O6UvZRdG-NcwSWVawlWBphQJMg0OuDt3Q9cF0qzpHPj3kkHfHU5WrB7-wWS4HWSw,CC,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,2,3,2,3,22,1,2,2,4,3,3,Control Condition,4,4,4,2.5,Study 1
+O6UvZRdG-NcwSWVawlWBphQJMg0OuDt3Q9cF0qzpHPj3kkHfHU5WrB7-wWS4HWSw,GB,5,5,4,5,4,4,5,4,4,4,5,4,4,4,2,2,4,3,3,22,1,2,1,1,1,1,Greyed out badges,4.5,4.25,4.25,3,Study 1
+iuxJINYd7iRiPF6wQkv78W4UkghTklb4RI_XD5WaXIW9piVgzPeny8CxehmAWT9P,CC,3,5,3,5,3,5,4,6,5,6,6,4,3,4,1,2,2,3,2,23,9,2,2,2,-999,2,Control Condition,4,5.25,4.25,2.25,Study 1
+iuxJINYd7iRiPF6wQkv78W4UkghTklb4RI_XD5WaXIW9piVgzPeny8CxehmAWT9P,GB,3,6,5,3,4,4,4,5,7,6,6,5,4,4,2,1,1,1,1,23,9,2,1,1,1,1,Greyed out badges,4.166666666666667,5.5,4.75,1,Study 1
+Th4Rmb90oasSuCFnikU6vbEF3uOHwcJVlov_AmYIyIcqdOhvPtgwHuIkz8ZUbZR1,CC,3,3,3,3,3,4,3,4,4,4,3,4,3,4,1,1,2,1,3,NA,NA,NA,3,3,-999,4,Control Condition,3.1666666666666665,3.75,3.5,1.75,Study 1
+Th4Rmb90oasSuCFnikU6vbEF3uOHwcJVlov_AmYIyIcqdOhvPtgwHuIkz8ZUbZR1,GB,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Greyed out badges,NA,NA,NA,NA,Study 1
+XzMX435gNWxbu3W6V4LUo8w9YTwpL_Qu0D4u5S0O6FLcgV2C_7XDwx5dI8KF8LC1,CC,6,5,5,6,6,5,3,4,4,4,4,4,3,3,1,1,2,2,2,20,3,2,4,-999,-999,2,Control Condition,5.5,3.75,3.5,1.75,Study 1
+XzMX435gNWxbu3W6V4LUo8w9YTwpL_Qu0D4u5S0O6FLcgV2C_7XDwx5dI8KF8LC1,GB,2,5,2,4,2,5,4,4,4,4,4,4,4,3,2,3,2,2,2,20,3,2,1,1,1,1,Greyed out badges,3.3333333333333335,4,3.75,2.25,Study 1
+4IJUBHpsTyooW-ZgSpZvjf5-5HXwb2zjQ2gy4FZFihcJLpE3UATurRxsBxYUwBoe,CC,6,6,6,6,5,7,4,4,4,5,5,2,4,4,1,2,3,1,4,19,1,1,-999,-999,2,2,Control Condition,6,4.25,3.75,2.5,Study 1
+4IJUBHpsTyooW-ZgSpZvjf5-5HXwb2zjQ2gy4FZFihcJLpE3UATurRxsBxYUwBoe,GB,7,7,5,6,4,7,6,7,7,6,7,7,6,4,2,1,2,4,2,19,1,1,-999,3,-999,3,Greyed out badges,6,6.5,6,2.25,Study 1
+UTGlLckQjnhlsIHVUQbGsysQXvLDDWnzUrKokpm4IEdET4L2GaM04UNSTNvssoT1,CC,5,4,5,6,6,4,4,4,4,5,5,5,3,4,1,3,2,1,1,25,13,2,3,3,2,3,Control Condition,5,4.25,4.25,1.75,Study 1
+UTGlLckQjnhlsIHVUQbGsysQXvLDDWnzUrKokpm4IEdET4L2GaM04UNSTNvssoT1,GB,6,6,5,5,5,5,4,4,4,4,3,4,4,3,2,2,2,1,3,25,13,2,2,1,1,3,Greyed out badges,5.333333333333333,4,3.5,2,Study 1
+OS3MdnahRyPu5Xp1vZxpklhUz5jtfwNrm_IMQsM4zfVTyJ5FtKpzGtOrf9c4hjH_,CC,6,6,6,5,5,6,6,6,6,6,6,6,6,6,1,3,2,3,2,23,1,2,3,-999,-999,4,Control Condition,5.666666666666667,6,6,2.5,Study 1
+OS3MdnahRyPu5Xp1vZxpklhUz5jtfwNrm_IMQsM4zfVTyJ5FtKpzGtOrf9c4hjH_,GB,6,6,6,5,6,6,6,6,6,6,6,6,6,6,2,2,3,2,2,23,1,2,1,1,1,1,Greyed out badges,5.833333333333333,6,6,2.25,Study 1
+MWHmrvltibQMKMn00Fyi4f47SBdliF4NDYxA6K9nyMg2BeYcKy40jXQPmo8SFiYy,CC,4,4,5,4,4,4,4,5,5,5,4,4,4,5,1,2,2,3,3,27,19,2,-999,-999,-999,-999,Control Condition,4.166666666666667,4.75,4.25,2.5,Study 1
+MWHmrvltibQMKMn00Fyi4f47SBdliF4NDYxA6K9nyMg2BeYcKy40jXQPmo8SFiYy,GB,4,4,5,4,4,4,3,4,4,4,4,4,4,4,2,2,3,3,4,27,19,2,1,1,1,1,Greyed out badges,4.166666666666667,3.75,4,3,Study 1
+72EbpFuk8xgfaXRXlJRK0N8dkkgNgSeIu4hBHk4AQDtRz3mdOxOFXJuTksxQUXpM,CC,5,5,5,5,5,5,7,7,7,7,7,7,7,7,1,2,2,1,4,28,8,1,1,-999,-999,2,Control Condition,5,7,7,2.25,Study 1
+72EbpFuk8xgfaXRXlJRK0N8dkkgNgSeIu4hBHk4AQDtRz3mdOxOFXJuTksxQUXpM,GB,5,6,5,4,5,5,3,4,7,4,4,3,3,7,2,1,2,1,3,28,8,1,1,1,1,1,Greyed out badges,5,4.5,4.25,1.75,Study 1
+pPoFpQuH1Uvuhztpg7DazPBP5KqteiZrvmv1yw0ZmqsjQg1hUaP_UYIODeoTTCwn,CC,4,4,4,4,4,4,4,4,4,4,4,5,4,4,1,3,3,3,3,23,11,2,2,2,3,2,Control Condition,4,4,4.25,3,Study 1
+pPoFpQuH1Uvuhztpg7DazPBP5KqteiZrvmv1yw0ZmqsjQg1hUaP_UYIODeoTTCwn,GB,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,3,2,3,2,23,11,2,2,-999,-999,3,Greyed out badges,4,4,4,2.5,Study 1
+J75dxFO_dotcv2k3bsRs19nwlm99BWoxh9aSdnwrEHS5pTNs1safUx4bQuD4ZotQ,CC,7,6,6,6,5,7,7,7,6,6,6,5,6,5,1,2,1,1,1,21,3,2,2,-999,-999,1,Control Condition,6.166666666666667,6.5,5.5,1.25,Study 1
+J75dxFO_dotcv2k3bsRs19nwlm99BWoxh9aSdnwrEHS5pTNs1safUx4bQuD4ZotQ,GB,7,6,6,7,7,7,7,7,5,5,5,5,6,5,2,1,1,1,1,21,3,2,1,-999,-999,-999,Greyed out badges,6.666666666666667,6,5.25,1,Study 1
+mNdXUEsJc12Ww7ruQYCteM455gDL-XIX1bARWkjFPXodCvbw2lBAaMT-BRAbrVnu,CC,7,7,6,5,5,7,6,5,6,6,5,5,6,5,1,2,2,3,1,20,1,2,4,-999,-999,4,Control Condition,6.166666666666667,5.75,5.25,2,Study 1
+mNdXUEsJc12Ww7ruQYCteM455gDL-XIX1bARWkjFPXodCvbw2lBAaMT-BRAbrVnu,GB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,2,1,1,1,20,1,2,-999,-999,-999,4,Greyed out badges,7,7,7,1.25,Study 1
+cuI_TNvp2w-7ON4dqrpLvZT1Fezop44MbxLVtA7T4iIokIMB88piYPBDuwEj63Ke,CC,7,7,7,7,7,7,7,7,7,7,7,7,7,7,1,2,1,1,3,21,3,2,3,-999,-999,2,Control Condition,7,7,7,1.75,Study 1
+cuI_TNvp2w-7ON4dqrpLvZT1Fezop44MbxLVtA7T4iIokIMB88piYPBDuwEj63Ke,GB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,2,1,1,21,3,2,1,1,1,1,Greyed out badges,7,7,7,1.25,Study 1
+SIEe5k0fahcky0razyuKY1Bcf-CXXndtdAYmk4j7HA9fdqWAOhq1X5TNX7IZwXow,CC,6,6,6,6,6,6,6,6,6,6,5,5,6,6,1,2,1,1,1,22,3,1,3,4,4,3,Control Condition,6,6,5.5,1.25,Study 1
+SIEe5k0fahcky0razyuKY1Bcf-CXXndtdAYmk4j7HA9fdqWAOhq1X5TNX7IZwXow,GB,6,6,6,6,6,6,6,6,6,6,6,5,6,6,2,2,2,2,1,22,3,1,3,4,4,4,Greyed out badges,6,6,5.75,1.75,Study 1
+Sk4P2cIf8X6zT6EzzlpV1IH8F91wuiOuvI7cdLg1sX8Kl1EBjM44xPtNGKmWDJWB,CC,7,7,6,7,6,6,7,6,7,6,7,7,6,6,1,1,1,4,1,22,3,2,2,-999,2,2,Control Condition,6.5,6.5,6.5,1.75,Study 1
+Sk4P2cIf8X6zT6EzzlpV1IH8F91wuiOuvI7cdLg1sX8Kl1EBjM44xPtNGKmWDJWB,GB,6,6,6,5,5,6,4,4,5,6,6,5,5,6,2,1,1,4,1,22,3,2,1,1,1,1,Greyed out badges,5.666666666666667,4.75,5.5,1.75,Study 1
+yM6P2eWxgK2Iz8TBtd3ZM8gFaS36HUah1AJK6HO83Ck1VExRjLEWL9ff5MlfUHdF,CC,6,4,6,5,7,6,7,7,5,6,7,7,7,5,1,1,1,1,1,20,3,2,-999,-999,-999,2,Control Condition,5.666666666666667,6.25,6.5,1,Study 1
+yM6P2eWxgK2Iz8TBtd3ZM8gFaS36HUah1AJK6HO83Ck1VExRjLEWL9ff5MlfUHdF,GB,5,7,5,4,3,4,5,4,7,7,6,7,5,7,2,3,1,4,1,20,3,2,4,1,1,1,Greyed out badges,4.666666666666667,5.75,6.25,2.25,Study 1
+xV5u0lOEOdfZ-wBay00WO1YaBPByL849pBIFQ38pSy0YtFzdGKVE0-RgasYPhMuk,CC,5,5,6,6,5,5,5,5,5,5,5,6,5,6,1,2,2,3,3,19,1,2,-999,-999,-999,3,Control Condition,5.333333333333333,5,5.5,2.5,Study 1
+xV5u0lOEOdfZ-wBay00WO1YaBPByL849pBIFQ38pSy0YtFzdGKVE0-RgasYPhMuk,GB,5,6,5,5,5,5,6,6,6,6,6,6,6,5,2,2,3,3,2,19,1,2,1,1,1,2,Greyed out badges,5.166666666666667,6,5.75,2.5,Study 1
+0RsY1eowAgeEEz56RMuMVr2iNsIKvILiMO8TdDZywnx4PYnh3OWkO6RzHkIZjEXa,CC,7,6,6,6,6,6,6,5,6,6,5,5,6,5,1,2,2,1,2,22,3,2,-999,-999,-999,-999,Control Condition,6.166666666666667,5.75,5.25,1.75,Study 1
+0RsY1eowAgeEEz56RMuMVr2iNsIKvILiMO8TdDZywnx4PYnh3OWkO6RzHkIZjEXa,GB,5,5,5,4,5,5,4,4,4,4,4,4,5,5,2,2,3,2,2,22,3,2,1,1,1,1,Greyed out badges,4.833333333333333,4,4.5,2.25,Study 1
+SBPuknakNvSUJPaXeEGza19RLnymbIb5M1VpPaDKo7tEEaqwM6zXMdAAAgAD2HY_,CC,5,5,5,4,5,4,3,3,4,4,4,4,4,4,1,3,1,3,3,27,3,1,-999,-999,-999,-999,Control Condition,4.666666666666667,3.5,4,2.5,Study 1
+SBPuknakNvSUJPaXeEGza19RLnymbIb5M1VpPaDKo7tEEaqwM6zXMdAAAgAD2HY_,GB,5,5,5,5,5,5,3,3,3,3,3,4,4,3,2,3,2,3,2,27,3,1,1,1,1,1,Greyed out badges,5,3,3.5,2.5,Study 1
+o-NI5dFm4eOrQNU3xExkpXw3oJ-29umTBsMLmfOV7s4VtyyleCxYxrVDZCOIIfQy,CC,6,6,5,6,5,5,6,6,5,5,6,5,5,5,1,2,2,2,4,20,3,2,1,4,4,-999,Control Condition,5.5,5.5,5.25,2.5,Study 1
+o-NI5dFm4eOrQNU3xExkpXw3oJ-29umTBsMLmfOV7s4VtyyleCxYxrVDZCOIIfQy,GB,6,5,6,6,5,6,6,5,5,5,6,5,5,5,2,2,2,1,3,20,3,2,1,1,1,1,Greyed out badges,5.666666666666667,5.25,5.25,2,Study 1
+Ss9587NjvGS1kU-AVav9gfMG9T7n4VkFMVFsit6PfKnFDq1CUTgrNXkBFJd2YY6V,CC,6,6,6,6,6,6,6,6,5,5,6,6,6,6,1,1,1,1,1,20,3,2,2,2,3,4,Control Condition,6,5.5,6,1,Study 1
+Ss9587NjvGS1kU-AVav9gfMG9T7n4VkFMVFsit6PfKnFDq1CUTgrNXkBFJd2YY6V,GB,6,5,5,6,5,5,6,6,5,4,6,5,6,5,2,3,2,1,2,20,3,2,1,1,1,3,Greyed out badges,5.333333333333333,5.25,5.5,2,Study 1
+7WR1X6YC7f3XeaJKhFnG4edFGn29DQO9ZwqM8uS4M4E2UsvrMSDHp8QSyNHpuf0G,CC,6,5,5,6,4,6,5,5,5,5,4,5,5,5,1,1,1,2,3,24,10,1,4,-999,2,4,Control Condition,5.333333333333333,5,4.75,1.75,Study 1
+7WR1X6YC7f3XeaJKhFnG4edFGn29DQO9ZwqM8uS4M4E2UsvrMSDHp8QSyNHpuf0G,GB,5,5,5,5,6,5,4,5,4,4,4,4,4,5,2,2,3,2,3,24,10,1,1,1,1,2,Greyed out badges,5.166666666666667,4.25,4.25,2.5,Study 1
+wzcePE2C2mV3dQ5hqO3hBa5FOJdJj4rCZdM8y3PL9QBDTkuuf7-uSb5-wBxyHZel,CC,6,5,7,6,7,6,6,7,6,5,4,4,6,6,1,1,1,2,1,21,5,2,2,2,-999,3,Control Condition,6.166666666666667,6,5,1.25,Study 1
+wzcePE2C2mV3dQ5hqO3hBa5FOJdJj4rCZdM8y3PL9QBDTkuuf7-uSb5-wBxyHZel,GB,6,6,6,6,5,6,5,6,4,4,4,4,5,5,2,1,2,2,3,21,5,2,1,1,1,1,Greyed out badges,5.833333333333333,4.75,4.5,2,Study 1
+htT7S_LwceZrgRJyihuuzATNv28_bksvKCJSemfeDXz0y2GvRSoR27tQUA_r6dUH,CC,5,6,5,5,6,6,5,5,6,5,6,5,5,5,1,2,2,1,4,24,12,2,-999,-999,-999,3,Control Condition,5.5,5.25,5.25,2.25,Study 1
+htT7S_LwceZrgRJyihuuzATNv28_bksvKCJSemfeDXz0y2GvRSoR27tQUA_r6dUH,GB,5,6,6,5,5,6,5,6,5,5,5,5,6,5,2,2,3,1,3,24,12,2,2,2,1,2,Greyed out badges,5.5,5.25,5.25,2.25,Study 1
+yqIZu-W9p6XWHWW2wTuvoNbvouzbUtoEAetqKQGOQweGFTIdtyEfXWf7BPE6Zou5,CC,4,5,4,4,4,4,4,4,4,4,4,4,4,4,1,2,3,2,3,20,2,1,2,-999,-999,2,Control Condition,4.166666666666667,4,4,2.5,Study 1
+yqIZu-W9p6XWHWW2wTuvoNbvouzbUtoEAetqKQGOQweGFTIdtyEfXWf7BPE6Zou5,GB,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,2,3,2,3,20,2,1,2,2,2,2,Greyed out badges,4,4,4,2.5,Study 1
+rZ3RnRCBVdflnisorp-ZQWoB7A8k327zw3la0A5avtHu9-lQqcEqwjbJPlTelzuS,CC,6,5,5,5,5,6,6,7,6,6,5,6,6,7,1,2,2,3,3,22,3,2,2,3,3,3,Control Condition,5.333333333333333,6.25,6,2.5,Study 1
+rZ3RnRCBVdflnisorp-ZQWoB7A8k327zw3la0A5avtHu9-lQqcEqwjbJPlTelzuS,GB,6,6,6,6,6,7,6,7,6,6,6,6,7,7,2,2,2,3,2,22,3,2,4,3,-999,3,Greyed out badges,6.166666666666667,6.25,6.5,2.25,Study 1
+90pD4CQUfklnuIAbDIG4-iBLfVjlzIg3iEUv6z-ha8qgwgAkcHnaeHAopeluyRnb,CC,6,5,6,6,5,6,5,5,4,4,4,4,4,4,1,2,1,2,3,27,11,1,3,-999,-999,2,Control Condition,5.666666666666667,4.5,4,2,Study 1
+90pD4CQUfklnuIAbDIG4-iBLfVjlzIg3iEUv6z-ha8qgwgAkcHnaeHAopeluyRnb,GB,5,6,6,5,5,5,2,3,4,4,1,1,3,3,2,2,3,2,3,27,11,1,1,1,1,1,Greyed out badges,5.333333333333333,3.25,2,2.5,Study 1
+RA__tysyzGTfYLrIMIB9be8BM9aQ1C67lWzMivD_4q2uxSeHxnM2jicmEkcc1SLZ,CC,6,6,6,6,5,6,6,5,6,5,6,6,6,5,1,2,1,1,2,22,1,2,3,-999,-999,3,Control Condition,5.833333333333333,5.5,5.75,1.5,Study 1
+RA__tysyzGTfYLrIMIB9be8BM9aQ1C67lWzMivD_4q2uxSeHxnM2jicmEkcc1SLZ,GB,6,6,6,6,6,6,5,6,5,6,6,6,6,5,2,2,1,1,2,22,1,2,4,4,4,2,Greyed out badges,6,5.5,5.75,1.5,Study 1
+EJlvfHZZLZFNgE8eUhkPwsTBm8DBtOrSx0t8DUn5Du_Lvwz9QXtHJiuKXiMJbC5X,CC,6,6,6,6,6,6,6,6,6,6,6,6,6,6,1,1,2,1,2,25,9,2,4,-999,-999,4,Control Condition,6,6,6,1.5,Study 1
+EJlvfHZZLZFNgE8eUhkPwsTBm8DBtOrSx0t8DUn5Du_Lvwz9QXtHJiuKXiMJbC5X,GB,6,6,6,6,6,6,6,6,6,6,6,6,6,6,2,2,2,2,2,25,9,2,2,1,1,-999,Greyed out badges,6,6,6,2,Study 1
+pbm4Zz_fw7dQfjTGv9K7V9raoMlyKt97neG77r1dZ71GvVVZ-3PkAVT0Kc8YB2fZ,CC,5,5,6,5,3,5,5,5,5,6,4,5,4,4,1,3,1,1,2,21,5,2,3,1,2,2,Control Condition,4.833333333333333,5.25,4.25,1.75,Study 1
+pbm4Zz_fw7dQfjTGv9K7V9raoMlyKt97neG77r1dZ71GvVVZ-3PkAVT0Kc8YB2fZ,GB,6,5,5,6,5,6,5,5,5,4,4,4,4,3,2,3,4,1,2,21,5,2,1,1,1,1,Greyed out badges,5.5,4.75,3.75,2.5,Study 1
+l5c1Xlz9vTTCy89dH5SaDczNWUmxx-zzRGfFBIfUUmd6thHnxdc79KQYmp4lEjji,CC,5,5,5,5,5,6,5,5,5,5,4,4,5,5,1,2,2,3,3,NA,NA,NA,3,-999,3,3,Control Condition,5.166666666666667,5,4.5,2.5,Study 1
+l5c1Xlz9vTTCy89dH5SaDczNWUmxx-zzRGfFBIfUUmd6thHnxdc79KQYmp4lEjji,GB,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Greyed out badges,NA,NA,NA,NA,Study 1
+fQsJ_7g6K2aeaySK4qH1ETlfARxOH4_9W_8bGbvKO6ORK6bd30GHMDIn0xsxdLN8,CC,2,4,3,5,3,4,3,3,6,6,4,3,5,2,1,1,4,1,4,20,1,2,3,2,1,3,Control Condition,3.5,4.5,3.5,2.5,Study 1
+fQsJ_7g6K2aeaySK4qH1ETlfARxOH4_9W_8bGbvKO6ORK6bd30GHMDIn0xsxdLN8,GB,3,4,3,5,4,4,5,3,3,1,5,4,3,4,2,3,4,3,2,20,1,2,3,3,4,3,Greyed out badges,3.8333333333333335,3,4,3,Study 1
+ZY41mftlmI2IADjW1bVTHahuBOnApHf2GbXAXh3f9r-q-aVSNIjDHhn2oZ_j1724,CC,5,6,7,5,7,6,6,7,4,4,6,6,6,6,1,2,2,2,3,26,13,2,2,-999,-999,-999,Control Condition,6,5.25,6,2.25,Study 1
+ZY41mftlmI2IADjW1bVTHahuBOnApHf2GbXAXh3f9r-q-aVSNIjDHhn2oZ_j1724,GB,6,5,7,7,6,7,7,7,7,7,7,7,7,7,2,1,1,1,1,26,13,2,-999,1,1,1,Greyed out badges,6.333333333333333,7,7,1,Study 1
+zJMxP1DeUBAYmI1HPAdxTZpucvqDP10z249WPSQ3AhAKHX1pgVK6xW9mkpsRYOkF,CC,5,5,5,5,4,5,5,5,5,6,6,6,6,5,1,3,2,2,2,21,3,2,2,-999,-999,2,Control Condition,4.833333333333333,5.25,5.75,2.25,Study 1
+zJMxP1DeUBAYmI1HPAdxTZpucvqDP10z249WPSQ3AhAKHX1pgVK6xW9mkpsRYOkF,GB,6,6,6,6,5,6,5,6,6,6,6,6,6,6,2,2,2,2,2,21,3,2,2,1,1,1,Greyed out badges,5.833333333333333,5.75,6,2,Study 1
+9o-EKftpg2tDC9x9c-ryCxgszo8oaE3t619U6V3ml6Sfqm5jusWkMTuHVWrqRtyw,CC,6,5,5,6,5,6,4,4,6,4,3,4,7,7,1,1,3,1,3,23,8,2,2,-999,-999,1,Control Condition,5.5,4.5,5.25,2,Study 1
+9o-EKftpg2tDC9x9c-ryCxgszo8oaE3t619U6V3ml6Sfqm5jusWkMTuHVWrqRtyw,GB,5,5,5,5,5,6,3,3,4,4,4,5,3,4,2,1,3,1,2,23,8,2,1,1,1,1,Greyed out badges,5.166666666666667,3.5,4,1.75,Study 1
+KSB_uVKxvOF3bnoiFJRiLkdxqi0RGPeiUuUHJRPS9nXdwAAP1eDUxsQ6Llvf7pHu,CC,6,6,6,6,6,6,6,6,6,6,6,6,6,4,1,1,1,1,1,25,12,1,4,-999,-999,4,Control Condition,6,6,5.5,1,Study 1
+KSB_uVKxvOF3bnoiFJRiLkdxqi0RGPeiUuUHJRPS9nXdwAAP1eDUxsQ6Llvf7pHu,GB,5,5,5,5,5,6,5,6,4,4,5,5,4,4,2,1,1,1,1,25,12,1,1,1,1,1,Greyed out badges,5.166666666666667,4.75,4.5,1,Study 1
+eH4zWRhxrWtnOhk-u70pWFw6jz416VLIcPLTY6I4nZxUNbjy4s5t87WHu-_DoM7F,CC,6,6,6,6,6,6,6,6,6,5,5,5,6,6,1,2,1,2,1,20,3,1,2,2,4,3,Control Condition,6,5.75,5.5,1.5,Study 1
+eH4zWRhxrWtnOhk-u70pWFw6jz416VLIcPLTY6I4nZxUNbjy4s5t87WHu-_DoM7F,GB,6,6,6,6,6,6,6,6,5,5,5,5,6,5,2,2,1,2,1,20,3,1,1,1,1,1,Greyed out badges,6,5.5,5.25,1.5,Study 1
+zp0srfu1A8N0FuZslPn3CoTJTOxWVxN0ZQWaVDQmPZPl1NJ-LfOFRgtfSghFpHK7,CC,7,6,7,6,7,7,5,7,4,5,6,6,6,5,1,1,2,2,2,21,3,2,3,-999,-999,4,Control Condition,6.666666666666667,5.25,5.75,1.75,Study 1
+zp0srfu1A8N0FuZslPn3CoTJTOxWVxN0ZQWaVDQmPZPl1NJ-LfOFRgtfSghFpHK7,CB,6,6,6,7,6,5,6,5,5,6,4,6,6,4,2,1,3,2,2,21,3,2,-999,-999,3,-999,Colored badges,6,5.5,5,2,Study 1
+vsrDvqam1gW6Lm-wRiyrUBNnz3abFczdwyVb9W84XQq00rZMkFqaMhTx5qxNMv5h,CC,6,5,7,4,4,5,6,6,4,4,4,4,6,5,1,2,3,3,2,20,3,1,4,-999,-999,2,Control Condition,5.166666666666667,5,4.75,2.5,Study 1
+vsrDvqam1gW6Lm-wRiyrUBNnz3abFczdwyVb9W84XQq00rZMkFqaMhTx5qxNMv5h,CB,6,5,5,4,4,5,5,6,5,6,3,5,6,6,2,3,3,2,3,20,3,1,4,4,-999,3,Colored badges,4.833333333333333,5.5,5,2.75,Study 1
+SNmlMU2juISxSQal0VPCt0aNGxSem7IvhKK73JisQM9PwNCgli-IL9dtV8pZ8tmK,CC,7,6,7,7,6,7,6,7,6,7,5,6,6,7,1,1,2,2,2,19,1,1,1,2,1,2,Control Condition,6.666666666666667,6.5,6,1.75,Study 1
+SNmlMU2juISxSQal0VPCt0aNGxSem7IvhKK73JisQM9PwNCgli-IL9dtV8pZ8tmK,CB,7,6,6,6,6,7,6,7,6,7,6,5,6,5,2,1,3,1,2,19,1,1,4,4,4,4,Colored badges,6.333333333333333,6.5,5.5,1.75,Study 1
+XNPKKNtNvEuJUutGRJfXUul_q4MD94J56F01HzBf0gp3H4WEv073Fc5l2n2BeHFX,CC,6,6,6,6,6,6,6,6,6,6,6,6,6,6,1,2,1,2,3,20,3,2,2,-999,3,3,Control Condition,6,6,6,2,Study 1
+XNPKKNtNvEuJUutGRJfXUul_q4MD94J56F01HzBf0gp3H4WEv073Fc5l2n2BeHFX,CB,7,7,7,7,7,7,7,7,7,7,6,7,7,7,2,1,2,2,3,20,3,2,4,4,4,4,Colored badges,7,7,6.75,2,Study 1
+sx7HfW0hHTzkjmPXJDjM08FooRhrg2d5XeAXrymYBbqpXHc6Lpi6T3AARyYmlgEZ,CC,6,7,7,6,6,6,7,6,6,6,6,6,6,6,1,2,1,4,4,23,8,2,3,-999,-999,3,Control Condition,6.333333333333333,6.25,6,2.75,Study 1
+sx7HfW0hHTzkjmPXJDjM08FooRhrg2d5XeAXrymYBbqpXHc6Lpi6T3AARyYmlgEZ,CB,7,7,7,7,6,7,7,7,6,6,6,6,7,7,2,1,1,2,1,23,8,2,4,4,4,4,Colored badges,6.833333333333333,6.5,6.5,1.25,Study 1
+Zul1vai0D5wmFF39_2ePBE9R4ZYdM2uH707WSosFig5YJcwnhv0VIh6RH7PpydOZ,CC,6,6,6,7,6,7,6,7,7,6,6,6,6,6,1,2,3,2,2,26,13,1,1,-999,-999,-999,Control Condition,6.333333333333333,6.5,6,2.25,Study 1
+Zul1vai0D5wmFF39_2ePBE9R4ZYdM2uH707WSosFig5YJcwnhv0VIh6RH7PpydOZ,CB,6,7,7,6,6,7,7,6,7,6,6,7,7,7,2,2,2,2,3,26,13,1,4,4,4,4,Colored badges,6.5,6.5,6.75,2.25,Study 1
+RM87ODIH2ssv0_e4fwMA235SWuyDrGGxbFJulk92G-poAT-a8xrho1xuqyNjsVvw,CC,4,4,6,4,2,4,6,6,3,5,4,6,6,4,1,3,1,2,3,25,10,2,1,1,-999,1,Control Condition,4,5,5,2.25,Study 1
+RM87ODIH2ssv0_e4fwMA235SWuyDrGGxbFJulk92G-poAT-a8xrho1xuqyNjsVvw,CB,6,6,7,6,7,7,6,6,6,6,6,5,6,4,2,1,1,2,3,25,10,2,4,4,4,4,Colored badges,6.5,6,5.25,1.75,Study 1
+3jvsdUuRjvdxpXn1SN1o3GPe2MsrEkxitY4Oi89SxvLpu50gfYDMtvMs1UNSsPzL,CC,6,6,6,6,6,6,6,6,5,5,5,5,6,4,1,4,3,1,3,NA,NA,NA,4,4,4,4,Control Condition,6,5.5,5,2.75,Study 1
+3jvsdUuRjvdxpXn1SN1o3GPe2MsrEkxitY4Oi89SxvLpu50gfYDMtvMs1UNSsPzL,CB,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Colored badges,NA,NA,NA,NA,Study 1
+lAQ_zJWhHoMuoZxuq8ObDOoAzxDAclyuzAVf_A073mU1Rxb7a2X3yTZY05Ak2ktF,CC,4,5,5,6,5,5,5,3,3,3,6,4,4,4,1,3,3,3,4,22,9,2,2,-999,-999,1,Control Condition,5,3.5,4.5,3.25,Study 1
+lAQ_zJWhHoMuoZxuq8ObDOoAzxDAclyuzAVf_A073mU1Rxb7a2X3yTZY05Ak2ktF,CB,3,3,5,4,3,6,5,4,3,6,5,4,6,6,2,4,3,4,3,22,9,2,1,-999,-999,-999,Colored badges,4,4.5,5.25,3.5,Study 1
+Cpiza0-HOTCyC16ekDtSqVNvGd9ZZ8p3O0CDVTSXb7bHzSgRj--qyCdJBj76W9H2,CC,6,6,6,6,6,6,6,6,5,6,6,6,6,6,1,2,1,1,1,23,9,2,3,3,3,3,Control Condition,6,5.75,6,1.25,Study 1
+Cpiza0-HOTCyC16ekDtSqVNvGd9ZZ8p3O0CDVTSXb7bHzSgRj--qyCdJBj76W9H2,CB,7,7,7,6,7,7,6,7,7,7,6,6,7,6,2,1,1,1,1,23,9,2,4,4,4,4,Colored badges,6.833333333333333,6.75,6.25,1,Study 1
+e32dPkjnBH1PWemKOi6k0WrxeF0hRp9K9woHeM63-xVg24ubKnTVLZuzus5ZTYCK,CC,5,5,5,5,4,5,4,4,5,4,5,4,5,4,1,3,2,3,2,22,3,2,3,2,2,3,Control Condition,4.833333333333333,4.25,4.5,2.5,Study 1
+e32dPkjnBH1PWemKOi6k0WrxeF0hRp9K9woHeM63-xVg24ubKnTVLZuzus5ZTYCK,CB,5,6,4,6,5,4,5,5,5,6,5,5,4,6,2,3,2,2,3,22,3,2,3,2,2,2,Colored badges,5,5.25,5,2.5,Study 1
+Bz2To7B-Axq8fiG3MZh9Eny8o10JOyLXZ5DkjWZ8XLCoVIs4kkQ6B9PoHtDP9YIi,CC,6,7,5,7,5,6,4,4,4,4,4,4,5,4,1,1,1,1,1,20,3,2,3,-999,-999,3,Control Condition,6,4,4.25,1,Study 1
+Bz2To7B-Axq8fiG3MZh9Eny8o10JOyLXZ5DkjWZ8XLCoVIs4kkQ6B9PoHtDP9YIi,CB,7,7,7,6,6,7,4,4,4,4,4,4,4,4,2,1,1,1,1,20,3,2,1,1,1,1,Colored badges,6.666666666666667,4,4,1,Study 1
+FpmuJfhDuMjufF2wgHhn2p94jhy83hDMU9RSU-BsNFwB8DGNOedp_kOm5FMOZAfU,CC,6,6,6,6,6,6,6,6,5,6,6,5,5,5,1,4,1,4,1,27,11,1,1,-999,-999,1,Control Condition,6,5.75,5.25,2.5,Study 1
+FpmuJfhDuMjufF2wgHhn2p94jhy83hDMU9RSU-BsNFwB8DGNOedp_kOm5FMOZAfU,CB,7,6,6,7,7,7,7,7,7,7,6,7,7,7,2,4,1,4,1,27,11,1,4,4,4,4,Colored badges,6.666666666666667,7,6.75,2.5,Study 1
+_k8hgVpViHThr7qpEu5cmYDKwEq5v7qfXxfZEotEj0n4EpmnQ9vZ18vZnBcz5W-o,CC,4,4,3,4,5,4,5,4,4,3,5,6,5,4,1,2,3,2,2,28,6,2,2,-999,-999,3,Control Condition,4,4,5,2.25,Study 1
+_k8hgVpViHThr7qpEu5cmYDKwEq5v7qfXxfZEotEj0n4EpmnQ9vZ18vZnBcz5W-o,CB,5,4,5,3,3,3,5,4,4,5,4,4,5,6,2,2,2,2,2,28,6,2,3,3,-999,2,Colored badges,3.8333333333333335,4.5,4.75,2,Study 1
+QuNKWLxsXxcVfkQjEYhB6j_cXGkg6oE-iRWeDBMk80J0snnGarhvXVPBdfB4Tdmi,CC,7,7,7,7,7,7,7,7,7,7,7,7,7,7,1,1,1,1,1,NA,NA,NA,1,1,1,1,Control Condition,7,7,7,1,Study 1
+QuNKWLxsXxcVfkQjEYhB6j_cXGkg6oE-iRWeDBMk80J0snnGarhvXVPBdfB4Tdmi,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,1,1,1,NA,NA,NA,1,1,1,1,Colored badges,7,7,7,1,Study 1
+iHYiWJRFMuXzBjNxawX2BUogHLSn3VVMAQA2HBJdO4U9ZC70mnerMEk9pRiJoyIT,CC,6,7,6,5,6,6,6,6,6,7,6,7,6,6,1,1,1,1,1,24,7,2,2,1,2,1,Control Condition,6,6.25,6.25,1,Study 1
+iHYiWJRFMuXzBjNxawX2BUogHLSn3VVMAQA2HBJdO4U9ZC70mnerMEk9pRiJoyIT,CB,7,7,7,6,6,7,7,7,7,7,7,7,7,7,2,1,2,1,1,24,7,2,4,4,4,4,Colored badges,6.666666666666667,7,7,1.25,Study 1
+uSmwFuniGZu7Rq-Y1almMaPFqivzhfZZNoSdCD9C4swyfhRk25j83ptu_g-k1o3S,CC,7,7,7,7,7,7,6,7,7,7,7,6,7,4,1,1,2,2,1,23,7,1,3,4,2,3,Control Condition,7,6.75,6,1.5,Study 1
+uSmwFuniGZu7Rq-Y1almMaPFqivzhfZZNoSdCD9C4swyfhRk25j83ptu_g-k1o3S,CB,7,7,7,7,7,7,7,7,7,7,6,6,7,6,2,1,1,1,1,23,7,1,4,3,3,3,Colored badges,7,7,6.25,1,Study 1
+L75Twl8YpqebaKJkKPLS134A5w4z8sLIZopoXJKbcUt7HqXaB5WfK3eOM2fxXyIW,CC,6,6,5,5,5,5,4,6,4,6,5,5,4,6,1,2,1,2,2,27,5,1,3,-999,-999,4,Control Condition,5.333333333333333,5,5,1.75,Study 1
+L75Twl8YpqebaKJkKPLS134A5w4z8sLIZopoXJKbcUt7HqXaB5WfK3eOM2fxXyIW,CB,5,5,5,4,5,5,5,4,5,5,6,5,4,4,2,2,2,1,2,27,5,1,2,2,-999,1,Colored badges,4.833333333333333,4.75,4.75,1.75,Study 1
+dWxtqSJMBmbasE-W7JBtnzM1tkkr-lUNoOcYNiSgE7U7UvaseXnjDK7O9_5o01yo,CC,5,5,5,5,6,6,5,6,5,6,5,5,6,5,1,2,2,1,4,24,11,2,2,3,-999,3,Control Condition,5.333333333333333,5.5,5.25,2.25,Study 1
+dWxtqSJMBmbasE-W7JBtnzM1tkkr-lUNoOcYNiSgE7U7UvaseXnjDK7O9_5o01yo,CB,6,6,6,6,6,6,6,5,5,6,5,5,5,5,2,1,3,1,3,24,11,2,3,-999,-999,3,Colored badges,6,5.5,5,2,Study 1
+u_znu_CTfA8B64ghkvPJI9w4g5zYD7rQUL8__CoLxKC1UVcdHev6HXQVWgYk2jRb,CC,4,5,5,6,5,6,6,3,4,4,5,4,6,3,1,2,3,2,3,27,9,1,1,2,3,-999,Control Condition,5.166666666666667,4.25,4.5,2.5,Study 1
+u_znu_CTfA8B64ghkvPJI9w4g5zYD7rQUL8__CoLxKC1UVcdHev6HXQVWgYk2jRb,CB,5,6,5,4,5,4,5,5,5,3,4,4,5,2,2,2,3,3,2,27,9,1,2,4,3,2,Colored badges,4.833333333333333,4.5,3.75,2.5,Study 1
+YphXx1rp7w-J_imFcmxgnv3ZuXnNaSbl8lMjGdPkQWd1Hfx4j_ncSkQTOnVlXgOu,CC,4,5,2,3,5,3,6,5,5,6,6,4,3,5,1,2,1,1,4,23,5,1,1,2,2,3,Control Condition,3.6666666666666665,5.5,4.5,2,Study 1
+YphXx1rp7w-J_imFcmxgnv3ZuXnNaSbl8lMjGdPkQWd1Hfx4j_ncSkQTOnVlXgOu,CB,6,6,6,6,5,6,6,5,6,6,5,5,7,5,2,2,1,1,2,23,5,1,4,4,4,4,Colored badges,5.833333333333333,5.75,5.5,1.5,Study 1
+rwVBgnDuG6FRMUPtO0Rhf0JkCM8k-V7_TzsGqp7NrIWszzp5mr9xZh2ozaYopOsP,CC,6,5,5,5,4,5,6,5,6,5,6,6,5,5,1,1,1,1,1,NA,NA,NA,1,1,-999,4,Control Condition,5,5.5,5.5,1,Study 1
+rwVBgnDuG6FRMUPtO0Rhf0JkCM8k-V7_TzsGqp7NrIWszzp5mr9xZh2ozaYopOsP,CB,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Colored badges,NA,NA,NA,NA,Study 1
+yAwmi-L8Pdx_2AlrHOvun3rJuWmXxzGkC4aMUFcGT4s2UZy7A9SgKXaoOY7QCgBr,CC,5,5,5,6,4,3,6,7,6,5,7,7,4,3,1,3,2,2,2,19,1,1,2,4,3,3,Control Condition,4.666666666666667,6,5.25,2.25,Study 1
+yAwmi-L8Pdx_2AlrHOvun3rJuWmXxzGkC4aMUFcGT4s2UZy7A9SgKXaoOY7QCgBr,CB,4,5,5,5,3,2,6,7,7,7,7,7,5,7,2,3,4,4,4,19,1,1,4,1,3,2,Colored badges,4,6.75,6.5,3.75,Study 1
+2EG31KrwYf2aVQjHYaVeKn55__sxvlIUPFqrnfFozvsqoaOBB21zCbqlf2nKyhzw,CC,7,7,7,7,7,7,7,7,7,7,7,7,7,7,1,1,1,1,1,26,13,2,1,1,-999,3,Control Condition,7,7,7,1,Study 1
+2EG31KrwYf2aVQjHYaVeKn55__sxvlIUPFqrnfFozvsqoaOBB21zCbqlf2nKyhzw,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,1,1,1,26,13,2,4,4,4,4,Colored badges,7,7,7,1,Study 1
+mszjYgCa-RqYjSORxCfKUPUBzjqdswX4p3q7c0CT3s4aI36fpFI1ByFletV42QVc,CC,5,4,5,4,3,5,5,6,5,5,6,6,5,4,1,3,2,2,2,26,9,2,2,-999,-999,3,Control Condition,4.333333333333333,5.25,5.25,2.25,Study 1
+mszjYgCa-RqYjSORxCfKUPUBzjqdswX4p3q7c0CT3s4aI36fpFI1ByFletV42QVc,CB,7,7,7,6,5,7,7,7,7,6,7,7,7,6,2,1,1,1,1,26,9,2,4,4,4,4,Colored badges,6.5,6.75,6.75,1,Study 1
+7Ihl2QXTEBkTiuC1qKXU-LBKeD8dBLYhzlVMYCM90lm5ikK6odOTCBox2mQM-AyY,CC,6,5,4,4,3,5,5,5,4,4,5,5,4,6,1,2,2,1,3,21,7,1,1,1,3,1,Control Condition,4.5,4.5,5,2,Study 1
+7Ihl2QXTEBkTiuC1qKXU-LBKeD8dBLYhzlVMYCM90lm5ikK6odOTCBox2mQM-AyY,CB,6,4,5,6,5,6,4,4,4,5,4,4,5,4,2,1,3,3,3,21,7,1,3,4,4,4,Colored badges,5.333333333333333,4.25,4.25,2.5,Study 1
+Uqy0-IN36TGIwLJCNBBBPy4OzZ6zoDjV4qdExeQatt7rTzx5K6P22QieIcGQPUYh,CC,6,4,6,5,5,4,5,4,5,6,5,6,6,5,1,2,3,2,3,19,3,2,3,-999,-999,3,Control Condition,5,5,5.5,2.5,Study 1
+Uqy0-IN36TGIwLJCNBBBPy4OzZ6zoDjV4qdExeQatt7rTzx5K6P22QieIcGQPUYh,CB,7,7,7,6,7,6,7,6,6,6,6,6,6,6,2,2,2,3,2,19,3,2,4,4,4,4,Colored badges,6.666666666666667,6.25,6,2.25,Study 1
+m3cPTq5Mi3HY585jNAogFyDUxd6xe5rF4u4jCniGftt3YJaLWhz6TwiouSmTWRC2,CC,6,7,4,4,6,4,5,6,6,6,6,6,6,6,1,1,1,4,2,27,1,2,3,-999,-999,-999,Control Condition,5.166666666666667,5.75,6,2,Study 1
+m3cPTq5Mi3HY585jNAogFyDUxd6xe5rF4u4jCniGftt3YJaLWhz6TwiouSmTWRC2,CB,6,7,6,6,6,6,6,6,5,6,5,4,6,6,2,2,1,3,2,27,1,2,4,4,4,4,Colored badges,6.166666666666667,5.75,5.25,2,Study 1
+Yrsbg8uvKwkNFUa5egBMSEGGwcEZfSMhKd1CDCjMtrR-LDdyjGqWMu5NUzq_6Lqt,CC,3,3,6,3,3,5,6,6,6,6,6,6,6,6,1,2,2,3,2,22,6,2,2,-999,2,1,Control Condition,3.8333333333333335,6,6,2.25,Study 1
+Yrsbg8uvKwkNFUa5egBMSEGGwcEZfSMhKd1CDCjMtrR-LDdyjGqWMu5NUzq_6Lqt,CB,7,6,7,7,7,7,7,7,4,4,7,7,6,4,2,2,2,2,2,22,6,2,-999,4,4,3,Colored badges,6.833333333333333,5.5,6,2,Study 1
+TjNiD-nCKg34ZdrLn-gouhzHCsGhPJfmNBDac7JQ1ix0ELN_5EEQ2Dhh-w8S1Coy,CC,7,6,6,6,7,6,5,5,6,7,4,5,5,6,1,1,2,2,2,19,3,2,2,3,2,2,Control Condition,6.333333333333333,5.75,5,1.75,Study 1
+TjNiD-nCKg34ZdrLn-gouhzHCsGhPJfmNBDac7JQ1ix0ELN_5EEQ2Dhh-w8S1Coy,CB,7,7,7,7,6,7,6,6,6,6,6,5,6,5,2,2,1,2,1,19,3,2,2,4,4,3,Colored badges,6.833333333333333,6,5.5,1.5,Study 1
+xTiCj2yucklAWwBXUrPDWd92Erudigutqwjk1zPrt2imHwJsaQrVKrGyJ53vusDo,CC,6,5,5,5,5,5,6,5,5,6,5,5,5,5,1,3,2,2,2,26,3,2,2,-999,-999,1,Control Condition,5.166666666666667,5.5,5,2.25,Study 1
+xTiCj2yucklAWwBXUrPDWd92Erudigutqwjk1zPrt2imHwJsaQrVKrGyJ53vusDo,CB,7,7,7,7,6,7,6,7,7,7,7,7,7,7,2,1,1,1,1,26,3,2,4,4,4,4,Colored badges,6.833333333333333,6.75,7,1,Study 1
+8GJM_8e_UIAIB7NPdCryQhP3U6miBraMdXhrzDAWegVC5roT6UdldqqlKXEOd8nA,CC,4,3,4,4,3,4,6,4,6,4,4,4,4,4,1,1,1,2,1,22,1,1,2,1,1,2,Control Condition,3.6666666666666665,5,4,1.25,Study 1
+8GJM_8e_UIAIB7NPdCryQhP3U6miBraMdXhrzDAWegVC5roT6UdldqqlKXEOd8nA,CB,6,6,6,6,6,6,5,6,4,4,4,4,4,4,2,1,1,1,1,22,1,1,4,4,4,4,Colored badges,6,4.75,4,1,Study 1
+nu9YhsCovzfPZfuIQ5sQXutnSOHT7PxhhTSg3B6xJZ2ByS0B3aH9bTD1lZTCGW6i,CC,7,7,7,7,7,7,7,7,7,7,7,7,7,7,1,2,2,3,2,20,3,2,3,4,4,-999,Control Condition,7,7,7,2.25,Study 1
+nu9YhsCovzfPZfuIQ5sQXutnSOHT7PxhhTSg3B6xJZ2ByS0B3aH9bTD1lZTCGW6i,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,2,2,2,2,20,3,2,4,4,4,4,Colored badges,7,7,7,2,Study 1
+V_DGEYETRrQtJc4ZpDIAAokJG_yfDv719bW7Blpn9Fal5nPGPs7CQCV2Sxg3Pp6P,CC,6,6,6,6,4,6,6,5,5,6,5,5,5,5,1,3,2,3,2,20,1,1,2,2,3,2,Control Condition,5.666666666666667,5.5,5,2.5,Study 1
+V_DGEYETRrQtJc4ZpDIAAokJG_yfDv719bW7Blpn9Fal5nPGPs7CQCV2Sxg3Pp6P,CB,6,7,6,6,6,7,6,6,5,5,6,5,6,6,2,2,2,1,2,20,1,1,2,3,3,4,Colored badges,6.333333333333333,5.5,5.75,1.75,Study 1
+n2axSGKsT5DuJdq5fBvb9JUE4MWRTFYdQIjvCDaVgdTRGV3kCnrhQntfSfYXLPA0,CC,4,6,5,4,6,5,5,3,4,2,3,5,5,6,1,1,4,4,4,20,3,2,-999,4,-999,4,Control Condition,5,3.5,4.75,3.25,Study 1
+n2axSGKsT5DuJdq5fBvb9JUE4MWRTFYdQIjvCDaVgdTRGV3kCnrhQntfSfYXLPA0,CB,6,5,7,5,7,6,5,5,6,7,6,5,6,6,2,4,1,4,1,20,3,2,4,-999,4,-999,Colored badges,6,5.75,5.75,2.5,Study 1
+dUsbAN_TVKHnPAo-usAGZDgMj6jZt4YzOd31K297gp6-s5mPzgSUmCcz1I1YnTKs,CC,6,5,6,5,5,6,5,5,5,5,5,6,6,5,1,2,2,2,2,27,12,1,4,2,2,4,Control Condition,5.5,5,5.5,2,Study 1
+dUsbAN_TVKHnPAo-usAGZDgMj6jZt4YzOd31K297gp6-s5mPzgSUmCcz1I1YnTKs,CB,6,6,5,6,6,6,6,7,7,6,6,7,6,6,2,2,2,2,2,27,12,1,4,4,4,3,Colored badges,5.833333333333333,6.5,6.25,2,Study 1
+WfmVr95q2iwIg0LZ1cBhDKlI-kR410vVzsJFM4p1ptS3XpcsoIOmar2PIZc1UYp4,CC,3,5,4,4,4,4,4,4,4,4,4,4,4,4,1,2,3,1,4,25,3,2,-999,-999,-999,-999,Control Condition,4,4,4,2.5,Study 1
+WfmVr95q2iwIg0LZ1cBhDKlI-kR410vVzsJFM4p1ptS3XpcsoIOmar2PIZc1UYp4,CB,2,4,4,3,4,3,4,4,4,4,4,4,4,4,2,3,3,3,4,25,3,2,4,4,4,4,Colored badges,3.3333333333333335,4,4,3.25,Study 1
+eYptOOlfPCeyb_qZsFnZJ-ZPdY_TFe4ikRAcD3jp9wfe8kFbhv31m5B5Kg5vzIJ-,CC,4,6,6,5,5,5,6,6,6,6,6,6,6,6,1,1,2,2,2,26,13,2,-999,-999,-999,3,Control Condition,5.166666666666667,6,6,1.75,Study 1
+eYptOOlfPCeyb_qZsFnZJ-ZPdY_TFe4ikRAcD3jp9wfe8kFbhv31m5B5Kg5vzIJ-,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,1,2,1,26,13,2,4,4,4,4,Colored badges,7,7,7,1.25,Study 1
+9aIjDplg4HPeLsfVC1Sx832Ij8xLQezBbkLNeAR7xDX0a73JkBl_nHaHf84MTzfv,CC,2,3,4,4,4,4,4,4,7,6,7,4,7,7,1,2,1,2,4,21,3,2,1,-999,-999,2,Control Condition,3.5,5.25,6.25,2.25,Study 1
+9aIjDplg4HPeLsfVC1Sx832Ij8xLQezBbkLNeAR7xDX0a73JkBl_nHaHf84MTzfv,CB,6,6,7,7,7,7,7,7,4,7,5,5,5,6,2,1,1,1,1,21,3,2,4,4,4,4,Colored badges,6.666666666666667,6.25,5.25,1,Study 1
+ZpWqW-9N44Wo4uct5i_JPmSEo60MT35onhujB4XYV4wYAo7dG1N9F2jsOn4Scb3q,CC,6,7,6,5,6,6,6,6,5,6,5,5,6,5,1,3,3,2,3,23,3,2,4,-999,-999,3,Control Condition,6,5.75,5.25,2.75,Study 1
+ZpWqW-9N44Wo4uct5i_JPmSEo60MT35onhujB4XYV4wYAo7dG1N9F2jsOn4Scb3q,CB,6,6,6,6,6,6,5,6,6,6,5,5,6,5,2,2,2,2,2,23,3,2,4,4,4,4,Colored badges,6,5.75,5.25,2,Study 1
+jRDAWItbhV9pn8Dyu0eqsLPqnlOLEouqib0BA28FIZHv4xvkPHGFLaBzIPHvnpxv,CC,5,4,7,7,7,7,7,7,7,7,7,7,7,7,1,1,2,2,3,24,11,2,2,-999,-999,-999,Control Condition,6.166666666666667,7,7,2,Study 1
+jRDAWItbhV9pn8Dyu0eqsLPqnlOLEouqib0BA28FIZHv4xvkPHGFLaBzIPHvnpxv,CB,7,4,7,7,7,7,7,7,7,7,7,7,7,7,2,3,2,2,2,24,11,2,-999,4,4,4,Colored badges,6.5,7,7,2.25,Study 1
+ASJLP-PBEAeESSeogvdJ6lMFapRV2uf2m3w7aDtIP-9GrSYPHZ8sA9q2DLS13tNG,CC,6,6,6,6,6,6,6,6,6,4,4,4,4,4,1,1,2,1,1,20,3,2,-999,2,-999,1,Control Condition,6,5.5,4,1.25,Study 1
+ASJLP-PBEAeESSeogvdJ6lMFapRV2uf2m3w7aDtIP-9GrSYPHZ8sA9q2DLS13tNG,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,2,1,1,20,3,2,4,4,4,4,Colored badges,7,7,7,1.25,Study 1
+Xq6rYVaEkO4nGO3_Jgx4QlY2jBT2QHjRczgA8pm04QaU_ik3xfJQTfPKzSmlscmX,CC,7,7,7,7,7,7,7,7,7,7,4,4,7,4,1,1,3,2,3,26,11,2,3,-999,-999,3,Control Condition,7,7,4.75,2.25,Study 1
+Xq6rYVaEkO4nGO3_Jgx4QlY2jBT2QHjRczgA8pm04QaU_ik3xfJQTfPKzSmlscmX,CB,7,7,7,7,7,7,7,7,4,7,4,4,7,4,2,1,1,1,1,26,11,2,4,4,4,4,Colored badges,7,6.25,4.75,1,Study 1
+NULERgNZh9VPiRuFNRSA35W6GB9PZAxtfPM1eEa3QhTkQzjC5gWivp720O8xmPLX,CB,3,4,4,4,3,4,6,6,4,5,5,6,6,5,1,1,2,2,2,23,7,2,2,3,-999,3,Colored badges,3.6666666666666665,5.25,5.5,1.75,Study 1
+NULERgNZh9VPiRuFNRSA35W6GB9PZAxtfPM1eEa3QhTkQzjC5gWivp720O8xmPLX,CC,5,5,6,6,4,5,5,6,5,5,5,4,6,5,2,2,1,1,2,23,7,2,3,-999,-999,3,Control Condition,5.166666666666667,5.25,5,1.5,Study 1
+5pkmouiawm4nHF0sXbuneHnPXLnlTP7P680b47GbaGmRNgI-C1orDzSnc5JIK1yd,CB,6,4,4,3,3,4,5,6,5,7,5,6,5,5,1,2,4,4,4,20,3,2,1,-999,-999,1,Colored badges,4,5.75,5.25,3.5,Study 1
+5pkmouiawm4nHF0sXbuneHnPXLnlTP7P680b47GbaGmRNgI-C1orDzSnc5JIK1yd,CC,6,6,6,6,6,7,6,6,6,6,6,6,6,5,2,1,1,1,1,20,3,2,4,-999,4,4,Control Condition,6.166666666666667,6,5.75,1,Study 1
+sq_5NPUeInyF6Yw221X_6pFGxpWxF9iYkaIFt1Vv-hX2Cp2DvI1bRXyUtFD6E3on,CB,6,6,6,6,5,6,5,5,5,5,5,4,5,5,1,3,2,2,2,22,3,2,2,2,-999,3,Colored badges,5.833333333333333,5,4.75,2.25,Study 1
+sq_5NPUeInyF6Yw221X_6pFGxpWxF9iYkaIFt1Vv-hX2Cp2DvI1bRXyUtFD6E3on,CC,6,6,6,6,6,7,6,6,6,6,6,6,6,6,2,3,1,2,1,22,3,2,-999,-999,-999,-999,Control Condition,6.166666666666667,6,6,1.75,Study 1
+sI1Ox_4t1ieDEF7WmT9rNUdc0THTAxvQDDDWhJdx0TkIOjwSzF34tKTH11tD7d_k,CB,5,5,6,5,4,4,3,3,5,4,5,5,4,5,1,3,3,3,3,22,1,2,3,-999,-999,-999,Colored badges,4.833333333333333,3.75,4.75,3,Study 1
+sI1Ox_4t1ieDEF7WmT9rNUdc0THTAxvQDDDWhJdx0TkIOjwSzF34tKTH11tD7d_k,CC,5,4,4,5,4,4,5,5,5,5,5,4,5,5,2,2,2,2,2,22,1,2,-999,-999,-999,-999,Control Condition,4.333333333333333,5,4.75,2,Study 1
+OaaokGsyrDQY6xQRpGeAq1ydcAUzxsLDrb6jbRRE5n83Jz3hS9BfTzUU14GpfDTU,CB,6,5,6,5,6,5,5,5,5,6,5,5,5,6,1,1,2,1,1,NA,NA,NA,4,4,4,3,Colored badges,5.5,5.25,5.25,1.25,Study 1
+OaaokGsyrDQY6xQRpGeAq1ydcAUzxsLDrb6jbRRE5n83Jz3hS9BfTzUU14GpfDTU,CC,7,6,6,6,6,6,6,6,6,6,6,6,6,5,2,1,2,1,1,NA,NA,NA,-999,-999,-999,-999,Control Condition,6.166666666666667,6,5.75,1.25,Study 1
+Do_iCdWWG3hKMJwQ7aKGca-gpgyzUU51Dj9pGn2EKlHpnr_Ha35rWn3EwWGxIqjs,CB,5,4,5,4,5,4,5,6,6,6,5,5,4,6,1,3,2,4,3,20,4,2,1,-999,3,3,Colored badges,4.5,5.75,5,3,Study 1
+Do_iCdWWG3hKMJwQ7aKGca-gpgyzUU51Dj9pGn2EKlHpnr_Ha35rWn3EwWGxIqjs,CC,5,5,5,5,5,5,5,6,5,6,4,5,6,4,2,2,3,2,1,20,4,2,1,-999,1,2,Control Condition,5,5.5,4.75,2,Study 1
+TJDG0p9CvLCrbiTlDWPHwJd9H2fW-FVvuc9Fh3tXjqoQHvK_sIeEP2AESFSO_QRH,CB,7,7,5,6,7,5,5,5,5,5,5,5,6,5,1,1,2,2,1,26,7,2,4,4,3,2,Colored badges,6.166666666666667,5,5.25,1.5,Study 1
+TJDG0p9CvLCrbiTlDWPHwJd9H2fW-FVvuc9Fh3tXjqoQHvK_sIeEP2AESFSO_QRH,CC,4,4,5,4,5,4,3,4,3,5,5,4,3,4,2,3,2,2,2,26,7,2,3,3,2,3,Control Condition,4.333333333333333,3.75,4,2.25,Study 1
+CINBXkRulRfOS7g-2GZ25C2zwHxkhHX7S-Jc6JGtPgfsPvmIV94EsWMNjPyU9HNh,CB,4,5,4,4,4,4,5,4,4,4,4,5,5,4,1,2,2,2,2,NA,NA,NA,2,-999,-999,3,Colored badges,4.166666666666667,4.25,4.5,2,Study 1
+CINBXkRulRfOS7g-2GZ25C2zwHxkhHX7S-Jc6JGtPgfsPvmIV94EsWMNjPyU9HNh,CC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Control Condition,NA,NA,NA,NA,Study 1
+Aj-t556iOQ039QqHSPhJs2uJIRjAaSFOb1jNqbveceEUrRPAjS0rjygwTaCWDftk,CB,5,6,4,5,4,5,4,5,4,4,4,4,4,4,1,4,4,4,4,20,3,1,4,4,4,4,Colored badges,4.833333333333333,4.25,4,4,Study 1
+Aj-t556iOQ039QqHSPhJs2uJIRjAaSFOb1jNqbveceEUrRPAjS0rjygwTaCWDftk,CC,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,4,4,1,4,20,3,1,1,1,1,1,Control Condition,4,4,4,3.25,Study 1
+ud5liceAUzgAytMtrMR0H-VF2nkSh-s7dVDj1_WVisUGZz3tQHhCQr5lpI1lT6fp,CB,7,7,6,7,6,7,6,7,7,6,7,6,7,6,1,2,2,2,2,NA,NA,NA,-999,3,4,3,Colored badges,6.666666666666667,6.5,6.5,2,Study 1
+ud5liceAUzgAytMtrMR0H-VF2nkSh-s7dVDj1_WVisUGZz3tQHhCQr5lpI1lT6fp,CC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Control Condition,NA,NA,NA,NA,Study 1
+8mAlO6NnZNzks7Q6H10X8pLnxFovFmcXF1aC52c5Tb5yiihVGi2zFdsqyQSufuOg,CB,5,5,5,3,4,4,6,4,5,5,4,3,6,5,1,1,1,3,4,18,1,2,1,-999,1,1,Colored badges,4.333333333333333,5,4.5,2.25,Study 1
+8mAlO6NnZNzks7Q6H10X8pLnxFovFmcXF1aC52c5Tb5yiihVGi2zFdsqyQSufuOg,CC,6,4,5,6,6,5,6,6,6,6,5,4,6,5,2,1,1,1,4,18,1,2,1,1,-999,3,Control Condition,5.333333333333333,6,5,1.75,Study 1
+WOeJoNAvxsLWZh5g3XpZETS5Fd6ilFFI4p0ND9TBx428JzkeKk9ZVoY5UgTUU9lY,CB,5,5,5,5,2,5,4,4,5,6,4,6,4,4,1,2,1,2,3,29,9,1,4,4,4,4,Colored badges,4.5,4.75,4.5,2,Study 1
+WOeJoNAvxsLWZh5g3XpZETS5Fd6ilFFI4p0ND9TBx428JzkeKk9ZVoY5UgTUU9lY,CC,6,6,6,6,6,6,4,4,5,5,4,4,4,4,2,3,2,3,2,29,9,1,3,-999,-999,2,Control Condition,6,4.5,4,2.5,Study 1
+adTRh-LmpBkYZ8tsFY8ehi17dJlcfv8WJDZcJeleLW9xva2z__poTEdMNZk7Gppl,CB,6,6,6,7,6,6,6,6,6,6,5,4,6,6,1,1,1,3,1,22,3,1,4,4,4,3,Colored badges,6.166666666666667,6,5.25,1.5,Study 1
+adTRh-LmpBkYZ8tsFY8ehi17dJlcfv8WJDZcJeleLW9xva2z__poTEdMNZk7Gppl,CC,6,7,6,6,6,6,6,6,6,6,4,4,6,6,2,2,2,1,1,22,3,1,2,1,1,1,Control Condition,6.166666666666667,6,5,1.5,Study 1
+PiGFTwESNakTZkxHeX8fo6t5tjcJDCgw23Vtu3ZfFA0viRbDqvne7B182Nl-5ao-,CB,6,6,6,6,6,6,6,6,5,5,6,5,6,4,1,2,1,3,1,27,9,1,4,4,4,4,Colored badges,6,5.5,5.25,1.75,Study 1
+PiGFTwESNakTZkxHeX8fo6t5tjcJDCgw23Vtu3ZfFA0viRbDqvne7B182Nl-5ao-,CC,7,7,7,7,7,7,7,7,7,7,7,6,7,7,2,1,1,1,1,27,9,1,1,1,1,1,Control Condition,7,7,6.75,1,Study 1
+MRj2m6vdqsTOYk1y6zvmv2VwgiXZjZ9dFtMomsbMUJ0oIwWNjxCpJrYm508bSzpp,CB,3,4,3,4,6,4,3,3,4,4,5,4,4,5,1,1,1,2,2,NA,NA,NA,3,4,4,4,Colored badges,4,3.5,4.5,1.5,Study 1
+MRj2m6vdqsTOYk1y6zvmv2VwgiXZjZ9dFtMomsbMUJ0oIwWNjxCpJrYm508bSzpp,CC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Control Condition,NA,NA,NA,NA,Study 1
+rIVtmfVkasu8L6AgLgnh9c3vyzAY48x-cuwcF_mJMAF5u3BC5PoCoKjdbdJJNOh2,CB,5,5,5,5,5,4,6,5,4,5,5,4,4,4,1,3,2,4,4,24,12,2,1,2,2,4,Colored badges,4.833333333333333,5,4.25,3.25,Study 1
+rIVtmfVkasu8L6AgLgnh9c3vyzAY48x-cuwcF_mJMAF5u3BC5PoCoKjdbdJJNOh2,CC,5,5,5,5,5,6,5,6,6,6,6,6,6,6,2,2,1,3,4,24,12,2,3,2,2,3,Control Condition,5.166666666666667,5.75,6,2.5,Study 1
+e7PPr6bg6tu3jnFkOIFSlJFo5yep8vShZFlxVY1jX1m7UXf9CBqb9DEo5zLOPxjs,CB,5,6,6,5,6,6,6,4,5,6,6,5,5,4,1,2,2,2,1,NA,NA,NA,-999,-999,-999,-999,Colored badges,5.666666666666667,5.25,5,1.75,Study 1
+e7PPr6bg6tu3jnFkOIFSlJFo5yep8vShZFlxVY1jX1m7UXf9CBqb9DEo5zLOPxjs,CC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Control Condition,NA,NA,NA,NA,Study 1
+p_1BXd8rgoMUCKs41nlIrsieASoBTQWKDMgmmHQzD1fajBEyCRqcAaeW358cQes3,CB,6,6,6,6,6,6,6,6,5,5,5,5,6,5,1,1,2,1,2,NA,NA,NA,4,4,4,-999,Colored badges,6,5.5,5.25,1.5,Study 1
+p_1BXd8rgoMUCKs41nlIrsieASoBTQWKDMgmmHQzD1fajBEyCRqcAaeW358cQes3,CC,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Control Condition,NA,NA,NA,NA,Study 1
+35cmTE6Va_kaePO1sE2N1IdM5klUUR_00c0a3c5zG4ABp4hxIbyWgoAY8hHSBiOP,CB,5,5,5,6,2,4,4,6,4,5,4,5,4,4,1,2,4,4,3,23,7,1,1,1,1,1,Colored badges,4.5,4.75,4.25,3.25,Study 1
+35cmTE6Va_kaePO1sE2N1IdM5klUUR_00c0a3c5zG4ABp4hxIbyWgoAY8hHSBiOP,CC,5,5,4,6,4,6,6,6,6,4,6,7,6,4,2,1,1,1,1,23,7,1,1,1,1,4,Control Condition,5,5.5,5.75,1,Study 1
+X_Xkgvy3Un8_e3S_g70l5V7LnYq4Wt56OTowtZD_IEhUK3D43KXHBHJzAC4xmTiB,CB,6,6,6,6,6,7,6,6,6,7,7,6,6,6,1,1,4,2,3,24,5,2,4,4,4,4,Colored badges,6.166666666666667,6.25,6.25,2.5,Study 1
+X_Xkgvy3Un8_e3S_g70l5V7LnYq4Wt56OTowtZD_IEhUK3D43KXHBHJzAC4xmTiB,CC,6,6,6,6,6,6,6,6,6,6,6,6,6,6,2,2,1,2,1,24,5,2,2,-999,-999,3,Control Condition,6,6,6,1.5,Study 1
+4fLVi2PP6FFIXG7X3HxC5pwkemmP6eMYJUSUpcc16Jm6nTKr85EOjLdthJn_9xbJ,CB,5,6,6,6,4,7,6,6,4,6,6,6,6,4,1,2,2,2,2,33,11,3,3,-999,4,4,Colored badges,5.666666666666667,5.5,5.5,2,Study 1
+4fLVi2PP6FFIXG7X3HxC5pwkemmP6eMYJUSUpcc16Jm6nTKr85EOjLdthJn_9xbJ,CC,4,5,5,4,4,4,5,4,5,5,5,5,5,5,2,3,2,3,3,33,11,3,1,1,1,2,Control Condition,4.333333333333333,4.75,5,2.75,Study 1
+7z_LXIrJVrvXQzSZkSp8uQnamI7xXrDO-n_kfwNSjFJpggcstnFLJyaOKm6CQAlz,CB,6,6,7,6,6,6,7,6,6,6,7,7,6,5,1,2,1,1,4,22,9,2,4,3,4,4,Colored badges,6.166666666666667,6.25,6.25,2,Study 1
+7z_LXIrJVrvXQzSZkSp8uQnamI7xXrDO-n_kfwNSjFJpggcstnFLJyaOKm6CQAlz,CC,4,5,4,4,4,4,5,5,7,6,6,6,5,6,2,4,3,4,4,22,9,2,1,1,1,1,Control Condition,4.166666666666667,5.75,5.75,3.75,Study 1
+GdQjvDkEoX_MSUvFzeY7SMLxaTQQeKyGAcfCttXAE0i_qyTSaV_TxN60DcAs4C-n,CB,5,5,5,4,3,4,6,6,5,5,4,5,4,5,1,2,3,4,3,31,1,2,4,-999,4,3,Colored badges,4.333333333333333,5.5,4.5,3,Study 1
+GdQjvDkEoX_MSUvFzeY7SMLxaTQQeKyGAcfCttXAE0i_qyTSaV_TxN60DcAs4C-n,CC,5,5,5,4,4,4,5,5,5,5,6,6,5,5,2,4,2,4,3,31,1,2,2,2,1,2,Control Condition,4.5,5,5.5,3.25,Study 1
+-aqhua3PNcEjS81FplsSbQTOXivABYF6pvszV99jjBiOw28oN9zJK2AM-SsQSM7l,CB,6,4,5,6,6,6,6,6,4,4,4,6,4,4,1,1,1,1,1,24,6,2,4,4,4,3,Colored badges,5.5,5,4.5,1,Study 1
+-aqhua3PNcEjS81FplsSbQTOXivABYF6pvszV99jjBiOw28oN9zJK2AM-SsQSM7l,CC,4,4,4,4,4,5,4,5,4,4,4,4,4,4,2,1,2,2,2,24,6,2,1,1,1,1,Control Condition,4.166666666666667,4.25,4,1.75,Study 1
+EWFNhnco-m2qPad4D4e9_tg0Jz89witQRy0olV-ULZLZjtr42VPl7T4ww4FwrmOg,CB,4,5,4,4,4,4,4,4,4,6,6,6,4,5,1,3,2,2,2,20,3,1,1,1,1,1,Colored badges,4.166666666666667,4.5,5.25,2.25,Study 1
+EWFNhnco-m2qPad4D4e9_tg0Jz89witQRy0olV-ULZLZjtr42VPl7T4ww4FwrmOg,CC,4,4,4,4,4,4,4,4,4,6,6,6,5,4,2,3,3,1,2,20,3,1,1,1,2,1,Control Condition,4,4.5,5.25,2.25,Study 1
+KJzy3kF2zf1Rdf_5iEM348gOBSS8skWHpUXrHFlwu5fGew3D-FrsmUlof124IWFY,CB,3,6,5,6,6,5,5,3,5,5,5,6,6,2,1,2,3,3,2,21,5,1,2,3,3,2,Colored badges,5.166666666666667,4.5,4.75,2.5,Study 1
+KJzy3kF2zf1Rdf_5iEM348gOBSS8skWHpUXrHFlwu5fGew3D-FrsmUlof124IWFY,CC,4,5,4,7,5,4,7,4,6,5,5,5,6,6,2,2,3,3,1,21,5,1,-999,4,2,1,Control Condition,4.833333333333333,5.5,5.5,2.25,Study 1
+FQRfm2SOJrhiBfd-fvdZhHYT96xsZi6-s8c8r7oGmNdmipxTNoQv2xjg66ZB_tdM,CB,5,6,6,4,3,5,7,7,7,7,7,7,6,5,1,2,2,4,4,24,6,1,2,-999,-999,4,Colored badges,4.833333333333333,7,6.25,3,Study 1
+FQRfm2SOJrhiBfd-fvdZhHYT96xsZi6-s8c8r7oGmNdmipxTNoQv2xjg66ZB_tdM,CC,6,6,6,4,5,6,7,7,7,7,7,7,6,6,2,2,3,3,3,24,6,1,3,-999,-999,3,Control Condition,5.5,7,6.5,2.75,Study 1
+jMfDzQyNenmshAKZhCa8F9PzMr4vtLANU7va4B69W9iphRB6aslKAObX1A_lBlBd,CB,6,6,6,6,5,6,6,6,5,5,4,6,5,5,1,1,2,1,3,21,5,1,4,4,4,3,Colored badges,5.833333333333333,5.5,5,1.75,Study 1
+jMfDzQyNenmshAKZhCa8F9PzMr4vtLANU7va4B69W9iphRB6aslKAObX1A_lBlBd,CC,6,6,6,6,6,6,5,5,5,6,5,5,5,5,2,1,2,1,1,21,5,1,3,-999,-999,2,Control Condition,6,5.25,5,1.25,Study 1
+9-24OmiCys4dA8gDuOo6aMsybBILomp2QtOSXWACrNZjIVSflkQ_lpDZX-vpmWrQ,CB,6,7,7,7,7,6,7,7,7,6,6,5,5,6,1,2,1,2,3,29,5,2,4,4,4,4,Colored badges,6.666666666666667,6.75,5.5,2,Study 1
+9-24OmiCys4dA8gDuOo6aMsybBILomp2QtOSXWACrNZjIVSflkQ_lpDZX-vpmWrQ,CC,7,7,7,7,7,7,6,6,6,6,6,6,6,6,2,1,1,1,2,29,5,2,1,1,-999,1,Control Condition,7,6,6,1.25,Study 1
+udIMLRo_HkPqBMOytVXSu4Z_36vEvSdQTmMwaij4wAx6Z5t6DINra2V7ZRHmzbxB,CB,4,4,4,4,4,4,4,4,4,4,4,4,4,4,1,2,2,2,2,30,3,1,2,2,-999,3,Colored badges,4,4,4,2,Study 1
+udIMLRo_HkPqBMOytVXSu4Z_36vEvSdQTmMwaij4wAx6Z5t6DINra2V7ZRHmzbxB,CC,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,3,2,2,2,30,3,1,3,3,2,-999,Control Condition,4,4,4,2.25,Study 1
+BVRmrZE92GbxYiboo_z-ox_i6o1pVCRKV9xNmYkiTKza2vIrhWi7zcd84Zwy3sB6,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,1,1,2,1,2,27,9,2,4,4,4,4,Colored badges,7,7,7,1.5,Study 1
+BVRmrZE92GbxYiboo_z-ox_i6o1pVCRKV9xNmYkiTKza2vIrhWi7zcd84Zwy3sB6,CC,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,2,1,1,27,9,2,-999,-999,-999,-999,Control Condition,7,7,7,1.25,Study 1
+s3-i8RtPgMERcqRY2j3X1POnfLUNMg4jxTSZ-IYucik3C_qotS_kw8v1gNSU8pyA,CB,6,6,6,6,5,6,6,6,6,6,6,6,6,6,1,1,1,1,2,19,3,2,4,4,4,4,Colored badges,5.833333333333333,6,6,1.25,Study 1
+s3-i8RtPgMERcqRY2j3X1POnfLUNMg4jxTSZ-IYucik3C_qotS_kw8v1gNSU8pyA,CC,6,6,6,6,6,6,6,6,6,6,6,6,6,6,2,2,2,2,2,19,3,2,-999,-999,-999,-999,Control Condition,6,6,6,2,Study 1
+I_XmvU9-pPqVF5MubucscPfgUFY57PjlA0JjP23hdvsqaY3o9kRhTPGluUHBYQlO,CB,6,6,6,6,5,6,6,6,6,6,6,7,6,6,1,1,1,3,1,23,9,2,4,4,4,4,Colored badges,5.833333333333333,6,6.25,1.5,Study 1
+I_XmvU9-pPqVF5MubucscPfgUFY57PjlA0JjP23hdvsqaY3o9kRhTPGluUHBYQlO,CC,6,6,6,6,6,6,6,6,6,6,6,7,6,6,2,1,2,2,1,23,9,2,3,3,3,4,Control Condition,6,6,6.25,1.5,Study 1
+0bcBz9oA8T18Abeeh3GGQHvL8BF7VKML9SEWQ06T1ncOieGMm1cvy2_WZIuNBJGj,CB,6,5,5,5,6,6,5,5,5,5,4,5,5,5,1,2,1,2,1,25,8,2,3,3,4,3,Colored badges,5.5,5,4.75,1.5,Study 1
+0bcBz9oA8T18Abeeh3GGQHvL8BF7VKML9SEWQ06T1ncOieGMm1cvy2_WZIuNBJGj,CC,6,6,6,4,6,6,4,4,6,5,4,4,4,4,2,2,2,2,3,25,8,2,3,3,4,3,Control Condition,5.666666666666667,4.75,4,2.25,Study 1
+mg2OGuvRnGv4PYqr_SCw0jzxiyMICgLf-Xw6iuuFhZOt6kgESl4EuK_aqDe7F443,CB,6,6,4,6,5,6,6,4,4,4,4,4,4,4,1,1,3,2,4,19,3,2,2,-999,-999,-999,Colored badges,5.5,4.5,4,2.5,Study 1
+mg2OGuvRnGv4PYqr_SCw0jzxiyMICgLf-Xw6iuuFhZOt6kgESl4EuK_aqDe7F443,CC,5,4,4,5,5,5,4,4,4,4,4,4,4,4,2,1,3,1,3,19,3,2,3,-999,2,3,Control Condition,4.666666666666667,4,4,2,Study 1
+JOGLAg8kD4lZl6vh60FXMZ8jYU-LGOtbTqkLRQbBFE5b-2xiXjCT92fXb3o87Dr8,CB,5,6,4,6,6,5,7,7,6,7,6,7,6,6,1,1,2,1,1,25,8,1,4,4,4,3,Colored badges,5.333333333333333,6.75,6.25,1.25,Study 1
+JOGLAg8kD4lZl6vh60FXMZ8jYU-LGOtbTqkLRQbBFE5b-2xiXjCT92fXb3o87Dr8,CC,3,5,3,4,3,4,4,5,5,4,5,4,5,4,2,3,2,2,2,25,8,1,-999,-999,-999,1,Control Condition,3.6666666666666665,4.5,4.5,2.25,Study 1
+4nVwBQC0q6prDsahx5prQQvYdDsyx6LC9uVtFFIXnopN6yKmBtgu6e7vAgG-ZNPY,CB,6,5,6,6,5,7,5,6,4,7,5,4,6,6,1,3,1,4,2,21,5,2,2,4,4,3,Colored badges,5.833333333333333,5.5,5.25,2.5,Study 1
+4nVwBQC0q6prDsahx5prQQvYdDsyx6LC9uVtFFIXnopN6yKmBtgu6e7vAgG-ZNPY,CC,5,3,5,2,2,2,6,6,6,6,6,5,6,6,2,3,4,2,3,21,5,2,1,1,1,2,Control Condition,3.1666666666666665,6,5.75,3,Study 1
+C51VVDdogHMq8zatMCirauxkat667jo-Zcc5-Q_OY4Kl-QSrSpDr2rd0gEXn0GMa,CB,6,5,6,6,5,6,4,5,6,6,6,5,6,5,1,1,1,1,1,27,12,1,4,4,4,4,Colored badges,5.666666666666667,5.25,5.5,1,Study 1
+C51VVDdogHMq8zatMCirauxkat667jo-Zcc5-Q_OY4Kl-QSrSpDr2rd0gEXn0GMa,CC,4,4,5,3,4,4,4,4,4,4,3,4,4,4,2,2,2,2,2,27,12,1,2,1,1,1,Control Condition,4,4,3.75,2,Study 1
+1uVy3ClukbpWjZlErdadWM4RnjCaSdxCD-bjz15lEEpOuhzsDlBQIaquCREqOYYb,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,1,1,1,1,1,24,9,2,2,2,3,3,Colored badges,7,7,7,1,Study 1
+1uVy3ClukbpWjZlErdadWM4RnjCaSdxCD-bjz15lEEpOuhzsDlBQIaquCREqOYYb,CC,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,2,2,1,3,24,9,2,-999,-999,-999,-999,Control Condition,7,7,7,2,Study 1
+kwwCLXlIe_oHFpgIrSYtaTUCuynpbQk1PDs24NQeZ9WPeB7ZGbVhj3NOQv_D5JH3,CB,3,3,2,2,1,3,5,3,4,4,5,4,3,4,1,2,2,1,3,30,10,1,1,4,4,1,Colored badges,2.3333333333333335,4,4,2,Study 1
+kwwCLXlIe_oHFpgIrSYtaTUCuynpbQk1PDs24NQeZ9WPeB7ZGbVhj3NOQv_D5JH3,CC,6,6,5,5,5,5,6,4,6,6,4,6,5,4,2,1,1,1,1,30,10,1,1,1,1,1,Control Condition,5.333333333333333,5.5,4.75,1,Study 1
+Lw_PH7G-3y9J0o-ELM8oAhty5-5yKnkBFzq6GOV9hyaKQPqfhxHHA8KgXzU0poNv,CB,5,5,5,6,5,5,6,6,5,6,6,6,6,6,1,1,1,1,1,23,2,2,4,4,4,4,Colored badges,5.166666666666667,5.75,6,1,Study 1
+Lw_PH7G-3y9J0o-ELM8oAhty5-5yKnkBFzq6GOV9hyaKQPqfhxHHA8KgXzU0poNv,GB,4,3,4,6,3,4,5,5,5,6,6,6,4,6,2,1,3,1,3,23,2,2,1,1,1,1,Greyed out badges,4,5.25,5.5,2,Study 1
+xnwJj9kYP8ONIRnFba9zLzvB8BTEYis0j6iwdVmWWlpxAAUHR-uZnZzmzX4DkgdA,CB,4,4,4,4,4,4,4,4,4,5,5,4,4,4,1,3,2,3,2,NA,NA,NA,3,3,3,3,Colored badges,4,4.25,4.25,2.5,Study 1
+xnwJj9kYP8ONIRnFba9zLzvB8BTEYis0j6iwdVmWWlpxAAUHR-uZnZzmzX4DkgdA,GB,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,2,2,2,2,NA,NA,NA,3,3,3,3,Greyed out badges,4,4,4,2,Study 1
+xzoJcEYz6CUpkYOp48XsUZZj8OsWz3R_zWLLyuwqszYW3Cdxgs0cEB06NxYWUCun,CB,6,4,5,6,4,6,7,7,3,4,7,4,6,3,1,2,3,2,3,22,3,1,4,-999,4,4,Colored badges,5.166666666666667,5.25,5,2.5,Study 1
+xzoJcEYz6CUpkYOp48XsUZZj8OsWz3R_zWLLyuwqszYW3Cdxgs0cEB06NxYWUCun,GB,7,7,7,6,6,6,3,2,4,4,4,4,4,3,2,1,3,2,2,22,3,1,1,1,1,1,Greyed out badges,6.5,3.25,3.75,2,Study 1
+8SbUQACWfairkGjxZBE2AzNM0MaJLS2-mHc6u18MANbgt16EWZV08ZiQUinBv6e2,CB,5,7,6,5,4,6,5,6,6,7,5,4,6,6,1,2,2,1,4,21,3,1,3,2,3,3,Colored badges,5.5,6,5.25,2.25,Study 1
+8SbUQACWfairkGjxZBE2AzNM0MaJLS2-mHc6u18MANbgt16EWZV08ZiQUinBv6e2,GB,6,5,6,7,6,6,4,5,6,5,3,4,6,4,2,2,3,2,3,21,3,1,4,3,3,3,Greyed out badges,6,5,4.25,2.5,Study 1
+BZFs-ZrePbgWfoPjzsPQnoHxQVhs7voBd7w8F37hcJ9VZQTS_t9MCrHWh91_NeAr,CB,6,5,4,2,4,4,7,7,4,5,4,4,2,2,1,1,3,2,4,19,3,2,1,1,1,4,Colored badges,4.166666666666667,5.75,3,2.5,Study 1
+BZFs-ZrePbgWfoPjzsPQnoHxQVhs7voBd7w8F37hcJ9VZQTS_t9MCrHWh91_NeAr,GB,6,6,6,6,6,6,6,7,4,4,6,6,5,3,2,2,4,3,4,19,3,2,2,1,1,1,Greyed out badges,6,5.25,5,3.25,Study 1
+rNwgEPRch39deVqiWRIxbvMm69jOEd3-gZx1p4SlfvPY6tC1t-vropr_-fcp6kbc,CB,2,4,2,2,2,3,4,4,4,4,4,4,3,3,1,2,1,4,3,22,7,2,4,4,4,4,Colored badges,2.5,4,3.5,2.5,Study 1
+rNwgEPRch39deVqiWRIxbvMm69jOEd3-gZx1p4SlfvPY6tC1t-vropr_-fcp6kbc,GB,1,3,2,2,3,2,4,3,4,4,4,4,3,4,2,3,1,2,4,22,7,2,1,1,1,1,Greyed out badges,2.1666666666666665,3.75,3.75,2.5,Study 1
+-Yba0GAb1Fa5649LmUeL0EisfrxznPFpt9GWERQQplrFayOtsu7Am4zA3uB-d-a5,CB,5,5,4,6,5,5,4,4,4,6,3,4,4,5,1,3,3,2,2,23,9,2,2,3,4,-999,Colored badges,5,4.5,4,2.5,Study 1
+-Yba0GAb1Fa5649LmUeL0EisfrxznPFpt9GWERQQplrFayOtsu7Am4zA3uB-d-a5,GB,5,5,4,3,5,5,4,5,5,4,4,5,5,3,2,2,2,1,3,23,9,2,2,3,1,4,Greyed out badges,4.5,4.5,4.25,2,Study 1
+utXh2wYWdB6fxdW-xvZJa7djxhubtQXh-y4v4TDSOQ6ZYtopSlHYX_23y2hKYdOb,CB,6,6,4,6,4,6,7,7,6,6,7,5,5,4,1,2,2,3,3,NA,NA,NA,1,-999,-999,-999,Colored badges,5.333333333333333,6.5,5.25,2.5,Study 1
+utXh2wYWdB6fxdW-xvZJa7djxhubtQXh-y4v4TDSOQ6ZYtopSlHYX_23y2hKYdOb,GB,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Greyed out badges,NA,NA,NA,NA,Study 1
+JBvxQZsAUNqKVP6lCgxb8fGvEJp8lDR_vii0q8r4m9Rq7FOXDI5eAhq4JLQcV6kt,CB,7,7,7,7,7,7,6,7,7,6,7,6,7,7,1,1,1,2,1,21,3,2,4,1,4,3,Colored badges,7,6.5,6.75,1.25,Study 1
+JBvxQZsAUNqKVP6lCgxb8fGvEJp8lDR_vii0q8r4m9Rq7FOXDI5eAhq4JLQcV6kt,GB,1,2,2,2,2,5,4,3,5,5,4,4,4,5,2,3,3,4,4,21,3,2,1,1,1,1,Greyed out badges,2.3333333333333335,4.25,4.25,3.5,Study 1
+7Xd1ipJB77DwfvMs9cRO21b6mOM-vlN1A4Bg6qbWPCfE-knJ3sS2Em1XhdY16Ws7,CB,5,6,5,6,4,5,6,7,5,6,6,5,5,6,1,2,2,2,3,19,3,1,2,3,3,2,Colored badges,5.166666666666667,6,5.5,2.25,Study 1
+7Xd1ipJB77DwfvMs9cRO21b6mOM-vlN1A4Bg6qbWPCfE-knJ3sS2Em1XhdY16Ws7,GB,7,6,6,7,6,6,6,6,6,7,6,6,5,6,2,2,3,2,2,19,3,1,1,1,1,1,Greyed out badges,6.333333333333333,6.25,5.75,2.25,Study 1
+lL6CQtExmSBRZSH7UmFSIb00tFxwwyhzqEPfnLOD55kjqSp2NFTt1GvItnchmiL8,CB,5,5,4,5,5,5,5,5,5,4,5,5,5,5,1,3,2,2,4,24,2,2,2,4,4,2,Colored badges,4.833333333333333,4.75,5,2.75,Study 1
+lL6CQtExmSBRZSH7UmFSIb00tFxwwyhzqEPfnLOD55kjqSp2NFTt1GvItnchmiL8,GB,3,3,3,4,3,4,4,5,4,3,4,4,4,4,2,3,4,3,1,24,2,2,1,1,1,1,Greyed out badges,3.3333333333333335,4,4,2.75,Study 1
+RgvF4W_6G_honJwy042BLapA3z5zQY1CPkCxrWcoeiIcsi3KK7duuSiGq6J0dKOH,CB,6,6,6,6,6,6,5,5,5,5,5,5,6,5,1,3,1,1,4,19,3,2,3,-999,-999,3,Colored badges,6,5,5.25,2.25,Study 1
+RgvF4W_6G_honJwy042BLapA3z5zQY1CPkCxrWcoeiIcsi3KK7duuSiGq6J0dKOH,GB,6,6,6,6,6,6,6,6,6,6,6,5,5,6,2,3,2,1,2,19,3,2,2,-999,-999,-999,Greyed out badges,6,6,5.5,2,Study 1
+PY1ntX-GkHgewgBTOSjYpUZoShdxE-X1bCDz7fmQ4wWILPw0KtxTV7hpC2OXa7Rm,CB,5,6,6,5,4,5,6,6,5,4,5,4,5,5,1,1,1,2,2,29,3,2,4,4,4,4,Colored badges,5.166666666666667,5.25,4.75,1.5,Study 1
+PY1ntX-GkHgewgBTOSjYpUZoShdxE-X1bCDz7fmQ4wWILPw0KtxTV7hpC2OXa7Rm,GB,5,5,3,3,3,3,2,2,4,3,3,3,2,3,2,3,3,3,3,29,3,2,1,1,1,1,Greyed out badges,3.6666666666666665,2.75,2.75,3,Study 1
+MRRvTk4hT_5CYHK1svO-6remrbccXb6Mg561cb6Pjj8S1ceCLNoP_0j4t5ChU2Dm,CB,6,6,6,6,7,6,7,7,7,6,7,7,7,5,1,1,2,1,2,22,5,1,4,4,4,4,Colored badges,6.166666666666667,6.75,6.5,1.5,Study 1
+MRRvTk4hT_5CYHK1svO-6remrbccXb6Mg561cb6Pjj8S1ceCLNoP_0j4t5ChU2Dm,GB,2,3,3,3,2,3,3,4,4,4,4,3,5,5,2,4,2,4,3,22,5,1,1,1,1,1,Greyed out badges,2.6666666666666665,3.75,4.25,3.25,Study 1
+XNqNgi9agF3iz319XzbfSRNyk6wfhrWKsdCMvhTQfVpNu94ejbdx6jNkNNww4gkj,CB,3,6,6,6,3,7,7,7,3,7,7,3,6,3,1,3,3,1,1,24,10,1,1,2,1,2,Colored badges,5.166666666666667,6,4.75,2,Study 1
+XNqNgi9agF3iz319XzbfSRNyk6wfhrWKsdCMvhTQfVpNu94ejbdx6jNkNNww4gkj,GB,5,5,7,5,7,6,6,6,6,6,5,3,6,4,2,3,4,3,3,24,10,1,4,2,2,4,Greyed out badges,5.833333333333333,6,4.5,3.25,Study 1
+67xp-Eb9LZc0gGw1JPNsErTNP-bmoYRwVlW27pQrnXEQl-n5leG57of8mEcOG-G6,CB,6,6,6,5,6,6,5,5,6,6,6,5,6,4,1,3,1,2,2,18,1,2,-999,-999,3,4,Colored badges,5.833333333333333,5.5,5.25,2,Study 1
+67xp-Eb9LZc0gGw1JPNsErTNP-bmoYRwVlW27pQrnXEQl-n5leG57of8mEcOG-G6,GB,6,6,6,5,5,5,6,6,5,6,6,6,5,6,2,2,1,2,1,18,1,2,-999,1,1,2,Greyed out badges,5.5,5.75,5.75,1.5,Study 1
+4e9Ax5QHPx1DToDhXnEhMm_XFXsIEwXtQAiB4dbIQEoksq43uslHD4CKedJREtau,CB,6,6,6,6,6,6,6,6,6,4,6,6,6,4,1,1,1,4,1,28,7,2,4,-999,-999,4,Colored badges,6,5.5,5.5,1.75,Study 1
+4e9Ax5QHPx1DToDhXnEhMm_XFXsIEwXtQAiB4dbIQEoksq43uslHD4CKedJREtau,GB,6,6,6,6,6,6,6,6,6,6,6,6,6,6,2,4,1,4,1,28,7,2,4,-999,-999,4,Greyed out badges,6,6,6,2.5,Study 1
+Lrdw3-FmqhYUbNnWer6vR2G7XITAWDaLo9C3f2X4_EBZe-ZRetuoOdv6qQ707ASv,CB,6,5,6,5,6,6,6,6,5,5,5,4,4,6,1,2,2,1,3,23,9,2,4,4,4,4,Colored badges,5.666666666666667,5.5,4.75,2,Study 1
+Lrdw3-FmqhYUbNnWer6vR2G7XITAWDaLo9C3f2X4_EBZe-ZRetuoOdv6qQ707ASv,GB,4,6,5,6,6,5,4,4,5,5,6,7,5,6,2,1,3,2,4,23,9,2,1,1,1,1,Greyed out badges,5.333333333333333,4.5,6,2.5,Study 1
+SIRW1PeA7cAIrMPmJvwNRDBmoENbGt4aSUEuau-TNOQON9lDSmoePKhGcoZSzLK9,CB,3,3,4,4,4,4,5,4,5,3,4,4,5,5,1,1,1,1,3,22,9,2,4,1,1,1,Colored badges,3.6666666666666665,4.25,4.5,1.5,Study 1
+SIRW1PeA7cAIrMPmJvwNRDBmoENbGt4aSUEuau-TNOQON9lDSmoePKhGcoZSzLK9,GB,6,7,5,6,5,6,4,4,4,6,4,4,6,4,2,1,4,1,3,22,9,2,3,1,1,3,Greyed out badges,5.833333333333333,4.5,4.5,2.25,Study 1
+fCBz8uAAzx0n_8QawtXgZ1CcZPQ-IdGIdsbI60BiBRkN2UzmJfkjRrm8B8As2dCZ,CB,5,6,6,5,3,5,6,6,6,5,6,7,7,6,1,1,2,2,2,31,7,2,3,-999,-999,4,Colored badges,5,5.75,6.5,1.75,Study 1
+fCBz8uAAzx0n_8QawtXgZ1CcZPQ-IdGIdsbI60BiBRkN2UzmJfkjRrm8B8As2dCZ,GB,2,4,4,2,2,3,5,6,4,3,6,7,6,6,2,3,3,4,4,31,7,2,2,-999,-999,1,Greyed out badges,2.8333333333333335,4.5,6.25,3.5,Study 1
+eZgm5E7tvHbKUubxXzlTNR9qk03a2iCDnNB_7VxOLgg84jHJddueUT23PSQiKGq-,CB,2,4,2,3,1,2,4,5,5,7,2,7,1,5,1,2,1,4,3,20,3,2,-999,-999,-999,-999,Colored badges,2.3333333333333335,5.25,3.75,2.5,Study 1
+eZgm5E7tvHbKUubxXzlTNR9qk03a2iCDnNB_7VxOLgg84jHJddueUT23PSQiKGq-,GB,3,2,5,1,1,6,6,3,1,2,6,5,1,1,2,4,1,2,3,20,3,2,-999,-999,-999,-999,Greyed out badges,3,3,3.25,2.5,Study 1
+bitn014Yt81cU7bZcqq5G-XKyRIeeKqCfBi7_MaHVHPuxwE_tOU86Fre2mUX3C4U,CB,6,6,6,6,6,6,6,5,6,6,6,5,6,6,1,2,1,2,3,27,11,2,4,4,4,4,Colored badges,6,5.75,5.75,2,Study 1
+bitn014Yt81cU7bZcqq5G-XKyRIeeKqCfBi7_MaHVHPuxwE_tOU86Fre2mUX3C4U,GB,6,6,5,6,5,6,6,6,6,6,6,6,6,6,2,2,3,2,2,27,11,2,1,1,1,1,Greyed out badges,5.666666666666667,6,6,2.25,Study 1
+-gtkEQPoWLe-3TSS-bVPhw7Ycd4EOnkCUrLlS9KQlj2cZ5Rv7YYz_dHHnZub4svD,CB,6,6,5,5,5,5,5,6,6,6,4,4,6,5,1,1,1,1,1,21,5,2,4,4,1,4,Colored badges,5.333333333333333,5.75,4.75,1,Study 1
+-gtkEQPoWLe-3TSS-bVPhw7Ycd4EOnkCUrLlS9KQlj2cZ5Rv7YYz_dHHnZub4svD,GB,4,5,4,4,4,4,5,5,5,5,4,4,5,6,2,4,4,4,4,21,5,2,1,1,1,1,Greyed out badges,4.166666666666667,5,4.75,4,Study 1
+smypXNNmaYC3ZnX3VMm8_YHRVgb-pQBw2o72576GAjAnqjC9iP9unnCovk0vMV0l,CB,3,3,2,4,2,2,3,4,3,3,5,5,4,3,1,3,4,2,4,21,7,2,4,4,4,4,Colored badges,2.6666666666666665,3.25,4.25,3.25,Study 1
+smypXNNmaYC3ZnX3VMm8_YHRVgb-pQBw2o72576GAjAnqjC9iP9unnCovk0vMV0l,GB,4,3,2,3,3,2,1,2,4,2,4,4,1,4,2,3,4,4,4,21,7,2,1,1,1,1,Greyed out badges,2.8333333333333335,2.25,3.25,3.75,Study 1
+s-QIY5iFEHU2p8Xh4_BesTQLtgSXtk-JTiH1O3lcWdvxcHzp401KoDfIPyOVJNmq,CB,6,7,6,6,6,6,6,4,6,6,6,7,6,4,1,1,2,1,4,23,8,2,4,4,4,4,Colored badges,6.166666666666667,5.5,5.75,2,Study 1
+s-QIY5iFEHU2p8Xh4_BesTQLtgSXtk-JTiH1O3lcWdvxcHzp401KoDfIPyOVJNmq,GB,3,4,3,2,2,2,6,6,4,5,6,6,6,6,2,3,4,4,4,23,8,2,1,1,1,1,Greyed out badges,2.6666666666666665,5.25,6,3.75,Study 1
+0q6M0tRW_G6BRCNvMO_DnsVLpidOsA5tMW-YKuGmTXC_sbLhOrUbQE561fx9CIFN,CB,7,7,7,7,7,7,7,7,4,7,4,4,7,4,1,1,1,2,3,20,3,1,4,4,4,3,Colored badges,7,6.25,4.75,1.75,Study 1
+0q6M0tRW_G6BRCNvMO_DnsVLpidOsA5tMW-YKuGmTXC_sbLhOrUbQE561fx9CIFN,GB,7,7,7,7,7,7,7,7,7,7,4,4,7,4,2,1,1,1,1,20,3,1,1,1,1,1,Greyed out badges,7,7,4.75,1,Study 1
+fYPOy0ZJD9Fv9jxVQYadmCIuvpqvgEiKLUk5K8bSTgIApR0B9sNbax8euzPbcdrm,CB,5,5,6,4,3,6,7,7,6,6,4,4,5,5,1,2,4,2,4,21,4,2,4,4,4,4,Colored badges,4.833333333333333,6.5,4.5,3,Study 1
+fYPOy0ZJD9Fv9jxVQYadmCIuvpqvgEiKLUk5K8bSTgIApR0B9sNbax8euzPbcdrm,GB,5,2,3,5,3,5,3,3,4,4,4,4,4,4,2,4,4,4,4,21,4,2,2,1,1,1,Greyed out badges,3.8333333333333335,3.5,4,4,Study 1
+QNnkrDLiQtzLGTL__xpNlcvmIjICijDE7jxZ73qnjYI0WVbJJFvWfijV98x-Jf8b,CB,5,5,5,6,6,5,5,6,4,4,4,4,4,5,1,2,1,2,3,20,3,2,3,4,4,3,Colored badges,5.333333333333333,4.75,4.25,2,Study 1
+QNnkrDLiQtzLGTL__xpNlcvmIjICijDE7jxZ73qnjYI0WVbJJFvWfijV98x-Jf8b,GB,4,6,6,4,6,5,5,5,3,5,5,4,5,4,2,2,1,3,1,20,3,2,1,1,1,1,Greyed out badges,5.166666666666667,4.5,4.5,1.75,Study 1
+1gzJE39jHFafIi6OBrM4V6IHtvk7giRt9DuvQf02KfjRMtW1QBx-7MD4PrFc78Oe,CB,7,7,7,7,6,6,7,7,7,7,7,7,7,7,1,2,2,1,2,23,9,2,-999,4,4,4,Colored badges,6.666666666666667,7,7,1.75,Study 1
+1gzJE39jHFafIi6OBrM4V6IHtvk7giRt9DuvQf02KfjRMtW1QBx-7MD4PrFc78Oe,GB,7,7,7,6,6,6,7,7,7,7,7,7,7,7,2,1,1,1,1,23,9,2,3,1,1,1,Greyed out badges,6.5,7,7,1,Study 1
+t3qZH4x5YPEYN7jyDgztH11pwINwOjzwDEFas69BiysTXUC6X-4-SNA_-WiNlmvZ,CB,5,6,7,4,1,5,4,6,4,6,4,5,4,4,1,2,1,1,2,20,1,1,3,4,4,3,Colored badges,4.666666666666667,5,4.25,1.5,Study 1
+t3qZH4x5YPEYN7jyDgztH11pwINwOjzwDEFas69BiysTXUC6X-4-SNA_-WiNlmvZ,GB,5,6,5,5,1,5,3,4,3,4,5,4,4,4,2,3,2,2,2,20,1,1,2,2,2,2,Greyed out badges,4.5,3.5,4.25,2.25,Study 1
+woD4mycFGsJzIW2uf48Z3uJLuTPyv_ZnsFx-fznhb2Q5ayn4yU73vPU03e4rbTjn,CB,6,7,6,6,5,7,5,6,5,6,7,7,6,6,1,3,2,3,3,21,3,2,3,4,4,4,Colored badges,6.166666666666667,5.5,6.5,2.75,Study 1
+woD4mycFGsJzIW2uf48Z3uJLuTPyv_ZnsFx-fznhb2Q5ayn4yU73vPU03e4rbTjn,GB,5,4,4,3,4,5,4,4,5,4,5,6,5,5,2,3,3,3,2,21,3,2,1,1,1,1,Greyed out badges,4.166666666666667,4.25,5.25,2.75,Study 1
+uL5_n5LwsbH8fwuMf35k8C4dPzQ1xuxfpvfpFYgEJ4FUY0QYdw9O4vZs5VBDDJJj,CB,4,3,5,5,2,3,4,5,4,6,3,3,4,3,1,2,3,3,3,23,8,2,3,3,4,-999,Colored badges,3.6666666666666665,4.75,3.25,2.75,Study 1
+uL5_n5LwsbH8fwuMf35k8C4dPzQ1xuxfpvfpFYgEJ4FUY0QYdw9O4vZs5VBDDJJj,GB,7,5,5,6,7,7,5,5,5,5,5,6,6,6,2,1,1,1,2,23,8,2,2,3,2,2,Greyed out badges,6.166666666666667,5,5.75,1.25,Study 1
+A6b_33c2-DzguY7R1LERTvpkoZxHBWNjtyKHsSiWHwexSgIn_hjFpOmLK2siPY43,CB,5,4,4,5,4,5,6,5,4,5,5,5,5,4,1,1,2,1,2,28,5,2,4,4,4,4,Colored badges,4.5,5,4.75,1.5,Study 1
+A6b_33c2-DzguY7R1LERTvpkoZxHBWNjtyKHsSiWHwexSgIn_hjFpOmLK2siPY43,GB,6,5,5,6,5,6,5,6,4,5,4,4,4,4,2,1,1,1,1,28,5,2,2,1,1,1,Greyed out badges,5.5,5,4,1,Study 1
+uJ6WIOcGLrTIw9wDIeF_TAs6GoaLDjkcnyNh7m_wQdNjP5ugchO8N1Q9AwPtguK4,CB,6,5,6,5,6,6,5,6,6,6,5,6,6,6,1,3,4,1,4,19,1,2,2,3,2,2,Colored badges,5.666666666666667,5.75,5.75,3,Study 1
+uJ6WIOcGLrTIw9wDIeF_TAs6GoaLDjkcnyNh7m_wQdNjP5ugchO8N1Q9AwPtguK4,GB,2,3,3,2,3,2,3,3,3,2,2,2,2,3,2,4,3,3,4,19,1,2,4,4,4,4,Greyed out badges,2.5,2.75,2.25,3.5,Study 1
+-DjnqyQeY3IbDs6QWJZG7FtXMlF8zsfrbMjBalVPt8lc8Z7mCWMWFVfRmu_k-vK2,CB,3,5,4,4,4,4,5,4,4,4,4,5,4,5,1,3,3,2,4,22,5,2,3,-999,3,-999,Colored badges,4,4.25,4.5,3,Study 1
+-DjnqyQeY3IbDs6QWJZG7FtXMlF8zsfrbMjBalVPt8lc8Z7mCWMWFVfRmu_k-vK2,GB,4,6,4,5,4,4,5,5,6,3,4,5,5,3,2,3,3,2,4,22,5,2,3,3,-999,4,Greyed out badges,4.5,4.75,4.25,3,Study 1
+3fqquMF9xtcZ5IgRV3qbtCbkM_FPOuMi7AtWWBAbCJIOdbQj8FRG9crIEh-aC5SU,CB,6,6,6,6,6,6,6,4,4,4,4,4,5,4,1,1,3,1,2,26,11,1,4,4,4,4,Colored badges,6,4.5,4.25,1.75,Study 1
+3fqquMF9xtcZ5IgRV3qbtCbkM_FPOuMi7AtWWBAbCJIOdbQj8FRG9crIEh-aC5SU,GB,6,6,6,6,6,6,4,4,4,4,4,4,4,4,2,2,2,2,2,26,11,1,3,1,1,2,Greyed out badges,6,4,4,2,Study 1
+w5WS2LxCXKTNtIOxBfPNUErWnSwVWF1qoT1Cqcuo4UcEqiNoAWte_YXscsZmhUFA,CB,6,6,4,5,5,6,6,6,5,7,5,5,6,3,1,1,1,3,4,22,5,2,2,4,3,4,Colored badges,5.333333333333333,6,4.75,2.25,Study 1
+w5WS2LxCXKTNtIOxBfPNUErWnSwVWF1qoT1Cqcuo4UcEqiNoAWte_YXscsZmhUFA,GB,7,7,7,6,5,7,6,7,7,7,7,7,6,7,2,2,1,1,1,22,5,2,3,4,3,4,Greyed out badges,6.5,6.75,6.75,1.25,Study 1
+JGCdGnzlSgXw1lE9Rqe6_3uUEv2jzCuKQPRD1RGsyLVeB--QlRXuhpVXTIVJzwVL,CB,6,6,6,6,5,6,6,7,6,7,6,7,6,6,1,1,1,2,2,19,1,2,2,-999,-999,1,Colored badges,5.833333333333333,6.5,6.25,1.5,Study 1
+JGCdGnzlSgXw1lE9Rqe6_3uUEv2jzCuKQPRD1RGsyLVeB--QlRXuhpVXTIVJzwVL,GB,6,6,6,6,5,6,6,6,6,6,6,6,5,7,2,1,2,1,2,19,1,2,3,2,3,2,Greyed out badges,5.833333333333333,6,6,1.5,Study 1
+pyYz2W0CMHUhaeAj2who_vvBOnbV4G4zn2qwVtfT15TyBmXwVirO20As-JIG4vB7,CB,6,6,6,6,5,6,7,7,6,6,6,6,7,5,1,2,1,1,2,22,8,2,3,4,4,3,Colored badges,5.833333333333333,6.5,6,1.5,Study 1
+pyYz2W0CMHUhaeAj2who_vvBOnbV4G4zn2qwVtfT15TyBmXwVirO20As-JIG4vB7,GB,4,4,4,4,4,4,4,5,4,4,4,4,5,4,2,2,3,3,3,22,8,2,1,1,1,1,Greyed out badges,4,4.25,4.25,2.75,Study 1
+TLGWbHJ4c3oeBs-INbMSbTJtsN_gTtw78a8g7d83NCW5pTJU0A-rWAmy3aVtXUby,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,1,1,1,2,2,NA,NA,NA,4,4,4,4,Colored badges,7,7,7,1.5,Study 1
+TLGWbHJ4c3oeBs-INbMSbTJtsN_gTtw78a8g7d83NCW5pTJU0A-rWAmy3aVtXUby,GB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,1,2,1,NA,NA,NA,4,4,4,4,Greyed out badges,7,7,7,1.25,Study 1
+0loTb4mCJJDcJkfyeglWToUxvGPd9EWZV-cDVCF2-I5cHPlVOJYExkl9x9YeFzmW,CB,4,6,4,4,6,4,4,4,4,4,4,4,4,4,1,1,3,2,3,25,5,2,3,4,4,3,Colored badges,4.666666666666667,4,4,2.25,Study 1
+0loTb4mCJJDcJkfyeglWToUxvGPd9EWZV-cDVCF2-I5cHPlVOJYExkl9x9YeFzmW,GB,6,6,5,5,4,5,4,5,3,3,3,3,4,3,2,2,2,2,2,25,5,2,2,1,1,1,Greyed out badges,5.166666666666667,3.75,3.25,2,Study 1
+THxztMSpD9VZOlTY7sKznMAgzXYmZFrA3rGQ4tE-hNEX59jdb0hdVEKfwhb9yqxS,CB,5,5,5,5,5,5,6,5,6,6,6,6,6,6,1,2,3,2,3,22,2,2,4,4,4,4,Colored badges,5,5.75,6,2.5,Study 1
+THxztMSpD9VZOlTY7sKznMAgzXYmZFrA3rGQ4tE-hNEX59jdb0hdVEKfwhb9yqxS,GB,5,6,5,2,5,5,3,4,6,3,5,5,5,5,2,2,2,2,2,22,2,2,1,1,1,1,Greyed out badges,4.666666666666667,4,5,2,Study 1
+dxZzQSzkIJBo7WHjHe0pLeITdtsvpLhiHCRz6-3qtAOR9qJOYkwofkQxwcgLbK7k,CB,7,5,4,6,6,6,5,4,5,4,7,4,6,4,1,3,3,4,4,26,5,2,-999,-999,-999,2,Colored badges,5.666666666666667,4.5,5.25,3.5,Study 1
+dxZzQSzkIJBo7WHjHe0pLeITdtsvpLhiHCRz6-3qtAOR9qJOYkwofkQxwcgLbK7k,GB,6,6,4,4,7,7,6,5,6,5,5,5,6,6,2,1,2,2,1,26,5,2,-999,3,4,3,Greyed out badges,5.666666666666667,5.5,5.5,1.5,Study 1
+89Ao1PoB8QMkBHA3okomsohk4yKeCsNL-3fI6ZmwjywZNmwhvnmvyaw_rcgC2uOk,CB,5,6,5,5,4,4,5,5,5,5,4,5,5,5,1,2,2,3,2,23,9,1,4,4,4,4,Colored badges,4.833333333333333,5,4.75,2.25,Study 1
+89Ao1PoB8QMkBHA3okomsohk4yKeCsNL-3fI6ZmwjywZNmwhvnmvyaw_rcgC2uOk,GB,5,6,5,5,5,5,4,4,5,4,4,4,4,5,2,2,2,2,2,23,9,1,1,1,1,1,Greyed out badges,5.166666666666667,4.25,4.25,2,Study 1
+8reUQ72yL3MJpU04B4XWee9y7Q2LmkvbH0AvMF5uaaZtYqPkd7mdlITkynIZBP1v,CB,6,6,5,6,5,5,6,4,4,3,3,3,5,4,1,2,3,3,4,22,9,2,4,4,4,4,Colored badges,5.5,4.25,3.75,3,Study 1
+8reUQ72yL3MJpU04B4XWee9y7Q2LmkvbH0AvMF5uaaZtYqPkd7mdlITkynIZBP1v,GB,6,6,6,6,5,6,2,2,4,4,3,3,3,4,2,2,2,2,2,22,9,2,1,1,1,1,Greyed out badges,5.833333333333333,3,3.25,2,Study 1
+Dc1gvW2DyEwEJiMj1tmHn2VavGmwjdZVVCqkQM-N5IJwb3GY6OZw3SdS-OSPPlED,CB,3,4,4,5,4,3,5,2,4,4,3,1,4,3,1,3,2,2,3,21,2,2,2,3,2,-999,Colored badges,3.8333333333333335,3.75,2.75,2.5,Study 1
+Dc1gvW2DyEwEJiMj1tmHn2VavGmwjdZVVCqkQM-N5IJwb3GY6OZw3SdS-OSPPlED,GB,6,5,7,4,6,5,7,6,5,5,5,6,6,6,2,3,3,3,2,21,2,2,-999,3,4,2,Greyed out badges,5.5,5.75,5.75,2.75,Study 1
+6x1tugT6LgGrq3oTinW2vMyEw0MdnlvWX_3MoJLzto61gef_eJV2hED_1NMWzmct,CB,6,3,6,2,2,5,3,2,5,4,5,6,4,5,1,4,2,3,2,21,5,1,2,-999,-999,2,Colored badges,4,3.5,5,2.75,Study 1
+6x1tugT6LgGrq3oTinW2vMyEw0MdnlvWX_3MoJLzto61gef_eJV2hED_1NMWzmct,GB,6,7,6,7,6,7,2,6,3,5,5,7,6,2,2,3,2,3,3,21,5,1,4,4,1,3,Greyed out badges,6.5,4,5,2.75,Study 1
+3O8f7f3yezUbixv16U7gdpvQYFy5NBBfDMr8yXkMaKJewYxOAw7KSnnQHXkTMjJT,GB,7,7,6,6,6,6,6,6,5,6,7,5,6,6,1,1,2,3,3,20,3,1,4,4,3,-999,Greyed out badges,6.333333333333333,5.75,6,2.25,Study 1
+3O8f7f3yezUbixv16U7gdpvQYFy5NBBfDMr8yXkMaKJewYxOAw7KSnnQHXkTMjJT,CB,6,6,7,7,7,7,5,4,6,6,4,5,6,5,2,1,1,1,1,20,3,1,4,4,4,4,Colored badges,6.666666666666667,5.25,5,1,Study 1
+ekLuH6BZA2TBsf_PSy_sT4XnS-m37aVcmhTcfwGZ2tR9Tj957ZsESkRNhuDdq3Tf,GB,4,5,4,4,5,6,6,5,5,5,5,6,6,3,1,1,3,3,3,20,3,2,-999,1,1,1,Greyed out badges,4.666666666666667,5.25,5,2.5,Study 1
+ekLuH6BZA2TBsf_PSy_sT4XnS-m37aVcmhTcfwGZ2tR9Tj957ZsESkRNhuDdq3Tf,CB,6,4,4,3,4,4,3,3,5,3,5,5,4,4,2,3,3,3,3,20,3,2,1,4,4,1,Colored badges,4.166666666666667,3.5,4.5,3,Study 1
+zxl6kl-Gx-iA0oV0TlRH9l23MkbKwzXcJUA6ow2942dihFfryvsmcakVgY8hhCUt,GB,4,5,3,4,3,4,5,5,4,5,5,6,4,5,1,2,3,2,3,22,5,2,1,1,1,1,Greyed out badges,3.8333333333333335,4.75,5,2.5,Study 1
+zxl6kl-Gx-iA0oV0TlRH9l23MkbKwzXcJUA6ow2942dihFfryvsmcakVgY8hhCUt,CB,5,6,5,4,4,5,4,6,4,5,6,5,4,4,2,1,2,2,2,22,5,2,4,4,4,4,Colored badges,4.833333333333333,4.75,4.75,1.75,Study 1
+iADDwL4FVUe-CrdqrVrRi5Pgef_hDnc5Rrk3lS-GO-SO-uTpAaXpHNU2YfS34wZd,GB,6,6,7,5,7,7,6,6,7,7,6,7,7,7,1,1,1,1,1,24,3,1,1,4,-999,4,Greyed out badges,6.333333333333333,6.5,6.75,1,Study 1
+iADDwL4FVUe-CrdqrVrRi5Pgef_hDnc5Rrk3lS-GO-SO-uTpAaXpHNU2YfS34wZd,CB,7,7,7,7,7,7,7,7,7,4,7,7,7,7,2,1,1,1,1,24,3,1,-999,-999,-999,3,Colored badges,7,6.25,7,1,Study 1
+kJ9C3Xq7FNmV7ljCS0k6n1qM7ItqRnhiRH0uR5MPbT4BR-afNbBy4NVzpcwOiV6V,GB,6,5,6,5,6,6,4,4,6,5,6,6,7,6,1,2,2,1,4,21,7,1,2,1,1,-999,Greyed out badges,5.666666666666667,4.75,6.25,2.25,Study 1
+kJ9C3Xq7FNmV7ljCS0k6n1qM7ItqRnhiRH0uR5MPbT4BR-afNbBy4NVzpcwOiV6V,CB,6,5,6,6,5,6,7,7,6,6,7,7,7,6,2,4,1,1,1,21,7,1,4,4,4,3,Colored badges,5.666666666666667,6.5,6.75,1.75,Study 1
+iU7o-78i04hRjj67hCwW-_AFAhX_hjTXL0vUgfb1CwmjnJGjPj-gO4rFrso_8Ikn,GB,5,3,4,3,5,5,5,4,4,4,5,5,5,5,1,1,2,2,2,19,3,2,3,2,1,2,Greyed out badges,4.166666666666667,4.25,5,1.75,Study 1
+iU7o-78i04hRjj67hCwW-_AFAhX_hjTXL0vUgfb1CwmjnJGjPj-gO4rFrso_8Ikn,CB,6,5,6,6,5,5,5,6,3,5,5,4,5,5,2,1,1,2,1,19,3,2,4,4,4,4,Colored badges,5.5,4.75,4.75,1.25,Study 1
+c2epvAOF10er7kGwkfgeWh_FqgfpUPEHOaa3tlVAfEvvrVqg-O0MFw4mXHINby1e,GB,5,6,6,5,5,6,4,5,4,3,4,4,3,3,1,1,2,2,3,21,7,1,1,1,1,1,Greyed out badges,5.5,4,3.5,2,Study 1
+c2epvAOF10er7kGwkfgeWh_FqgfpUPEHOaa3tlVAfEvvrVqg-O0MFw4mXHINby1e,CB,6,6,6,6,6,6,6,6,6,7,5,5,6,6,2,1,1,1,1,21,7,1,3,4,4,4,Colored badges,6,6.25,5.5,1,Study 1
+T7F9vr5fea8xzB-2ymFoyjE3G4Sx4rVbwiXWxS6owRU0nl9kUBRaIq2iS66zAGsV,GB,4,5,5,4,4,4,4,4,4,4,4,5,4,4,1,2,4,2,4,27,12,2,1,1,1,1,Greyed out badges,4.333333333333333,4,4.25,3,Study 1
+T7F9vr5fea8xzB-2ymFoyjE3G4Sx4rVbwiXWxS6owRU0nl9kUBRaIq2iS66zAGsV,CB,6,6,6,6,6,6,5,6,6,6,6,5,5,6,2,1,3,3,3,27,12,2,4,4,4,4,Colored badges,6,5.75,5.5,2.5,Study 1
+vQ3m7AtdwFidRuFB7dIqjuLse9k5Oa9tp6bFeNUWvvFynChRP6jHEO13lb634FaH,GB,5,5,6,6,4,6,5,5,5,5,5,5,5,4,1,4,3,4,4,24,5,2,1,1,1,1,Greyed out badges,5.333333333333333,5,4.75,3.75,Study 1
+vQ3m7AtdwFidRuFB7dIqjuLse9k5Oa9tp6bFeNUWvvFynChRP6jHEO13lb634FaH,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,2,2,4,2,24,5,2,4,4,4,4,Colored badges,7,7,7,2.5,Study 1
+UXDvEElaZqIsCO8x7_CoGHHfQsBIYcx4Sectdl4SEQ5UaN5pX5SEm9-XQ-Epl2v3,GB,7,5,6,6,5,6,6,6,5,6,5,5,6,6,1,1,2,2,2,20,1,2,2,1,1,1,Greyed out badges,5.833333333333333,5.75,5.5,1.75,Study 1
+UXDvEElaZqIsCO8x7_CoGHHfQsBIYcx4Sectdl4SEQ5UaN5pX5SEm9-XQ-Epl2v3,CB,7,7,7,7,7,7,6,6,6,7,6,7,6,7,2,1,2,2,2,20,1,2,4,4,4,4,Colored badges,7,6.25,6.5,1.75,Study 1
+45tTwWqxX8GH3r4sn5s5uNvxjdMbk6jXushLAS_LSPQcM_6X9_fZW6BW5WppLZ5z,GB,5,6,4,5,5,5,3,3,4,5,4,5,5,3,1,2,3,1,2,21,3,2,2,1,1,1,Greyed out badges,5,3.75,4.25,2,Study 1
+45tTwWqxX8GH3r4sn5s5uNvxjdMbk6jXushLAS_LSPQcM_6X9_fZW6BW5WppLZ5z,CB,6,6,7,6,6,7,7,7,6,6,5,6,7,7,2,1,1,1,2,21,3,2,4,4,4,4,Colored badges,6.333333333333333,6.5,6.25,1.25,Study 1
+Lye0TJw0TTwFgEKd1Vrwb253J61yJvQxCypKKr9RaIYYvPdo-U5H-5OLfcY__cmf,GB,7,7,7,7,7,7,4,6,6,6,4,7,7,4,1,2,1,4,3,23,9,2,1,1,1,1,Greyed out badges,7,5.5,5.5,2.5,Study 1
+Lye0TJw0TTwFgEKd1Vrwb253J61yJvQxCypKKr9RaIYYvPdo-U5H-5OLfcY__cmf,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,1,4,3,23,9,2,4,4,4,4,Colored badges,7,7,7,2.25,Study 1
+njelgKVTpWkgb3ca8SBvAoq8dvLovpUrxQF2UM77r7iEJYGtYkzyKOE7VlfOn8ev,GB,6,5,6,6,6,6,6,6,6,6,5,6,6,6,1,2,4,1,4,23,10,2,-999,4,1,-999,Greyed out badges,5.833333333333333,6,5.75,2.75,Study 1
+njelgKVTpWkgb3ca8SBvAoq8dvLovpUrxQF2UM77r7iEJYGtYkzyKOE7VlfOn8ev,CB,7,7,6,6,6,6,6,7,6,6,6,6,6,6,2,1,2,1,3,23,10,2,-999,4,-999,3,Colored badges,6.333333333333333,6.25,6,1.75,Study 1
+_S8rpcoLIlRBB97LCnXrPi3M_tPMsFvTPLHhHwIo0_c7-BxHKA1PThv37sZIuqQk,GB,5,5,6,6,4,4,6,4,6,6,6,6,6,6,1,3,3,4,4,31,10,2,1,1,1,-999,Greyed out badges,5,5.5,6,3.5,Study 1
+_S8rpcoLIlRBB97LCnXrPi3M_tPMsFvTPLHhHwIo0_c7-BxHKA1PThv37sZIuqQk,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,3,2,3,31,10,2,4,4,4,4,Colored badges,7,7,7,2.25,Study 1
+xivZJpGr-kYSbwe6zOy79YAm2cTXi717-OtrLCdUPnSQc-fY1shw3zNJDCzFRzcx,GB,7,7,7,7,6,7,7,7,7,6,6,7,6,6,1,1,2,1,1,28,9,2,1,1,1,1,Greyed out badges,6.833333333333333,6.75,6.25,1.25,Study 1
+xivZJpGr-kYSbwe6zOy79YAm2cTXi717-OtrLCdUPnSQc-fY1shw3zNJDCzFRzcx,CB,5,5,5,6,5,5,7,7,6,5,6,6,6,6,2,3,2,4,1,28,9,2,4,4,4,4,Colored badges,5.166666666666667,6.25,6,2.5,Study 1
+D8-s7vTQlyAmfM02NhX62ADncVhrHuL6C-aRihJ30VonoiUAxKYYi8JfUYd281vY,GB,6,6,6,6,5,5,7,7,7,7,6,6,6,6,1,2,3,3,4,20,3,1,1,1,1,1,Greyed out badges,5.666666666666667,7,6,3,Study 1
+D8-s7vTQlyAmfM02NhX62ADncVhrHuL6C-aRihJ30VonoiUAxKYYi8JfUYd281vY,CB,7,7,7,7,7,7,7,7,7,7,7,7,6,6,2,1,4,2,4,20,3,1,4,4,4,4,Colored badges,7,7,6.5,2.75,Study 1
+uzoOw1DqJ2fGKE55WgHDNSb2YNuwp_sqoGAiKd550M2I8TOjXUuggzbzjYYoz-Pv,GB,5,4,4,4,4,5,5,5,4,4,7,7,7,7,1,4,4,2,4,23,8,2,2,1,1,2,Greyed out badges,4.333333333333333,4.5,7,3.5,Study 1
+uzoOw1DqJ2fGKE55WgHDNSb2YNuwp_sqoGAiKd550M2I8TOjXUuggzbzjYYoz-Pv,CB,7,5,7,7,7,7,7,7,7,7,7,7,7,7,2,2,3,2,2,23,8,2,3,2,2,4,Colored badges,6.666666666666667,7,7,2.25,Study 1
+b_IaRuR21liA0L-ibcjDk-n1NwMIwxRk-88YWbEz6VPckPbkOsvZeKyLFvP9bUj7,GB,7,7,7,7,5,6,7,7,7,7,7,7,7,4,1,1,3,1,1,23,9,2,1,1,1,1,Greyed out badges,6.5,7,6.25,1.5,Study 1
+b_IaRuR21liA0L-ibcjDk-n1NwMIwxRk-88YWbEz6VPckPbkOsvZeKyLFvP9bUj7,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,1,1,1,23,9,2,1,1,1,1,Colored badges,7,7,7,1,Study 1
+tzWRonz5S3zSHuEfHYbhbH-vlngMJ8EiEkvV1qZMyoCbJN_ki6Z0JulplQYtINx1,GB,7,4,7,4,4,7,3,3,4,3,3,4,3,3,1,1,1,1,1,22,9,2,1,1,1,1,Greyed out badges,5.5,3.25,3.25,1,Study 1
+tzWRonz5S3zSHuEfHYbhbH-vlngMJ8EiEkvV1qZMyoCbJN_ki6Z0JulplQYtINx1,CB,6,6,7,6,7,7,4,4,4,4,4,4,4,4,2,1,1,1,1,22,9,2,4,4,4,4,Colored badges,6.5,4,4,1,Study 1
+VqlcUoLE9FocmCTQNa-ldqWA4nI_EPNJs5TqYTLsX5mJz2pdCWtiELC5Yonwb9dL,GB,7,5,6,6,6,6,6,6,6,6,5,5,4,5,1,4,1,2,4,25,3,2,1,2,-999,3,Greyed out badges,6,6,4.75,2.75,Study 1
+VqlcUoLE9FocmCTQNa-ldqWA4nI_EPNJs5TqYTLsX5mJz2pdCWtiELC5Yonwb9dL,CB,7,6,7,7,6,7,5,6,6,6,6,5,5,6,2,2,1,2,1,25,3,2,4,3,4,4,Colored badges,6.666666666666667,5.75,5.5,1.5,Study 1
+kJqu3lg9Z__5WVzXdd2ZR_ilBCzpHMLy_GIGRyhJ72LI1-ZmUw-rm0nq_figZniP,GB,5,5,5,5,5,6,6,4,5,4,4,3,4,4,1,1,2,3,3,19,3,2,1,1,1,1,Greyed out badges,5.166666666666667,4.75,3.75,2.25,Study 1
+kJqu3lg9Z__5WVzXdd2ZR_ilBCzpHMLy_GIGRyhJ72LI1-ZmUw-rm0nq_figZniP,CB,7,7,7,7,7,7,7,7,7,5,5,5,7,7,2,1,2,1,3,19,3,2,4,4,4,4,Colored badges,7,6.5,6,1.75,Study 1
+jgpUzE6Q1zanikSd1p1b2qjI2bLS-phxNZZkMMnP5ECeG0VlGND5cA1WGNblLJ7n,GB,1,3,2,3,2,1,3,3,4,4,5,5,4,3,1,1,4,4,3,21,3,1,1,1,1,1,Greyed out badges,2,3.5,4.25,3,Study 1
+jgpUzE6Q1zanikSd1p1b2qjI2bLS-phxNZZkMMnP5ECeG0VlGND5cA1WGNblLJ7n,CB,5,4,7,6,6,5,4,5,6,5,5,5,7,4,2,2,1,4,3,21,3,1,4,4,4,4,Colored badges,5.5,5,5.25,2.5,Study 1
+G5Gusx4uhT9KUd5EOwMJD9EwAD9kyIvHgaUJsEezfnR8X9e6PmI8FSxj9us_O3Fy,GB,5,6,7,7,6,7,6,7,5,5,6,6,6,4,1,1,2,3,2,20,7,1,2,1,1,2,Greyed out badges,6.333333333333333,5.75,5.5,2,Study 1
+G5Gusx4uhT9KUd5EOwMJD9EwAD9kyIvHgaUJsEezfnR8X9e6PmI8FSxj9us_O3Fy,CB,6,6,6,6,6,6,5,5,6,7,6,6,6,6,2,1,2,3,2,20,7,1,4,4,4,4,Colored badges,6,5.75,6,2,Study 1
+z7-M25cRGprq_XUcL1etPGm6XBdK7Fst8EgP2rIcE4_vcHQ8wyZqWJBTDz05DQvs,GB,5,4,4,4,4,5,6,5,5,5,5,6,6,6,1,1,2,3,2,21,5,1,1,1,1,1,Greyed out badges,4.333333333333333,5.25,5.75,2,Study 1
+z7-M25cRGprq_XUcL1etPGm6XBdK7Fst8EgP2rIcE4_vcHQ8wyZqWJBTDz05DQvs,CB,7,7,7,7,7,7,6,6,6,6,5,6,6,5,2,1,1,1,1,21,5,1,4,4,4,4,Colored badges,7,6,5.5,1,Study 1
+n8KQ8dXg6mEylk4V5hDNvoN_jd9ZinNLM4kPwbRj74bFT-kP_ooHa6R_2NjiS_p9,GB,6,6,6,6,6,6,5,6,6,6,4,4,6,4,1,2,2,2,2,22,5,2,4,4,-999,3,Greyed out badges,6,5.75,4.5,2,Study 1
+n8KQ8dXg6mEylk4V5hDNvoN_jd9ZinNLM4kPwbRj74bFT-kP_ooHa6R_2NjiS_p9,CB,6,6,6,4,4,5,6,6,6,6,6,6,6,6,2,3,3,2,2,22,5,2,4,4,4,4,Colored badges,5.166666666666667,6,6,2.5,Study 1
+EgtU_GgOtLj5ZntgjIgblfBGVHVtDkJ0zK7zTnzng0OIVAohUf2rfAuvXgPu6qzz,GB,5,5,6,6,5,5,5,6,5,5,5,5,6,4,1,2,3,2,3,21,6,2,2,1,1,1,Greyed out badges,5.333333333333333,5.25,5,2.5,Study 1
+EgtU_GgOtLj5ZntgjIgblfBGVHVtDkJ0zK7zTnzng0OIVAohUf2rfAuvXgPu6qzz,CB,7,6,7,7,6,6,5,6,6,6,6,5,5,5,2,2,2,2,3,21,6,2,4,4,4,4,Colored badges,6.5,5.75,5.25,2.25,Study 1
+OvmOYqkSqgKkIKnW7GLs8MUPly8po-tL7rmELtLqhDkbBrhgNY7GkH_CTFUxaFov,GB,6,6,6,5,5,6,6,6,6,6,5,6,6,5,1,2,2,2,2,25,1,2,2,1,1,4,Greyed out badges,5.666666666666667,6,5.5,2,Study 1
+OvmOYqkSqgKkIKnW7GLs8MUPly8po-tL7rmELtLqhDkbBrhgNY7GkH_CTFUxaFov,CB,7,6,6,6,7,7,7,7,6,7,6,7,7,7,2,1,1,3,2,25,1,2,4,4,4,4,Colored badges,6.5,6.75,6.75,1.75,Study 1
+k6QlBbpSetpJ_8_Vs1y5btL_WcVj6YXDMo93Up0EKupQoUYVjkxBW3QxSaybiK6k,GB,3,4,6,2,3,2,5,6,4,4,4,4,5,3,1,4,4,1,4,26,11,2,1,1,1,1,Greyed out badges,3.3333333333333335,4.75,4,3.25,Study 1
+k6QlBbpSetpJ_8_Vs1y5btL_WcVj6YXDMo93Up0EKupQoUYVjkxBW3QxSaybiK6k,CB,7,5,6,6,6,6,6,4,5,6,5,4,6,6,2,4,4,2,4,26,11,2,4,4,4,4,Colored badges,6,5.25,5.25,3.5,Study 1
+jXjWJoc6vdipOfj2eZfLCif1aQcrezHAZFGoW_35YudsHg_pbg_2_By5K5rl0FHv,GB,4,4,5,5,5,5,5,5,5,5,4,4,5,4,1,1,1,1,2,21,7,2,1,1,1,1,Greyed out badges,4.666666666666667,5,4.25,1.25,Study 1
+jXjWJoc6vdipOfj2eZfLCif1aQcrezHAZFGoW_35YudsHg_pbg_2_By5K5rl0FHv,CB,7,6,7,7,7,7,7,7,7,6,7,6,7,6,2,1,4,1,1,21,7,2,4,4,4,4,Colored badges,6.833333333333333,6.75,6.5,1.75,Study 1
+eFzjuw9VQ8H-sT2dkpK04L6DRTpc5EnEtErje8ibQ4zpZwgaJyQBRwIsoZUELp5t,GB,6,6,6,6,6,6,6,6,6,6,6,6,6,6,1,2,2,2,2,24,7,1,-999,1,1,-999,Greyed out badges,6,6,6,2,Study 1
+eFzjuw9VQ8H-sT2dkpK04L6DRTpc5EnEtErje8ibQ4zpZwgaJyQBRwIsoZUELp5t,CB,6,7,7,6,6,6,6,6,6,7,7,6,6,6,2,2,2,2,1,24,7,1,4,4,4,4,Colored badges,6.333333333333333,6.25,6.25,1.75,Study 1
+wYx4dFul3VdNEznwfwXFBJWZaM01XUXg-bKHVDBYBs7WhI5Ma5wAhU7xHl8aC7Lo,GB,5,4,5,5,5,5,4,4,4,5,5,4,5,6,1,3,4,3,4,20,4,2,1,1,1,1,Greyed out badges,4.833333333333333,4.25,5,3.5,Study 1
+wYx4dFul3VdNEznwfwXFBJWZaM01XUXg-bKHVDBYBs7WhI5Ma5wAhU7xHl8aC7Lo,CB,3,2,3,3,3,3,4,2,4,4,6,6,3,5,2,2,3,2,4,20,4,2,4,-999,4,4,Colored badges,2.8333333333333335,3.5,5,2.75,Study 1
+xEvYaltaWniO2wtG6YrcSPBM6dcdwyZ7UyjTctceGef52pIbfHKcGb-V3BqjC33t,GB,6,5,5,6,5,5,5,6,5,6,5,6,5,5,1,2,3,1,2,20,1,1,1,-999,2,2,Greyed out badges,5.333333333333333,5.5,5.25,2,Study 1
+xEvYaltaWniO2wtG6YrcSPBM6dcdwyZ7UyjTctceGef52pIbfHKcGb-V3BqjC33t,CB,6,6,6,6,5,6,5,4,5,5,5,6,6,4,2,4,2,2,3,20,1,1,-999,3,3,-999,Colored badges,5.833333333333333,4.75,5.25,2.75,Study 1
+-gXOoMRDsyMkR4GhwPy9aYHP6_bdEFBYG4JqiT4viI6itRYVLQpR5x_O6rYJEYPx,GB,7,7,7,6,7,7,7,7,7,7,7,7,7,7,1,1,1,1,1,24,7,2,1,1,1,1,Greyed out badges,6.833333333333333,7,7,1,Study 1
+-gXOoMRDsyMkR4GhwPy9aYHP6_bdEFBYG4JqiT4viI6itRYVLQpR5x_O6rYJEYPx,CB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,2,1,1,4,1,24,7,2,4,4,4,4,Colored badges,7,7,7,1.75,Study 1
+qDi1rL68L3a5KsQAqk2KXdc07bA42NsKe9QRMg5uSZH1yfvLu17iIMX7EItr-PDo,GB,7,7,7,7,7,7,7,7,7,7,7,7,7,7,1,1,2,1,1,22,5,2,-999,-999,-999,-999,Greyed out badges,7,7,7,1.25,Study 1
+qDi1rL68L3a5KsQAqk2KXdc07bA42NsKe9QRMg5uSZH1yfvLu17iIMX7EItr-PDo,CB,6,6,6,5,5,6,5,5,6,6,6,6,5,6,2,3,2,2,2,22,5,2,-999,-999,-999,-999,Colored badges,5.666666666666667,5.5,5.75,2.25,Study 1
+QpcsFtBpKaiVf-qEM8_MC2IvivZV0LDPFk5lnODq0M5qWqORryH4VUgIX3mXV3ax,GB,6,5,6,6,6,6,6,6,5,5,5,5,6,5,1,2,2,3,2,24,11,1,3,3,-999,3,Greyed out badges,5.833333333333333,5.5,5.25,2.25,Study 1
+QpcsFtBpKaiVf-qEM8_MC2IvivZV0LDPFk5lnODq0M5qWqORryH4VUgIX3mXV3ax,CB,6,6,6,6,6,6,5,6,6,5,6,4,6,6,2,2,2,3,2,24,11,1,2,4,4,3,Colored badges,6,5.5,5.5,2.25,Study 1
+1byeMInyZBgN7M9HJvgC2n7iDSEeUQqsly9niBidhA8lKSS-AJHwT-jLwNiIyq-u,GB,3,3,2,2,1,3,6,6,3,7,7,7,3,3,1,2,4,4,4,24,5,2,2,1,1,1,Greyed out badges,2.3333333333333335,5.5,5,3.5,Study 1
+1byeMInyZBgN7M9HJvgC2n7iDSEeUQqsly9niBidhA8lKSS-AJHwT-jLwNiIyq-u,CB,6,6,6,7,6,7,7,7,5,7,7,7,6,5,2,1,2,1,2,24,5,2,4,4,4,4,Colored badges,6.333333333333333,6.5,6.25,1.5,Study 1
+-551aif-rcjp3XhAieDb5GT8ZB1YynmOkgsH_fFX7umiyNN6TJghcWd2l3y-0SZK,GB,5,4,4,4,4,4,4,4,4,4,4,4,4,4,1,3,2,1,2,22,3,3,2,1,1,1,Greyed out badges,4.166666666666667,4,4,2,Study 1
+-551aif-rcjp3XhAieDb5GT8ZB1YynmOkgsH_fFX7umiyNN6TJghcWd2l3y-0SZK,CB,6,6,6,6,6,6,7,7,6,6,7,6,6,5,2,1,3,1,2,22,3,3,4,4,4,4,Colored badges,6,6.5,6,1.75,Study 1
+_Pqc92kg3qxszo7JiJMfd_71oeAHloj-_S97tgfXZkhS59ooTazVrW66kCXWgAl6,GB,4,5,3,4,3,3,3,3,4,4,5,4,5,5,1,2,2,2,3,26,15,2,1,1,1,1,Greyed out badges,3.6666666666666665,3.5,4.75,2.25,Study 1
+_Pqc92kg3qxszo7JiJMfd_71oeAHloj-_S97tgfXZkhS59ooTazVrW66kCXWgAl6,CB,5,5,3,3,3,3,4,5,4,5,4,5,5,5,2,2,3,2,3,26,15,2,4,4,4,4,Colored badges,3.6666666666666665,4.5,4.75,2.5,Study 1
+cnhFcxFVyRM5vYEWM0tDsB4EyTlmQTQwp-gDrQSpq6YPqW5pouKC4OPGu9pHMyRQ,GB,5,7,5,5,4,7,6,7,6,6,6,5,5,4,1,1,4,1,3,20,1,1,3,4,-999,3,Greyed out badges,5.5,6.25,5,2.25,Study 1
+cnhFcxFVyRM5vYEWM0tDsB4EyTlmQTQwp-gDrQSpq6YPqW5pouKC4OPGu9pHMyRQ,CB,5,6,7,4,4,4,4,6,5,4,6,5,4,5,2,1,1,2,1,20,1,1,4,-999,4,4,Colored badges,5,4.75,5,1.25,Study 1
+Ugvn6iH5d11RYWPSW6lqP-bhZXXHYEB70IymDCGeQ4hcFqRMpTHxMVOpilO-7ktD,GB,3,4,3,4,3,3,6,6,6,6,4,4,4,4,1,2,1,2,2,NA,NA,NA,2,1,2,2,Greyed out badges,3.3333333333333335,6,4,1.75,Study 1
+Ugvn6iH5d11RYWPSW6lqP-bhZXXHYEB70IymDCGeQ4hcFqRMpTHxMVOpilO-7ktD,CB,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,2,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,Colored badges,NA,NA,NA,NA,Study 1
+G2w_rvC58yubXYIz92OGp7gLTxWNcN87E_ayfiQ25OhrziMfMtjU2AjgpDxO4zcF,GB,6,7,7,7,6,6,7,7,5,7,7,7,7,6,1,1,2,3,1,20,3,1,1,1,1,1,Greyed out badges,6.5,6.5,6.75,1.75,Study 1
+G2w_rvC58yubXYIz92OGp7gLTxWNcN87E_ayfiQ25OhrziMfMtjU2AjgpDxO4zcF,CB,7,7,7,7,7,7,7,7,7,6,7,7,7,7,2,1,2,2,1,20,3,1,4,4,4,4,Colored badges,7,6.75,7,1.5,Study 1
+mYr_b5Y1ueZS2eg3wirm7vNGcV7Fzy7xsZ-s5Sv3ynezdoNI29p5z_16pkAKS7aG,GB,7,6,6,5,5,6,6,4,6,6,6,6,7,6,1,1,1,1,2,27,3,1,1,1,1,1,Greyed out badges,5.833333333333333,5.5,6.25,1.25,Study 1
+mYr_b5Y1ueZS2eg3wirm7vNGcV7Fzy7xsZ-s5Sv3ynezdoNI29p5z_16pkAKS7aG,CB,6,6,6,6,6,6,6,6,6,6,6,6,6,6,2,2,2,2,2,27,3,1,4,4,4,4,Colored badges,6,6,6,2,Study 1
+1J71GeGiQMJHPhfwtoMbBPa0bhWWiKSNNYIzYf1dVrxniX1Ee3smjl_w3t1ddhp6,GB,5,5,5,6,6,4,4,5,4,4,4,3,5,4,1,1,1,1,1,20,5,1,4,1,1,4,Greyed out badges,5.166666666666667,4.25,4,1,Study 1
+1J71GeGiQMJHPhfwtoMbBPa0bhWWiKSNNYIzYf1dVrxniX1Ee3smjl_w3t1ddhp6,CB,7,5,6,7,6,6,5,5,5,5,5,6,6,5,2,1,1,4,4,20,5,1,3,4,4,3,Colored badges,6.166666666666667,5,5.5,2.5,Study 1
